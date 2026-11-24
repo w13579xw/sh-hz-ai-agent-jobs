@@ -182,10 +182,14 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
-      max-height: 230px;
+      max-height: 148px;
       overflow-y: auto;
-      padding-right: 4px;
+      padding-right: 6px;
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
     }
+    .change-list::-webkit-scrollbar { width: 5px; }
+    .change-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
 
     .change-list li {
       display: flex;
