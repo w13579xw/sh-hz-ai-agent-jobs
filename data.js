@@ -3,7 +3,7 @@ window.JOBS_DATA = {
   "meta": {
     "title": "沪杭 AI 应用开发实习与校招岗位雷达",
     "subtitle": "面向 2028 届计算机硕士 · 覆盖上海 / 杭州 57 家大厂、外企与中厂",
-    "updatedAt": "2026-11-24 18:42 (Asia/Shanghai)",
+    "updatedAt": "2026-11-24 18:48 (Asia/Shanghai)",
     "nextAutoUpdate": "每日 03:00 (Asia/Shanghai) 自动检查更新",
     "totalCompanies": 57,
     "referenceDate": "2026-11-24"
@@ -15,32 +15,32 @@ window.JOBS_DATA = {
         {
           "channel": "日常实习",
           "company": "小红书",
-          "title": "企业智能部（Intelligence Lab）AI Agent 实习生",
-          "url": "https://job.xiaohongshu.com/campus/intern"
+          "title": "Agent 产品研发实习生（职位 20736·直达JD）",
+          "url": "https://job.xiaohongshu.com/campus/intern/position/20736"
         },
         {
           "channel": "日常实习",
           "company": "MiniMax",
-          "title": "AI System 研发实习生（明确覆盖2028届及以后）",
-          "url": "https://www.minimax.cn/careers"
+          "title": "Agent 系统工程实习生（AI Infra·直达JD）",
+          "url": "https://vrfi1sk8a0.jobs.feishu.cn/379481/position/7685277183518427419/detail"
         },
         {
           "channel": "日常实习",
           "company": "字节跳动",
-          "title": "AI Agent 全栈研发实习生（开发者服务 A172769A / 杭州广告）",
+          "title": "AI Agent 全栈研发实习生（职位 A172769A·直达JD）",
           "url": "https://jobs.bytedance.com/campus/position?keywords=A172769A"
         },
         {
           "channel": "日常实习",
-          "company": "有赞",
-          "title": "Agent 全栈开发实习生（杭州西溪·可转正）",
-          "url": "https://www.zhipin.com/gongsi/c713b194fb8479e41XR92d24.html"
+          "company": "百度",
+          "title": "Agent 评测算法实习生（J106616·明确2028届·直达JD）",
+          "url": "https://talent.baidu.com/jobs/detail/INTERN/4bd782af-7dc6-44c1-b02a-e31bb6bc7cb2"
         },
         {
-          "channel": "秋招",
-          "company": "萤石网络",
-          "title": "测试开发工程师-AI（明确考 Agent 框架 / ReAct / MCP）",
-          "url": "https://job.ezviz.com/"
+          "channel": "日常实习",
+          "company": "有赞",
+          "title": "Agent 全栈开发实习生（官方招聘系统）",
+          "url": "https://job.youzan.com/"
         }
       ],
       "closed": [
@@ -1721,7 +1721,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "国内AI原生搜索与专业文档处理代表，聚焦非结构化长文本检索与问答落地。",
       "matchLevel": "高匹配",
-      "officialUrl": "https://www.zhipin.com/gongsi/c21348fc4e8b3bc11nV53Ny5GA~~.html",
+      "officialUrl": "https://www.liepin.com/zhaopin/?key=%E7%A7%98%E5%A1%94%E7%A7%91%E6%8A%80%20AI",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -1730,7 +1730,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "AI搜索系统研发（日常实习）",
-              "url": "https://www.zhipin.com/gongsi/c21348fc4e8b3bc11nV53Ny5GA~~.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E7%A7%98%E5%A1%94%E7%A7%91%E6%8A%80%20AI",
               "postedDate": "2026-10-15",
               "status": "open",
               "linkType": "portal"
@@ -1748,7 +1748,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "AI搜索系统研发（校招/正式）",
-              "url": "https://www.zhipin.com/gongsi/c21348fc4e8b3bc11nV53Ny5GA~~.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E7%A7%98%E5%A1%94%E7%A7%91%E6%8A%80%20AI",
               "postedDate": "2026-10-10",
               "status": "open",
               "linkType": "portal"
@@ -2057,7 +2057,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "专精特新“小巨人”，在文档审核、垂直行业大模型私有化、知识图谱与Agent工作流积累深厚。",
       "matchLevel": "高匹配",
-      "officialUrl": "https://www.zhipin.com/gongsi/d7655073117466cf1HZ92di_gA~~.html",
+      "officialUrl": "https://www.liepin.com/zhaopin/?key=%E8%BE%BE%E8%A7%82%E6%95%B0%E6%8D%AE%20AI",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -2066,7 +2066,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "大模型研发工程师（日常实习）",
-              "url": "https://www.zhipin.com/gongsi/d7655073117466cf1HZ92di_gA~~.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E8%BE%BE%E8%A7%82%E6%95%B0%E6%8D%AE%20AI",
               "postedDate": "2026-10-15",
               "status": "open",
               "linkType": "portal"
@@ -2084,7 +2084,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "大模型研发工程师（校招/正式）",
-              "url": "https://www.zhipin.com/gongsi/d7655073117466cf1HZ92di_gA~~.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E8%BE%BE%E8%A7%82%E6%95%B0%E6%8D%AE%20AI",
               "postedDate": "2026-10-10",
               "status": "open",
               "linkType": "portal"
@@ -2526,7 +2526,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "面向音频与内容场景设计Agent系统，明确要求任务拆解、工具调用、MCP与Memory管理。",
       "matchLevel": "高匹配",
-      "officialUrl": "https://www.zhipin.com/gongsi/e79e6cb443329f631XR429-0.html",
+      "officialUrl": "https://www.liepin.com/zhaopin/?key=%E5%96%9C%E9%A9%AC%E6%8B%89%E9%9B%85%20Agent",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -2535,7 +2535,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "Agent系统开发工程师（日常实习）",
-              "url": "https://www.zhipin.com/gongsi/e79e6cb443329f631XR429-0.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E5%96%9C%E9%A9%AC%E6%8B%89%E9%9B%85%20Agent",
               "postedDate": "2026-10-15",
               "status": "open",
               "linkType": "portal"
@@ -2553,7 +2553,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "Agent系统开发工程师（校招/正式）",
-              "url": "https://www.zhipin.com/gongsi/e79e6cb443329f631XR429-0.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E5%96%9C%E9%A9%AC%E6%8B%89%E9%9B%85%20Agent",
               "postedDate": "2026-10-10",
               "status": "open",
               "linkType": "portal"
@@ -2923,7 +2923,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "跨境支付与数字科技场景下的AI Agent客服、智能化风控与业务流程自动化落地。",
       "matchLevel": "中匹配",
-      "officialUrl": "https://www.zhipin.com/gongsi/e74a815777df4c981nZ529y9.html",
+      "officialUrl": "https://www.liepin.com/zhaopin/?key=%E8%BF%9E%E8%BF%9E%E6%95%B0%E5%AD%97%20AI",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -2942,7 +2942,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "全栈开发工程师（AI Agent方向）（校招/正式）",
-              "url": "https://www.zhipin.com/gongsi/e74a815777df4c981nZ529y9.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E8%BF%9E%E8%BF%9E%E6%95%B0%E5%AD%97%20AI",
               "postedDate": "2026-10-10",
               "status": "open",
               "linkType": "portal"
@@ -3312,7 +3312,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "将RPA流程自动化与大模型、AI Agent深度融合，极客文化浓、重Python自动化落地。",
       "matchLevel": "高匹配",
-      "officialUrl": "https://www.zhipin.com/gongsi/a6064d7c66dc8b091nd43ty_Fw~~.html",
+      "officialUrl": "https://www.liepin.com/zhaopin/?key=%E5%BD%B1%E5%88%80%20AI",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3321,7 +3321,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "RPA / AI 开发实习生（杭州·可转正）",
-              "url": "https://www.zhipin.com/gongsi/a6064d7c66dc8b091nd43ty_Fw~~.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E5%BD%B1%E5%88%80%20AI",
               "postedDate": "2026-11-15",
               "status": "open",
               "linkType": "portal"
@@ -3339,7 +3339,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "2027届 RPA/AI 开发工程师（杭州）",
-              "url": "https://www.zhipin.com/gongsi/a6064d7c66dc8b091nd43ty_Fw~~.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E5%BD%B1%E5%88%80%20AI",
               "postedDate": "2026-10-20",
               "status": "open",
               "linkType": "portal"
@@ -3378,7 +3378,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "国产IPA（智能流程自动化）与AI Agent代表企业，核心产品聚焦大模型数字员工与工作流。",
       "matchLevel": "高匹配",
-      "officialUrl": "https://www.zhipin.com/gongsi/a4c92976ebcb0e891nF43t-0GA~~.html",
+      "officialUrl": "https://www.liepin.com/zhaopin/?key=%E5%AE%9E%E5%9C%A8%E6%99%BA%E8%83%BD%20AI",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3387,7 +3387,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "Agent架构师（日常实习）",
-              "url": "https://www.zhipin.com/gongsi/a4c92976ebcb0e891nF43t-0GA~~.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E5%AE%9E%E5%9C%A8%E6%99%BA%E8%83%BD%20AI",
               "postedDate": "2026-10-15",
               "status": "open",
               "linkType": "portal"
@@ -3405,7 +3405,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "Agent架构师（校招/正式）",
-              "url": "https://www.zhipin.com/gongsi/a4c92976ebcb0e891nF43t-0GA~~.html",
+              "url": "https://www.liepin.com/zhaopin/?key=%E5%AE%9E%E5%9C%A8%E6%99%BA%E8%83%BD%20AI",
               "postedDate": "2026-10-10",
               "status": "open",
               "linkType": "portal"
@@ -3575,7 +3575,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "聚焦AI+AR眼镜与AI-Native UI本地智能体框架。",
       "matchLevel": "中匹配",
-      "officialUrl": "https://www.liepin.com/company/9233630/",
+      "officialUrl": "https://www.liepin.com/zhaopin/?key=Rokid%20AI",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3584,7 +3584,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "AIUI本地智能体开发（日常实习）",
-              "url": "https://www.liepin.com/company/9233630/",
+              "url": "https://www.liepin.com/zhaopin/?key=Rokid%20AI",
               "postedDate": "2026-10-15",
               "status": "open",
               "linkType": "portal"
@@ -3602,7 +3602,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "AIUI本地智能体开发（校招/正式）",
-              "url": "https://www.liepin.com/company/9233630/",
+              "url": "https://www.liepin.com/zhaopin/?key=Rokid%20AI",
               "postedDate": "2026-10-10",
               "status": "open",
               "linkType": "portal"
@@ -3708,7 +3708,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "积极推进AI Native战略，高频举办Agent黑客松，落地商家经营AI与GEO工具。",
       "matchLevel": "高匹配",
-      "officialUrl": "https://www.zhipin.com/gongsi/c713b194fb8479e41XR92d24.html",
+      "officialUrl": "https://job.youzan.com/",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3717,7 +3717,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "Agent 全栈开发实习生（杭州西溪·可转正）",
-              "url": "https://www.zhipin.com/gongsi/c713b194fb8479e41XR92d24.html",
+              "url": "https://job.youzan.com/",
               "postedDate": "2026-11-18",
               "status": "open",
               "linkType": "portal"
@@ -3764,7 +3764,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "深耕数字医疗，聚焦临床决策辅助、用药助手与医疗文本大模型应用落地。",
       "matchLevel": "中匹配",
-      "officialUrl": "https://www.zhipin.com/gongsi/1297d0257ef8cda41nx53tq-",
+      "officialUrl": "https://www.liepin.com/zhaopin/?key=%E4%B8%81%E9%A6%99%E5%9B%AD%20AI",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3773,7 +3773,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "临床决策AI研发（日常实习）",
-              "url": "https://www.zhipin.com/gongsi/1297d0257ef8cda41nx53tq-",
+              "url": "https://www.liepin.com/zhaopin/?key=%E4%B8%81%E9%A6%99%E5%9B%AD%20AI",
               "postedDate": "2026-10-15",
               "status": "open",
               "linkType": "portal"
@@ -3791,7 +3791,7 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "临床决策AI研发（校招/正式）",
-              "url": "https://www.zhipin.com/gongsi/1297d0257ef8cda41nx53tq-",
+              "url": "https://www.liepin.com/zhaopin/?key=%E4%B8%81%E9%A6%99%E5%9B%AD%20AI",
               "postedDate": "2026-10-10",
               "status": "open",
               "linkType": "portal"
@@ -3829,7 +3829,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "杭州本土垂类龙头，面向政企采购数智化与跨境支付出海场景落地垂直大模型与Agent。",
       "matchLevel": "中匹配",
-      "officialUrl": "https://www.zhipin.com/gongsi/d6b38c2637a85bc21nd93du5FlE~.html",
+      "officialUrl": "https://www.liepin.com/zhaopin/?key=%E6%94%BF%E9%87%87%E4%BA%91%20AI",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
