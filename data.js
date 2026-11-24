@@ -3,7 +3,7 @@ window.JOBS_DATA = {
   "meta": {
     "title": "沪杭 AI 应用开发实习与校招岗位雷达",
     "subtitle": "面向 2028 届计算机硕士 · 覆盖上海 / 杭州 57 家大厂、外企与中厂",
-    "updatedAt": "2026-11-24 18:35 (Asia/Shanghai)",
+    "updatedAt": "2026-11-24 18:42 (Asia/Shanghai)",
     "nextAutoUpdate": "每日 03:00 (Asia/Shanghai) 自动检查更新",
     "totalCompanies": 57,
     "referenceDate": "2026-11-24"
@@ -34,7 +34,7 @@ window.JOBS_DATA = {
           "channel": "日常实习",
           "company": "有赞",
           "title": "Agent 全栈开发实习生（杭州西溪·可转正）",
-          "url": "https://www.youzan.com/intro/join"
+          "url": "https://www.zhipin.com/gongsi/c713b194fb8479e41XR92d24.html"
         },
         {
           "channel": "秋招",
@@ -111,13 +111,15 @@ window.JOBS_DATA = {
               "title": "AI应用研发实习生（Agent方向·杭州/上海）",
               "url": "https://talent.alibaba.com/campus/position-list?lang=zh&keywords=Agent",
               "postedDate": "2026-11-18",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             },
             {
               "title": "阿里云 Qwen/通义 AI Agent 应用实习生",
               "url": "https://talent.alibaba.com/campus/position-list?lang=zh&keywords=Agent",
               "postedDate": "2026-11-20",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -134,13 +136,15 @@ window.JOBS_DATA = {
               "title": "2027届 AI应用研发工程师（Agent方向）",
               "url": "https://talent.alibaba.com/campus/position-list?lang=zh&keywords=Agent",
               "postedDate": "2026-10-28",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             },
             {
               "title": "Agent Infra 基础设施研发工程师",
               "url": "https://talent.alibaba.com/campus/position-list?lang=zh&keywords=Agent",
               "postedDate": "2026-11-05",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -189,7 +193,8 @@ window.JOBS_DATA = {
               "title": "AI应用后端与架构研发实习生（杭州/上海）",
               "url": "https://talent.antgroup.com/campus-full-list?keywords=Agent",
               "postedDate": "2026-11-12",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -206,7 +211,8 @@ window.JOBS_DATA = {
               "title": "2027届 支付宝AI应用与Agent研发工程师",
               "url": "https://talent.antgroup.com/campus-full-list?keywords=Agent",
               "postedDate": "2026-10-20",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -256,13 +262,15 @@ window.JOBS_DATA = {
               "title": "AI Agent全栈研发实习生 - 开发者服务（A172769A）",
               "url": "https://jobs.bytedance.com/campus/position?keywords=A172769A",
               "postedDate": "2026-11-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "jd"
             },
             {
               "title": "AI Agent全栈工程师实习生 - 中国交易与广告（杭州）",
               "url": "https://jobs.bytedance.com/campus/position?keywords=Agent",
               "postedDate": "2026-11-19",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -274,7 +282,8 @@ window.JOBS_DATA = {
               "title": "ByteDance Seed Early Career 实习（面向2027.9及以后毕业）",
               "url": "https://seed.bytedance.com/zh/seedearlycareer",
               "postedDate": "2026-11-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "jd"
             }
           ]
         },
@@ -286,13 +295,15 @@ window.JOBS_DATA = {
               "title": "2027届 大语言模型Agent全栈开发工程师（A173843·杭州）",
               "url": "https://jobs.bytedance.com/campus/position?keywords=A173843",
               "postedDate": "2026-11-06",
-              "status": "open"
+              "status": "open",
+              "linkType": "jd"
             },
             {
               "title": "Agent工程师（AI Coding方向·杭州）",
               "url": "https://jobs.bytedance.com/campus/position?keywords=Agent",
               "postedDate": "2026-11-14",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -343,13 +354,15 @@ window.JOBS_DATA = {
               "title": "Agent 产品研发实习生（上海·职位20736）",
               "url": "https://job.xiaohongshu.com/campus/intern/position/20736",
               "postedDate": "2026-11-17",
-              "status": "open"
+              "status": "open",
+              "linkType": "jd"
             },
             {
               "title": "企业智能部（Intelligence Lab）AI Agent 实习生",
               "url": "https://job.xiaohongshu.com/campus/intern",
               "postedDate": "2026-11-24",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -361,7 +374,8 @@ window.JOBS_DATA = {
               "title": "Ace 顶尖实习生计划 - AI Agent / Agent Infra 方向",
               "url": "https://job.xiaohongshu.com/campus/intern",
               "postedDate": "2026-11-02",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -373,13 +387,15 @@ window.JOBS_DATA = {
               "title": "2027校招 大模型Agent开发工程师（AI Coding方向）",
               "url": "https://job.xiaohongshu.com/campus/intern",
               "postedDate": "2026-10-30",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             },
             {
               "title": "2027校招 Agent平台全栈 / AI Agent Infra工程师",
               "url": "https://job.xiaohongshu.com/campus/intern",
               "postedDate": "2026-11-04",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -429,7 +445,8 @@ window.JOBS_DATA = {
               "title": "大模型应用 / 服务端研发日常实习生（上海）",
               "url": "https://careers.pddglobalhr.com/campus/intern",
               "postedDate": "2026-11-11",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -446,7 +463,8 @@ window.JOBS_DATA = {
               "title": "2027届 AI Agent 研发工程师（上海）",
               "url": "https://careers.pddglobalhr.com/campus/intern",
               "postedDate": "2026-10-29",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -493,7 +511,8 @@ window.JOBS_DATA = {
               "title": "AI应用开发实习生（上海）",
               "url": "https://zhaopin.meituan.com/web/campus",
               "postedDate": "2026-11-09",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -510,7 +529,8 @@ window.JOBS_DATA = {
               "title": "AI全栈工程师 / AI应用开发工程师（上海）",
               "url": "https://zhaopin.meituan.com/web/campus",
               "postedDate": "2026-10-22",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -559,7 +579,8 @@ window.JOBS_DATA = {
               "title": "CSIG/TEG 智能检索与Agent研发实习生（上海）",
               "url": "https://careers.tencent.com/search.html?keyword=Agent",
               "postedDate": "2026-11-13",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -576,13 +597,15 @@ window.JOBS_DATA = {
               "title": "游戏AI-大模型应用研发（Agentic Coding·上海）",
               "url": "https://careers.tencent.com/search.html?keyword=Agent",
               "postedDate": "2026-11-07",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             },
             {
               "title": "CSIG 腾讯云 Kinfra 智能检索与Agent研发（上海）",
               "url": "https://careers.tencent.com/search.html?keyword=Agent",
               "postedDate": "2026-11-16",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -629,7 +652,8 @@ window.JOBS_DATA = {
               "title": "Agent应用开发日常实习生（上海杨浦）",
               "url": "https://jobs.bilibili.com/campus/positions",
               "postedDate": "2026-11-05",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -646,7 +670,8 @@ window.JOBS_DATA = {
               "title": "2027届 Agent应用开发工程师（上海）",
               "url": "https://jobs.bilibili.com/campus/positions",
               "postedDate": "2026-10-18",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -694,7 +719,8 @@ window.JOBS_DATA = {
               "title": "AI Agent 应用后端研发实习生（上海长宁）",
               "url": "https://careers.trip.com/campus",
               "postedDate": "2026-11-03",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -711,7 +737,8 @@ window.JOBS_DATA = {
               "title": "AI Agent 应用开发工程师（Python/Go·MCP/LangGraph）",
               "url": "https://careers.trip.com/campus",
               "postedDate": "2026-11-12",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -761,7 +788,8 @@ window.JOBS_DATA = {
               "title": "效率工程部 AI应用开发实习生（杭州）",
               "url": "https://campus.163.com/app/job/position",
               "postedDate": "2026-11-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -778,7 +806,8 @@ window.JOBS_DATA = {
               "title": "集团EHR Java开发工程师（AI Agent方向·杭州）",
               "url": "https://campus.163.com/app/job/position",
               "postedDate": "2026-10-27",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -827,7 +856,8 @@ window.JOBS_DATA = {
               "title": "计算产品线昇腾 AI 开源实习生（上海/杭州）",
               "url": "https://career.huawei.com/reccampportal/portal5/campus-recruitment.html",
               "postedDate": "2026-11-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -844,7 +874,8 @@ window.JOBS_DATA = {
               "title": "华为云大模型应用与推理优化研发工程师（上海/杭州）",
               "url": "https://career.huawei.com/reccampportal/portal5/campus-recruitment.html",
               "postedDate": "2026-10-19",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -891,7 +922,8 @@ window.JOBS_DATA = {
               "title": "JoyAI Agent 大模型研发实习生（上海）",
               "url": "https://campus.jd.com/api/wx/position/index",
               "postedDate": "2026-11-14",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -908,7 +940,8 @@ window.JOBS_DATA = {
               "title": "Agent 大模型算法与工程研发（Coding/DeepResearch·上海）",
               "url": "https://campus.jd.com/api/wx/position/index",
               "postedDate": "2026-11-08",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -956,13 +989,15 @@ window.JOBS_DATA = {
               "title": "Agent 工程师实习生（J107185）",
               "url": "https://talent.baidu.com/jobs/detail/INTERN/48d0f3a9-e643-41c6-849f-1d2a4fcd5772",
               "postedDate": "2026-11-08",
-              "status": "open"
+              "status": "open",
+              "linkType": "jd"
             },
             {
               "title": "Agent 评测算法实习生（J106616·明确2028届及以后）",
               "url": "https://talent.baidu.com/jobs/detail/INTERN/4bd782af-7dc6-44c1-b02a-e31bb6bc7cb2",
               "postedDate": "2026-10-16",
-              "status": "open"
+              "status": "open",
+              "linkType": "jd"
             }
           ]
         },
@@ -979,7 +1014,8 @@ window.JOBS_DATA = {
               "title": "千帆大模型平台应用开发工程师（上海）",
               "url": "https://talent.baidu.com/jobs/list?recruitType=INTERN",
               "postedDate": "2026-11-01",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1035,7 +1071,8 @@ window.JOBS_DATA = {
               "title": "大模型与AIGC应用开发（校招/正式）",
               "url": "https://campus.kuaishou.cn/recruit/campus/e/#/campus/jobs?name=AI",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1084,7 +1121,8 @@ window.JOBS_DATA = {
               "title": "LLM应用工程（日常实习）",
               "url": "https://jobs.careers.microsoft.com/global/en/search?q=AI%20Agent&lc=Shanghai%2C%20China",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1101,7 +1139,8 @@ window.JOBS_DATA = {
               "title": "LLM应用工程（校招/正式）",
               "url": "https://jobs.careers.microsoft.com/global/en/search?q=AI%20Agent&lc=Shanghai%2C%20China",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1149,7 +1188,8 @@ window.JOBS_DATA = {
               "title": "Cloud Developer（Business AI）（日常实习）",
               "url": "https://jobs.sap.com/search/?q=AI&locationsearch=Shanghai",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1166,7 +1206,8 @@ window.JOBS_DATA = {
               "title": "Cloud Developer（Business AI）（校招/正式）",
               "url": "https://jobs.sap.com/search/?q=AI&locationsearch=Shanghai",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1213,7 +1254,8 @@ window.JOBS_DATA = {
               "title": "SDE（Bedrock与Agent编排工具）（日常实习）",
               "url": "https://www.amazon.jobs/en/search?base_query=AI+Agent&loc_query=Shanghai%2C+China",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1230,7 +1272,8 @@ window.JOBS_DATA = {
               "title": "SDE（Bedrock与Agent编排工具）（校招/正式）",
               "url": "https://www.amazon.jobs/en/search?base_query=AI+Agent&loc_query=Shanghai%2C+China",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1277,7 +1320,8 @@ window.JOBS_DATA = {
               "title": "AI Infra工程师（日常实习）",
               "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite?q=AI",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1294,7 +1338,8 @@ window.JOBS_DATA = {
               "title": "AI Infra工程师（校招/正式）",
               "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite?q=AI",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1341,7 +1386,8 @@ window.JOBS_DATA = {
               "title": "软件工程师（AI/LLM方向）（日常实习）",
               "url": "https://jobs.ebayinc.com/us/en/search-results?keywords=AI&location=Shanghai",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1358,7 +1404,8 @@ window.JOBS_DATA = {
               "title": "软件工程师（AI/LLM方向）（校招/正式）",
               "url": "https://jobs.ebayinc.com/us/en/search-results?keywords=AI&location=Shanghai",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1405,7 +1452,8 @@ window.JOBS_DATA = {
               "title": "AI/ML Engineering（日常实习）",
               "url": "https://paypal.eightfold.ai/careers?query=AI&location=Shanghai",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1422,7 +1470,8 @@ window.JOBS_DATA = {
               "title": "AI/ML Engineering（校招/正式）",
               "url": "https://paypal.eightfold.ai/careers?query=AI&location=Shanghai",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1470,13 +1519,15 @@ window.JOBS_DATA = {
               "title": "Agent 系统工程实习生（AI Infra·上海）",
               "url": "https://vrfi1sk8a0.jobs.feishu.cn/379481/position/7685277183518427419/detail",
               "postedDate": "2026-11-19",
-              "status": "open"
+              "status": "open",
+              "linkType": "jd"
             },
             {
               "title": "AI System 研发实习生（明确覆盖2028届及以后·上海）",
               "url": "https://www.minimax.cn/careers",
               "postedDate": "2026-11-24",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1488,7 +1539,8 @@ window.JOBS_DATA = {
               "title": "2028届实习通道入口（投递前请核对具体岗位标签）",
               "url": "https://www.minimax.cn/careers",
               "postedDate": "2026-11-19",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1500,7 +1552,8 @@ window.JOBS_DATA = {
               "title": "AI 服务端工程师（Agent / AI App·上海）",
               "url": "https://www.minimax.cn/careers",
               "postedDate": "2026-11-18",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1546,7 +1599,8 @@ window.JOBS_DATA = {
               "title": "Agent开发工程师（日常实习）",
               "url": "https://app.mokahr.com/campus-recruitment/step/141903#/jobs",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1563,7 +1617,8 @@ window.JOBS_DATA = {
               "title": "Agent开发工程师（校招/正式）",
               "url": "https://app.mokahr.com/campus-recruitment/step/141903#/jobs",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1611,7 +1666,8 @@ window.JOBS_DATA = {
               "title": "大模型应用开发工程师/实习生（日常实习）",
               "url": "https://hr.sensetime.com/campus",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1628,7 +1684,8 @@ window.JOBS_DATA = {
               "title": "大模型应用开发工程师/实习生（校招/正式）",
               "url": "https://hr.sensetime.com/campus",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1675,7 +1732,8 @@ window.JOBS_DATA = {
               "title": "AI搜索系统研发（日常实习）",
               "url": "https://www.zhipin.com/gongsi/c21348fc4e8b3bc11nV53Ny5GA~~.html",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1692,7 +1750,8 @@ window.JOBS_DATA = {
               "title": "AI搜索系统研发（校招/正式）",
               "url": "https://www.zhipin.com/gongsi/c21348fc4e8b3bc11nV53Ny5GA~~.html",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1742,7 +1801,8 @@ window.JOBS_DATA = {
               "title": "Agent Harness 研究实习生（上海/杭州）",
               "url": "https://infinigence.feishu.cn/m/jobs",
               "postedDate": "2026-11-16",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1759,7 +1819,8 @@ window.JOBS_DATA = {
               "title": "2027届 Golang后端 / 推理框架开发工程师",
               "url": "https://infinigence.feishu.cn/m/jobs",
               "postedDate": "2026-10-28",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1806,7 +1867,8 @@ window.JOBS_DATA = {
               "title": "服务端开发实习生（AI应用/妙想大模型方向·上海）",
               "url": "https://career.eastmoney.com/",
               "postedDate": "2026-11-12",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1823,7 +1885,8 @@ window.JOBS_DATA = {
               "title": "EASTstar-服务端开发工程师（AI应用开发方向·上海）",
               "url": "https://career.eastmoney.com/",
               "postedDate": "2026-11-03",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1860,7 +1923,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "科创板上市基础软件厂，拥有分布式向量数据库、LLMOps平台与企业级AI智能体（TKH）。",
       "matchLevel": "高匹配",
-      "officialUrl": "https://transwarp.mokahr.com/campus-recruitment/transwarp",
+      "officialUrl": "https://app.mokahr.com/campus_apply/transwarp",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -1869,9 +1932,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "智能体开发工程师（日常实习）",
-              "url": "https://transwarp.mokahr.com/campus-recruitment/transwarp",
+              "url": "https://app.mokahr.com/campus_apply/transwarp",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1886,9 +1950,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "智能体开发工程师（校招/正式）",
-              "url": "https://transwarp.mokahr.com/campus-recruitment/transwarp",
+              "url": "https://app.mokahr.com/campus_apply/transwarp",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -1936,7 +2001,8 @@ window.JOBS_DATA = {
               "title": "AI应用服务端开发（日常实习）",
               "url": "https://intsig.zhiye.com/campus/jobs",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -1953,7 +2019,8 @@ window.JOBS_DATA = {
               "title": "AI应用服务端开发（校招/正式）",
               "url": "https://intsig.zhiye.com/campus/jobs",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2001,7 +2068,8 @@ window.JOBS_DATA = {
               "title": "大模型研发工程师（日常实习）",
               "url": "https://www.zhipin.com/gongsi/d7655073117466cf1HZ92di_gA~~.html",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2018,7 +2086,8 @@ window.JOBS_DATA = {
               "title": "大模型研发工程师（校招/正式）",
               "url": "https://www.zhipin.com/gongsi/d7655073117466cf1HZ92di_gA~~.html",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2064,7 +2133,8 @@ window.JOBS_DATA = {
               "title": "LLM Agent应用开发（日常实习）",
               "url": "https://aispeech.zhiye.com/Campus",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2081,7 +2151,8 @@ window.JOBS_DATA = {
               "title": "LLM Agent应用开发（校招/正式）",
               "url": "https://aispeech.zhiye.com/Campus",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2129,13 +2200,15 @@ window.JOBS_DATA = {
               "title": "AI Agent 开发实习生（VAS 整车应用软件中心·上海）",
               "url": "https://campus.nio.com/",
               "postedDate": "2026-11-16",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             },
             {
               "title": "智能工艺开发（AI Agent）实习生（上海嘉定）",
               "url": "https://campus.nio.com/",
               "postedDate": "2026-11-11",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2152,7 +2225,8 @@ window.JOBS_DATA = {
               "title": "大模型应用与座舱智能体研发工程师（上海）",
               "url": "https://campus.nio.com/",
               "postedDate": "2026-10-21",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2200,7 +2274,8 @@ window.JOBS_DATA = {
               "title": "数据与智能体开发工程师（日常实习）",
               "url": "https://www.lixiang.com/employ/campus/list.html",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2217,7 +2292,8 @@ window.JOBS_DATA = {
               "title": "数据与智能体开发工程师（校招/正式）",
               "url": "https://www.lixiang.com/employ/campus/list.html",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2263,7 +2339,8 @@ window.JOBS_DATA = {
               "title": "车载Agent与座舱大模型研发（日常实习）",
               "url": "https://xiaopeng.zhiye.com/campus",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2280,7 +2357,8 @@ window.JOBS_DATA = {
               "title": "车载Agent与座舱大模型研发（校招/正式）",
               "url": "https://xiaopeng.zhiye.com/campus",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2326,7 +2404,8 @@ window.JOBS_DATA = {
               "title": "Smart Agent研发（日常实习）",
               "url": "https://campus.hellobike.com/",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2343,7 +2422,8 @@ window.JOBS_DATA = {
               "title": "Smart Agent研发（校招/正式）",
               "url": "https://campus.hellobike.com/",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2391,7 +2471,8 @@ window.JOBS_DATA = {
               "title": "大模型应用开发工程师（日常实习）",
               "url": "https://campus.dewu.com/",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2408,7 +2489,8 @@ window.JOBS_DATA = {
               "title": "大模型应用开发工程师（校招/正式）",
               "url": "https://campus.dewu.com/",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2455,7 +2537,8 @@ window.JOBS_DATA = {
               "title": "Agent系统开发工程师（日常实习）",
               "url": "https://www.zhipin.com/gongsi/e79e6cb443329f631XR429-0.html",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2472,7 +2555,8 @@ window.JOBS_DATA = {
               "title": "Agent系统开发工程师（校招/正式）",
               "url": "https://www.zhipin.com/gongsi/e79e6cb443329f631XR429-0.html",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2518,7 +2602,8 @@ window.JOBS_DATA = {
               "title": "大模型应用与工程开发（日常实习）",
               "url": "https://join.yuewen.com/",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2535,7 +2620,8 @@ window.JOBS_DATA = {
               "title": "大模型应用与工程开发（校招/正式）",
               "url": "https://join.yuewen.com/",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2582,7 +2668,8 @@ window.JOBS_DATA = {
               "title": "后端开发（AI方向）（日常实习）",
               "url": "https://ddmcxz.zhiye.com/",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2599,7 +2686,8 @@ window.JOBS_DATA = {
               "title": "后端开发（AI方向）（校招/正式）",
               "url": "https://ddmcxz.zhiye.com/",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2646,7 +2734,8 @@ window.JOBS_DATA = {
               "title": "AI研发工程师（Agent研发管线）（日常实习）",
               "url": "https://jobs.mihoyo.com/#/campus/position",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2663,7 +2752,8 @@ window.JOBS_DATA = {
               "title": "AI研发工程师（Agent研发管线）（校招/正式）",
               "url": "https://jobs.mihoyo.com/#/campus/position",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2711,7 +2801,8 @@ window.JOBS_DATA = {
               "title": "Agent 开发实习生（杭州余杭/西湖·支持转正）",
               "url": "https://job.10jqka.com.cn/",
               "postedDate": "2026-11-17",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2728,7 +2819,8 @@ window.JOBS_DATA = {
               "title": "金融 Agent 开发工程师（AIME 专项·杭州）",
               "url": "https://job.10jqka.com.cn/",
               "postedDate": "2026-11-05",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2777,7 +2869,8 @@ window.JOBS_DATA = {
               "title": "AI应用与Agent开发实习生（杭州/上海）",
               "url": "https://campus.hundsun.com/",
               "postedDate": "2026-11-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2794,7 +2887,8 @@ window.JOBS_DATA = {
               "title": "2027届 AI应用开发工程师（光子大模型/Agent）",
               "url": "https://campus.hundsun.com/",
               "postedDate": "2026-10-26",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2850,7 +2944,8 @@ window.JOBS_DATA = {
               "title": "全栈开发工程师（AI Agent方向）（校招/正式）",
               "url": "https://www.zhipin.com/gongsi/e74a815777df4c981nZ529y9.html",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2898,7 +2993,8 @@ window.JOBS_DATA = {
               "title": "AI Agent开发（日常实习）",
               "url": "https://campushr.hikvision.com/",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2915,7 +3011,8 @@ window.JOBS_DATA = {
               "title": "AI Agent开发（校招/正式）",
               "url": "https://campushr.hikvision.com/",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -2963,7 +3060,8 @@ window.JOBS_DATA = {
               "title": "AI应用开发工程师（日常实习）",
               "url": "https://job.dahuatech.com/",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -2980,7 +3078,8 @@ window.JOBS_DATA = {
               "title": "AI应用开发工程师（校招/正式）",
               "url": "https://job.dahuatech.com/",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3028,7 +3127,8 @@ window.JOBS_DATA = {
               "title": "AI应用与测试开发实习生（杭州）",
               "url": "https://job.ezviz.com/",
               "postedDate": "2026-11-09",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3045,7 +3145,8 @@ window.JOBS_DATA = {
               "title": "测试开发工程师-AI（Agent框架/ReAct/MCP·杭州）",
               "url": "https://job.ezviz.com/",
               "postedDate": "2026-11-14",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3081,7 +3182,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "车机端智能体（Eva）、AI OS交互及企业内部Data Agent、Text-to-SQL工作流落地。",
       "matchLevel": "中匹配",
-      "officialUrl": "https://campus.zeekrlife.com/",
+      "officialUrl": "https://campus.geely.com/",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3090,9 +3191,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "智能座舱大模型应用/Agent开发（日常实习）",
-              "url": "https://campus.zeekrlife.com/",
+              "url": "https://campus.geely.com/",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3107,9 +3209,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "智能座舱大模型应用/Agent开发（校招/正式）",
-              "url": "https://campus.zeekrlife.com/",
+              "url": "https://campus.geely.com/",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3155,7 +3258,8 @@ window.JOBS_DATA = {
               "title": "世界模型 / 座舱 AI 应用实习生（杭州滨江）",
               "url": "https://leapmotor.zhiye.com/campus",
               "postedDate": "2026-11-11",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3172,7 +3276,8 @@ window.JOBS_DATA = {
               "title": "座舱 AI 大模型应用工程师（杭州）",
               "url": "https://leapmotor.zhiye.com/campus",
               "postedDate": "2026-10-12",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3207,7 +3312,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "将RPA流程自动化与大模型、AI Agent深度融合，极客文化浓、重Python自动化落地。",
       "matchLevel": "高匹配",
-      "officialUrl": "https://www.yingdao.com/joinus",
+      "officialUrl": "https://www.zhipin.com/gongsi/a6064d7c66dc8b091nd43ty_Fw~~.html",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3216,9 +3321,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "RPA / AI 开发实习生（杭州·可转正）",
-              "url": "https://www.yingdao.com/joinus",
+              "url": "https://www.zhipin.com/gongsi/a6064d7c66dc8b091nd43ty_Fw~~.html",
               "postedDate": "2026-11-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3233,9 +3339,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "2027届 RPA/AI 开发工程师（杭州）",
-              "url": "https://www.yingdao.com/joinus",
+              "url": "https://www.zhipin.com/gongsi/a6064d7c66dc8b091nd43ty_Fw~~.html",
               "postedDate": "2026-10-20",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3271,7 +3378,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "国产IPA（智能流程自动化）与AI Agent代表企业，核心产品聚焦大模型数字员工与工作流。",
       "matchLevel": "高匹配",
-      "officialUrl": "https://www.ai-indeed.com/joinus",
+      "officialUrl": "https://www.zhipin.com/gongsi/a4c92976ebcb0e891nF43t-0GA~~.html",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3280,9 +3387,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "Agent架构师（日常实习）",
-              "url": "https://www.ai-indeed.com/joinus",
+              "url": "https://www.zhipin.com/gongsi/a4c92976ebcb0e891nF43t-0GA~~.html",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3297,9 +3405,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "Agent架构师（校招/正式）",
-              "url": "https://www.ai-indeed.com/joinus",
+              "url": "https://www.zhipin.com/gongsi/a4c92976ebcb0e891nF43t-0GA~~.html",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3335,7 +3444,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "空间大模型、3D生成与工业数字孪生中的AI工程化与自动化工作流建设。",
       "matchLevel": "中匹配",
-      "officialUrl": "https://www.kujiale.com/careers",
+      "officialUrl": "https://app.mokahr.com/campus_apply/qunhemail/2832#/jobs",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3344,9 +3453,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "AI Infra/研发工程师（日常实习）",
-              "url": "https://www.kujiale.com/careers",
+              "url": "https://app.mokahr.com/campus_apply/qunhemail/2832#/jobs",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3361,9 +3471,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "AI Infra/研发工程师（校招/正式）",
-              "url": "https://www.kujiale.com/careers",
+              "url": "https://app.mokahr.com/campus_apply/qunhemail/2832#/jobs",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3409,7 +3520,8 @@ window.JOBS_DATA = {
               "title": "Python 开发实习生 / 多模态 LLM 训练实习生（杭州滨江）",
               "url": "https://www.arcsoft.com.cn/job/JobList.html",
               "postedDate": "2026-11-14",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3426,7 +3538,8 @@ window.JOBS_DATA = {
               "title": "2027届 AIGC / 多模态大模型研发工程师（杭州）",
               "url": "https://www.arcsoft.com.cn/job/JobList.html",
               "postedDate": "2026-10-18",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3462,7 +3575,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "聚焦AI+AR眼镜与AI-Native UI本地智能体框架。",
       "matchLevel": "中匹配",
-      "officialUrl": "https://rokid.jobs.feishu.cn/",
+      "officialUrl": "https://www.liepin.com/company/9233630/",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3471,9 +3584,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "AIUI本地智能体开发（日常实习）",
-              "url": "https://rokid.jobs.feishu.cn/",
+              "url": "https://www.liepin.com/company/9233630/",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3488,9 +3602,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "AIUI本地智能体开发（校招/正式）",
-              "url": "https://rokid.jobs.feishu.cn/",
+              "url": "https://www.liepin.com/company/9233630/",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3538,7 +3653,8 @@ window.JOBS_DATA = {
               "title": "AI 开发实习生（杭州西湖·可转正）",
               "url": "https://job.tuya.com/",
               "postedDate": "2026-11-13",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3555,7 +3671,8 @@ window.JOBS_DATA = {
               "title": "AI 应用开发工程师（杭州）",
               "url": "https://job.tuya.com/",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3591,7 +3708,7 @@ window.JOBS_DATA = {
       ],
       "highlights": "积极推进AI Native战略，高频举办Agent黑客松，落地商家经营AI与GEO工具。",
       "matchLevel": "高匹配",
-      "officialUrl": "https://www.youzan.com/intro/join",
+      "officialUrl": "https://www.zhipin.com/gongsi/c713b194fb8479e41XR92d24.html",
       "lastChecked": "2026-11-24",
       "channels": {
         "daily": {
@@ -3600,9 +3717,10 @@ window.JOBS_DATA = {
           "openings": [
             {
               "title": "Agent 全栈开发实习生（杭州西溪·可转正）",
-              "url": "https://www.youzan.com/intro/join",
+              "url": "https://www.zhipin.com/gongsi/c713b194fb8479e41XR92d24.html",
               "postedDate": "2026-11-18",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3657,7 +3775,8 @@ window.JOBS_DATA = {
               "title": "临床决策AI研发（日常实习）",
               "url": "https://www.zhipin.com/gongsi/1297d0257ef8cda41nx53tq-",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3674,7 +3793,8 @@ window.JOBS_DATA = {
               "title": "临床决策AI研发（校招/正式）",
               "url": "https://www.zhipin.com/gongsi/1297d0257ef8cda41nx53tq-",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }
@@ -3771,7 +3891,8 @@ window.JOBS_DATA = {
               "title": "AI Agent应用开发工程师（日常实习）",
               "url": "https://campus.iflytek.com/",
               "postedDate": "2026-10-15",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         },
@@ -3788,7 +3909,8 @@ window.JOBS_DATA = {
               "title": "AI Agent应用开发工程师（校招/正式）",
               "url": "https://campus.iflytek.com/",
               "postedDate": "2026-10-10",
-              "status": "open"
+              "status": "open",
+              "linkType": "portal"
             }
           ]
         }

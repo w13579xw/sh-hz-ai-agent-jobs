@@ -435,6 +435,15 @@
       color: #c2410c;
       font-weight: 700;
     }
+    .link-type-pill {
+      flex-shrink: 0;
+      font-size: 10.5px;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .link-type-jd { background: #dcfce7; color: #15803d; }
+    .link-type-portal { background: #e2e8f0; color: #475569; }
 
     .status-list { display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; }
     .status-row { display: flex; gap: 8px; align-items: baseline; line-height: 1.45; }
@@ -894,15 +903,22 @@
     }
 
     function renderOpeningsHtml(openings, showChannelTag) {
-      return openings.map(o => `
+      return openings.map(o => {
+        const isJd = o.linkType === "jd";
+        const typeBadge = isJd
+          ? `<span class="link-type-pill link-type-jd" title="直达具体岗位详情页或职位ID">直达JD</span>`
+          : `<span class="link-type-pill link-type-portal" title="直达企业官方招聘职位列表页，进入后搜索岗位名即可">职位列表</span>`;
+        return `
         <div class="opening-item">
           <div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap">
             ${showChannelTag ? `<span class="ch-badge ${channelBadgeClass(o.channelLabel)}">${o.channelLabel}</span>` : ""}
+            ${typeBadge}
             <a class="opening-link" href="${escapeHtml(o.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(o.title)} ↗</a>
           </div>
           ${renderDatePill(o.postedDate)}
         </div>
-      `).join("");
+      `;
+      }).join("");
     }
 
     function renderChannelSummaryText(ch) {
