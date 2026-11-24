@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>沪杭 AI 应用开发实习与校招岗位雷达</title>
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --surface: #ffffff;
+      --surface-soft: #f8fafc;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --primary: #2563eb;
+      --primary-light: #eff6ff;
+      --primary-border: #bfdbfe;
+      --shanghai: #0284c7;
+      --shanghai-bg: #e0f2fe;
+      --hangzhou: #0d9488;
+      --hangzhou-bg: #ccfbf1;
+      --match: #d97706;
+      --match-bg: #fef3c7;
+      --success: #15803d;
+      --success-bg: #dcfce7;
+      --danger: #dc2626;
+      --danger-bg: #fee2e2;
+      --purple: #7c3aed;
+      --purple-bg: #f3e8ff;
+      --radius: 14px;
+      --shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+      --shadow-hover: 0 10px 26px rgba(37, 99, 235, 0.1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      padding-bottom: 60px;
+    }
+
+    .container {
+      max-width: 1340px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #0f766e 100%);
+      color: #fff;
+      padding: 30px 24px 26px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.18);
+    }
+
+    .hero-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .hero-sub { font-size: 14px; color: rgba(255, 255, 255, 0.84); }
+
+    .update-badge {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      backdrop-filter: blur(8px);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 12.5px;
+      color: #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .update-badge strong { color: #fff; font-weight: 600; }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+      gap: 12px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      padding: 13px 16px;
+    }
+    .stat-label { font-size: 12px; color: rgba(255, 255, 255, 0.78); margin-bottom: 4px; }
+    .stat-value { font-size: 24px; font-weight: 700; color: #fff; }
+
+    /* Changelog Box */
+    .changelog-panel {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 14px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .changelog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .changelog-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .changelog-date {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--surface-soft);
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+
+    .changelog-toggle {
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid var(--primary-border);
+      border-radius: 7px;
+      padding: 4px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .changelog-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 820px) {
+      .changelog-grid { grid-template-columns: 1fr; }
+    }
+
+    .change-col {
+      background: var(--surface-soft);
+      border: 1px solid #eef2f7;
+      border-radius: 9px;
+      padding: 10px 12px;
+      font-size: 12.5px;
+    }
+
+    .change-col-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+      font-size: 12.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .change-col-title.added { color: var(--success); }
+    .change-col-title.closed { color: var(--danger); }
+
+    .change-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .change-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      line-height: 1.45;
+      color: var(--text-secondary);
+    }
+
+    .change-list a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .change-list a:hover { text-decoration: underline; }
+
+    .changelog-history {
+      display: none;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+      font-size: 12.5px;
+      color: var(--text-secondary);
+    }
+    .changelog-history.open { display: block; }
+
+    .ch-badge {
+      flex-shrink: 0;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+    .ch-daily { background: var(--success-bg); color: var(--success); }
+    .ch-summer { background: var(--primary-light); color: var(--primary); }
+    .ch-campus { background: var(--purple-bg); color: var(--purple); }
+
+    /* Filter Panel */
+    .filter-panel {
+      margin-top: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .region-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+
+    .tab-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .group-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-right: 2px;
+    }
+
+    .pill-btn {
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--text-secondary);
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.16s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .pill-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+    .pill-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
+    }
+
+    .pill-btn.recent-btn.active {
+      background: #ea580c;
+      border-color: #ea580c;
+      box-shadow: 0 3px 10px rgba(234, 88, 12, 0.25);
+    }
+
+    .pill-btn .count {
+      background: rgba(15, 23, 42, 0.08);
+      padding: 1px 6px;
+      border-radius: 999px;
+      font-size: 11px;
+    }
+    .pill-btn.active .count { background: rgba(255, 255, 255, 0.24); color: #fff; }
+
+    .controls-row {
+      display: grid;
+      grid-template-columns: 2fr 1.1fr 1.2fr 1fr 0.85fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    @media (max-width: 980px) { .controls-row { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .controls-row { grid-template-columns: 1fr; } }
+
+    .input-box, .select-box {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font-size: 13.5px;
+      background: var(--surface-soft);
+      color: var(--text);
+      outline: none;
+    }
+    .input-box:focus, .select-box:focus { border-color: var(--primary); background: #fff; }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      margin-bottom: 12px;
+      gap: 10px;
+    }
+
+    .result-info { font-size: 13.5px; color: var(--text-secondary); }
+    .result-info strong { color: var(--primary); font-size: 16px; }
+    .filter-hint { font-size: 12px; color: var(--text-muted); margin-left: 8px; }
+
+    .toolbar-actions { display: flex; gap: 8px; align-items: center; }
+
+    .action-btn {
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-secondary);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .action-btn.active { background: var(--primary-light); color: var(--primary); border-color: var(--primary-border); }
+    .action-btn:hover { border-color: var(--primary); }
+
+    /* Cards */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(395px, 1fr));
+      gap: 16px;
+    }
+    @media (max-width: 480px) { .cards-grid { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); border-color: var(--primary-border); }
+
+    .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .company-name { font-size: 17px; font-weight: 700; color: var(--text); line-height: 1.3; }
+    .company-sub { font-size: 12.5px; color: var(--text-muted); margin-top: 3px; }
+
+    .badges { display: flex; flex-wrap: wrap; gap: 5px; justify-content: flex-end; flex-shrink: 0; }
+    .badge { padding: 2px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 600; white-space: nowrap; }
+    .badge-sh { background: var(--shanghai-bg); color: var(--shanghai); }
+    .badge-hz { background: var(--hangzhou-bg); color: var(--hangzhou); }
+    .badge-match { background: var(--match-bg); color: var(--match); }
+
+    .roles-box {
+      font-size: 13px;
+      color: var(--text);
+      background: var(--surface-soft);
+      border-radius: 8px;
+      padding: 8px 10px;
+      border: 1px solid #eef2f7;
+    }
+
+    /* Specific Openings List (when filtered by channel or recent) */
+    .openings-box {
+      background: #f8fafc;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .openings-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .opening-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 8px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 7px;
+      font-size: 12.5px;
+    }
+    .opening-link {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.35;
+    }
+    .opening-link:hover { text-decoration: underline; }
+
+    .date-pill {
+      flex-shrink: 0;
+      font-size: 11px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .date-pill.fresh {
+      background: #ffedd5;
+      color: #c2410c;
+      font-weight: 700;
+    }
+
+    .status-list { display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; }
+    .status-row { display: flex; gap: 8px; align-items: baseline; line-height: 1.45; }
+    .status-tag {
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 5px;
+      width: 58px;
+      text-align: center;
+    }
+    .tag-daily { background: var(--success-bg); color: var(--success); }
+    .tag-summer { background: var(--primary-light); color: var(--primary); }
+    .tag-campus { background: var(--purple-bg); color: var(--purple); }
+    .state-closed { color: var(--danger); font-weight: 600; }
+
+    .highlights { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tech-tag {
+      font-size: 11.5px;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #e2e8f0;
+      cursor: pointer;
+    }
+    .tech-tag:hover { background: var(--primary-light); color: var(--primary); border-color: var(--primary-border); }
+
+    .card-footer {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .progress-select {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--text);
+      cursor: pointer;
+    }
+    .progress-select[data-state="已投递"] { background: #eff6ff; border-color: #93c5fd; color: #1d4ed8; }
+    .progress-select[data-state="面试中"] { background: #fef3c7; border-color: #fcd34d; color: #b45309; }
+    .progress-select[data-state="已拿Offer"] { background: #dcfce7; border-color: #86efac; color: #15803d; }
+
+    .official-link {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .official-link:hover { text-decoration: underline; }
+
+    /* Table View */
+    .table-wrap {
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+      box-shadow: var(--shadow);
+    }
+    .table-wrap.active { display: block; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 960px; }
+    thead th {
+      background: #f1f5f9;
+      color: var(--text);
+      font-weight: 700;
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    tbody td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text-secondary);
+    }
+    tbody tr:hover { background: #f8fafc; }
+
+    .tbl-opening-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 50px 20px;
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      color: var(--text-muted);
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-top">
+        <div>
+          <h1 id="pageTitle">沪杭 AI 应用开发实习与校招岗位雷达</h1>
+          <div class="hero-sub" id="pageSubtitle">面向 2028 届计算机硕士 · 覆盖上海 / 杭州 57 家大厂、外企与中厂</div>
+        </div>
+        <div class="update-badge">
+          <div>最近更新：<strong id="updatedAt">-</strong></div>
+          <div>自动巡检：<strong id="nextAutoUpdate">每日 03:00 (Asia/Shanghai)</strong></div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">覆盖企业总数</div>
+          <div class="stat-value" id="statTotal">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">上海地区企业</div>
+          <div class="stat-value" id="statSH">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">杭州地区企业</div>
+          <div class="stat-value" id="statHZ">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">近 30 天上线企业</div>
+          <div class="stat-value" id="statRecent">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">我的已投递 / 面试</div>
+          <div class="stat-value" id="statTracked">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 最新动态（区分新增与已停招，区分日常/暑期/秋招） -->
+    <section class="changelog-panel">
+      <div class="changelog-header">
+        <div class="changelog-title">
+          📢 最新岗位动态
+          <span class="changelog-date" id="latestLogDate">-</span>
+        </div>
+        <button class="changelog-toggle" id="toggleLogBtn">查看历史巡检记录</button>
+      </div>
+      <div class="changelog-grid" id="latestLogGrid"></div>
+      <div class="changelog-history" id="changelogHistory"></div>
+    </section>
+
+    <!-- 筛选面板 -->
+    <section class="filter-panel">
+      <div class="region-row">
+        <div class="tab-group" id="regionTabs">
+          <span class="group-label">地区：</span>
+          <button class="pill-btn active" data-region="all">全部 <span class="count" id="cntAll">0</span></button>
+          <button class="pill-btn" data-region="上海">上海 <span class="count" id="cntSH">0</span></button>
+          <button class="pill-btn" data-region="杭州">杭州 <span class="count" id="cntHZ">0</span></button>
+          <button class="pill-btn" data-region="双城">沪杭双城 <span class="count" id="cntBoth">0</span></button>
+        </div>
+
+        <div class="tab-group" id="recruitTabs">
+          <span class="group-label">通道：</span>
+          <button class="pill-btn active" data-recruit="all">全部 <span class="count" id="cntChAll">0</span></button>
+          <button class="pill-btn" data-recruit="daily">日常实习 <span class="count" id="cntChDaily">0</span></button>
+          <button class="pill-btn" data-recruit="summer">暑期实习 <span class="count" id="cntChSummer">0</span></button>
+          <button class="pill-btn" data-recruit="campus">秋招 <span class="count" id="cntChCampus">0</span></button>
+          <button class="pill-btn recent-btn" id="recentOnlyBtn">🔥 近30天上线 <span class="count" id="cntRecent">0</span></button>
+        </div>
+      </div>
+
+      <div class="controls-row">
+        <input type="text" id="searchInput" class="input-box" placeholder="搜索公司、具体岗位名、技术栈（如 MCP、LangGraph、Spring AI、RAG、OCR）..." />
+        <select id="categoryFilter" class="select-box">
+          <option value="all">全部企业类型</option>
+          <option value="国内一线大厂">国内一线大厂</option>
+          <option value="外企研发中心">外企研发中心</option>
+          <option value="上海中厂与独角兽">上海中厂与独角兽</option>
+          <option value="杭州中厂与垂类龙头">杭州中厂与垂类龙头</option>
+        </select>
+        <select id="matchFilter" class="select-box">
+          <option value="all">全部匹配度</option>
+          <option value="高匹配">仅看高匹配（OCR/图谱/工作流）</option>
+        </select>
+        <select id="progressFilter" class="select-box">
+          <option value="all">全部投递进度</option>
+          <option value="未投递">未投递</option>
+          <option value="已投递">已投递</option>
+          <option value="面试中">面试中</option>
+          <option value="已拿Offer">已拿Offer</option>
+        </select>
+        <button class="action-btn" id="resetBtn">重置筛选</button>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="result-info">
+        当前命中 <strong id="filteredCount">0</strong> 家企业
+        <span class="filter-hint" id="filterModeHint">当前显示全部通道（点击具体通道可自动过滤已停招/未开启企业，并直达可投岗位）</span>
+      </div>
+      <div class="toolbar-actions">
+        <button class="action-btn active" id="viewCardsBtn">卡片视图</button>
+        <button class="action-btn" id="viewTableBtn">表格视图</button>
+        <button class="action-btn" id="exportCsvBtn">导出 CSV</button>
+      </div>
+    </div>
+
+    <section class="cards-grid" id="cardsGrid"></section>
+
+    <section class="table-wrap" id="tableWrap">
+      <table>
+        <thead id="tableHead"></thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="./data.js"></script>
+  <script>
+    const STORAGE_KEY = "ai_agent_jobs_progress_v1";
+    const data = window.JOBS_DATA || { meta: {}, changelog: [], companies: [] };
+    const companies = data.companies || [];
+
+    const CHANNEL_LABELS = {
+      daily: "日常实习",
+      summer: "暑期实习",
+      campus: "秋招"
+    };
+
+    const state = {
+      region: "all",
+      recruit: "all",     // "all" | "daily" | "summer" | "campus"
+      recentOnly: false,  // 近30天上线
+      category: "all",
+      match: "all",
+      progress: "all",
+      query: "",
+      view: "cards"
+    };
+
+    function getReferenceTime() {
+      const ref = (data.meta && data.meta.referenceDate) ? data.meta.referenceDate : new Date().toISOString().slice(0, 10);
+      return new Date(ref + "T23:59:59+08:00").getTime();
+    }
+
+    const REF_TIME = getReferenceTime();
+    const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
+
+    function isWithin30Days(dateStr) {
+      if (!dateStr) return false;
+      const t = new Date(dateStr + "T00:00:00+08:00").getTime();
+      if (isNaN(t)) return false;
+      const diff = REF_TIME - t;
+      return diff >= -86400000 && diff <= THIRTY_DAYS_MS;
+    }
+
+    function escapeHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function loadProgress() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
+      catch { return {}; }
+    }
+
+    let progressMap = loadProgress();
+
+    function getProgress(id) { return progressMap[id] || "未投递"; }
+
+    function saveProgress(map) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+      updateTrackedStat();
+    }
+
+    function updateTrackedStat() {
+      const tracked = Object.values(progressMap).filter(v => v && v !== "未投递").length;
+      document.getElementById("statTracked").textContent = tracked;
+    }
+
+    // 获取某公司在指定通道（或全部通道）下的所有「在招」岗位；若开启 recentOnly，仅返回近30天上线的在招岗位
+    function getActiveOpenings(company, channelKey, recentOnly) {
+      const channels = company.channels || {};
+      const keys = channelKey === "all" ? ["daily", "summer", "campus"] : [channelKey];
+      const result = [];
+      for (const k of keys) {
+        const ch = channels[k];
+        if (!ch || ch.status !== "open") continue;
+        const openings = (ch.openings || []).filter(o => o.status === "open");
+        for (const o of openings) {
+          if (recentOnly && !isWithin30Days(o.postedDate)) continue;
+          result.push({ ...o, channelKey: k, channelLabel: CHANNEL_LABELS[k] });
+        }
+      }
+      return result;
+    }
+
+    function hasOpenChannel(company, channelKey) {
+      return getActiveOpenings(company, channelKey, false).length > 0;
+    }
+
+    function channelBadgeClass(label) {
+      if (label === "日常实习") return "ch-daily";
+      if (label === "暑期实习") return "ch-summer";
+      return "ch-campus";
+    }
+
+    function renderChangelog() {
+      const logs = data.changelog || [];
+      if (!logs.length) return;
+      const latest = logs[0];
+      document.getElementById("latestLogDate").textContent = latest.date || "-";
+
+      const added = latest.added || [];
+      const closed = latest.closed || [];
+
+      const addedHtml = added.length
+        ? added.map(item => `
+            <li>
+              <span class="ch-badge ${channelBadgeClass(item.channel)}">${escapeHtml(item.channel)}</span>
+              <span>
+                <strong>${escapeHtml(item.company)}</strong>：
+                ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)} ↗</a>` : escapeHtml(item.title)}
+              </span>
+            </li>
+          `).join("")
+        : `<li>今日暂无新增上线岗位</li>`;
+
+      const closedHtml = closed.length
+        ? closed.map(item => `
+            <li>
+              <span class="ch-badge ${channelBadgeClass(item.channel)}">${escapeHtml(item.channel)}</span>
+              <span><strong>${escapeHtml(item.company)}</strong>：${escapeHtml(item.title)}</span>
+            </li>
+          `).join("")
+        : `<li>今日暂无已停招或招满岗位</li>`;
+
+      document.getElementById("latestLogGrid").innerHTML = `
+        <div class="change-col">
+          <div class="change-col-title added">🟢 新增上线岗位（${added.length}）</div>
+          <ul class="change-list">${addedHtml}</ul>
+        </div>
+        <div class="change-col">
+          <div class="change-col-title closed">🔴 已停招 / 招满岗位（${closed.length}）</div>
+          <ul class="change-list">${closedHtml}</ul>
+        </div>
+      `;
+
+      document.getElementById("changelogHistory").innerHTML = logs.map(l => {
+        const aCount = (l.added || []).length;
+        const cCount = (l.closed || []).length;
+        return `<div style="padding:6px 0;border-bottom:1px dashed var(--border)">
+          <strong>${escapeHtml(l.date)}</strong>（新增 ${aCount} / 停招 ${cCount}）：${escapeHtml(l.note || l.summary || "")}
+        </div>`;
+      }).join("");
+    }
+
+    function initMeta() {
+      if (data.meta) {
+        document.getElementById("pageTitle").textContent = data.meta.title || "沪杭 AI 应用开发岗位雷达";
+        document.getElementById("pageSubtitle").textContent = data.meta.subtitle || "";
+        document.getElementById("updatedAt").textContent = data.meta.updatedAt || "-";
+        document.getElementById("nextAutoUpdate").textContent = data.meta.nextAutoUpdate || "每日 03:00";
+      }
+
+      const shCount = companies.filter(c => c.cities.includes("上海")).length;
+      const hzCount = companies.filter(c => c.cities.includes("杭州")).length;
+      const bothCount = companies.filter(c => c.cities.includes("上海") && c.cities.includes("杭州")).length;
+      const recentCount = companies.filter(c => getActiveOpenings(c, "all", true).length > 0).length;
+
+      document.getElementById("statTotal").textContent = companies.length;
+      document.getElementById("statSH").textContent = shCount;
+      document.getElementById("statHZ").textContent = hzCount;
+      document.getElementById("statRecent").textContent = recentCount;
+
+      document.getElementById("cntAll").textContent = companies.length;
+      document.getElementById("cntSH").textContent = shCount;
+      document.getElementById("cntHZ").textContent = hzCount;
+      document.getElementById("cntBoth").textContent = bothCount;
+
+      document.getElementById("cntChAll").textContent = companies.length;
+      document.getElementById("cntChDaily").textContent = companies.filter(c => hasOpenChannel(c, "daily")).length;
+      document.getElementById("cntChSummer").textContent = companies.filter(c => hasOpenChannel(c, "summer")).length;
+      document.getElementById("cntChCampus").textContent = companies.filter(c => hasOpenChannel(c, "campus")).length;
+      document.getElementById("cntRecent").textContent = recentCount;
+
+      updateTrackedStat();
+      renderChangelog();
+    }
+
+    function filterCompanies() {
+      const q = state.query.trim().toLowerCase();
+      return companies.filter(c => {
+        if (state.region === "上海" && !c.cities.includes("上海")) return false;
+        if (state.region === "杭州" && !c.cities.includes("杭州")) return false;
+        if (state.region === "双城" && !(c.cities.includes("上海") && c.cities.includes("杭州"))) return false;
+
+        // 通道筛选：若选中特定通道，只保留该通道目前明确在招(open)且有可投岗位的企业；已招满/取消/未开启自动过滤
+        if (state.recruit !== "all") {
+          const active = getActiveOpenings(c, state.recruit, state.recentOnly);
+          if (active.length === 0) return false;
+        } else if (state.recentOnly) {
+          // 全部通道 + 近30天上线
+          const active = getActiveOpenings(c, "all", true);
+          if (active.length === 0) return false;
+        }
+
+        if (state.category !== "all" && c.category !== state.category) return false;
+        if (state.match !== "all" && c.matchLevel !== state.match) return false;
+        if (state.progress !== "all" && getProgress(c.id) !== state.progress) return false;
+
+        if (q) {
+          const chTexts = ["daily", "summer", "campus"].map(k => {
+            const ch = (c.channels || {})[k];
+            if (!ch) return "";
+            return ch.summary + " " + (ch.openings || []).map(o => o.title).join(" ");
+          }).join(" ");
+          const hay = [
+            c.name, c.category, c.subCategory, c.baseDetail,
+            (c.cities || []).join(" "),
+            (c.roles || []).join(" "),
+            (c.techStack || []).join(" "),
+            c.highlights, chTexts
+          ].join(" ").toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+    }
+
+    function renderProgressSelect(id) {
+      const val = getProgress(id);
+      const opts = ["未投递", "已投递", "面试中", "已拿Offer"];
+      return `<select class="progress-select" data-id="${id}" data-state="${val}">
+        ${opts.map(o => `<option value="${o}" ${o === val ? "selected" : ""}>${o}</option>`).join("")}
+      </select>`;
+    }
+
+    function renderDatePill(dateStr) {
+      if (!dateStr) return "";
+      const fresh = isWithin30Days(dateStr);
+      const shortDate = dateStr.slice(5); // MM-DD
+      return `<span class="date-pill ${fresh ? "fresh" : ""}">${fresh ? "🔥 " : ""}${shortDate} 上线</span>`;
+    }
+
+    function renderOpeningsHtml(openings, showChannelTag) {
+      return openings.map(o => `
+        <div class="opening-item">
+          <div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap">
+            ${showChannelTag ? `<span class="ch-badge ${channelBadgeClass(o.channelLabel)}">${o.channelLabel}</span>` : ""}
+            <a class="opening-link" href="${escapeHtml(o.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(o.title)} ↗</a>
+          </div>
+          ${renderDatePill(o.postedDate)}
+        </div>
+      `).join("");
+    }
+
+    function renderChannelSummaryText(ch) {
+      if (!ch) return "-";
+      if (ch.status === "closed") {
+        return `<span class="state-closed">【已停招/结束】</span>${escapeHtml(ch.summary)}`;
+      }
+      return escapeHtml(ch.summary);
+    }
+
+    function updateFilterHint() {
+      const hint = document.getElementById("filterModeHint");
+      const parts = [];
+      if (state.recruit !== "all") {
+        parts.push(`仅显示当前在招「${CHANNEL_LABELS[state.recruit]}」的企业与可投岗位直达链接（已自动过滤停招/未开启）`);
+      }
+      if (state.recentOnly) {
+        parts.push(`仅限近 30 天内上线岗位`);
+      }
+      hint.textContent = parts.length
+        ? parts.join(" · ")
+        : "当前显示全部通道（点击具体通道可自动隐藏无关列与停招企业，并展示具体岗位直达链接）";
+    }
+
+    function render() {
+      updateFilterHint();
+      const list = filterCompanies();
+      document.getElementById("filteredCount").textContent = list.length;
+
+      const cardsGrid = document.getElementById("cardsGrid");
+      const tableWrap = document.getElementById("tableWrap");
+      const tableHead = document.getElementById("tableHead");
+      const tableBody = document.getElementById("tableBody");
+
+      const isChannelFiltered = state.recruit !== "all";
+      const showSpecificOpenings = isChannelFiltered || state.recentOnly;
+
+      if (state.view === "cards") {
+        cardsGrid.style.display = "grid";
+        tableWrap.classList.remove("active");
+        if (list.length === 0) {
+          cardsGrid.innerHTML = `<div class="empty-state">当前筛选条件下暂无在招企业，可尝试切换通道、取消“近30天上线”或放宽地区。</div>`;
+          return;
+        }
+        cardsGrid.innerHTML = list.map(c => {
+          const cityBadges = c.cities.map(city =>
+            `<span class="badge ${city === "上海" ? "badge-sh" : "badge-hz"}">${city}</span>`
+          ).join("");
+          const matchBadge = c.matchLevel === "高匹配" ? `<span class="badge badge-match">高匹配</span>` : "";
+          const techHtml = (c.techStack || []).map(t => `<span class="tech-tag" data-tech="${escapeHtml(t)}">${escapeHtml(t)}</span>`).join("");
+
+          let bodySection = "";
+          if (showSpecificOpenings) {
+            const openings = getActiveOpenings(c, state.recruit, state.recentOnly);
+            const titleLabel = isChannelFiltered
+              ? `可投递「${CHANNEL_LABELS[state.recruit]}」岗位（${openings.length}）`
+              : `近 30 天上线可投岗位（${openings.length}）`;
+            bodySection = `
+              <div class="openings-box">
+                <div class="openings-title">
+                  <span>${titleLabel}</span>
+                  <span style="font-weight:500;color:var(--text-muted)">点击岗位直达投递</span>
+                </div>
+                ${renderOpeningsHtml(openings, !isChannelFiltered)}
+              </div>
+            `;
+          } else {
+            const ch = c.channels || {};
+            bodySection = `
+              <div class="roles-box">
+                <strong>代表岗位：</strong>${escapeHtml((c.roles || []).join(" / "))}
+              </div>
+              <div class="status-list">
+                <div class="status-row">
+                  <span class="status-tag tag-daily">日常实习</span>
+                  <span>${renderChannelSummaryText(ch.daily)}</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-tag tag-summer">暑期实习</span>
+                  <span>${renderChannelSummaryText(ch.summer)}</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-tag tag-campus">秋招正式</span>
+                  <span>${renderChannelSummaryText(ch.campus)}</span>
+                </div>
+              </div>
+            `;
+          }
+
+          return `
+            <article class="card">
+              <div class="card-header">
+                <div>
+                  <div class="company-name">${escapeHtml(c.name)}</div>
+                  <div class="company-sub">${escapeHtml(c.category)} · ${escapeHtml(c.subCategory)} · ${escapeHtml(c.baseDetail)}</div>
+                </div>
+                <div class="badges">${cityBadges}${matchBadge}</div>
+              </div>
+
+              ${bodySection}
+
+              <div class="highlights">${escapeHtml(c.highlights)}</div>
+              <div class="tech-tags">${techHtml}</div>
+
+              <div class="card-footer">
+                ${renderProgressSelect(c.id)}
+                <span style="font-size:11.5px;color:var(--text-muted)">核验：${escapeHtml(c.lastChecked)}</span>
+                ${!isChannelFiltered ? `<a class="official-link" href="${escapeHtml(c.officialUrl)}" target="_blank" rel="noopener noreferrer">官网入口 ↗</a>` : `<a class="official-link" href="${escapeHtml(c.officialUrl)}" target="_blank" rel="noopener noreferrer">企业主页 ↗</a>`}
+              </div>
+            </article>
+          `;
+        }).join("");
+      } else {
+        cardsGrid.style.display = "none";
+        tableWrap.classList.add("active");
+
+        if (isChannelFiltered) {
+          // 筛选了具体通道：只保留该通道列（移除另外两个通道列），直接展示具体岗位名与直达链接
+          const chName = CHANNEL_LABELS[state.recruit];
+          tableHead.innerHTML = `
+            <tr>
+              <th style="width: 19%">企业与 Base</th>
+              <th style="width: 41%">在招「${chName}」岗位及直达投递链接</th>
+              <th style="width: 26%">核心职责与技术栈</th>
+              <th style="width: 14%">投递进度</th>
+            </tr>
+          `;
+          if (list.length === 0) {
+            tableBody.innerHTML = `<tr><td colspan="4" style="text-align:center;padding:40px;color:var(--text-muted)">当前暂无符合条件的在招「${chName}」企业</td></tr>`;
+            return;
+          }
+          tableBody.innerHTML = list.map(c => {
+            const openings = getActiveOpenings(c, state.recruit, state.recentOnly);
+            return `
+              <tr>
+                <td>
+                  <div style="font-weight:700;color:var(--text);margin-bottom:4px">${escapeHtml(c.name)}</div>
+                  <div style="margin-bottom:4px">${c.cities.map(city => `<span class="badge ${city === "上海" ? "badge-sh" : "badge-hz"}">${city}</span>`).join(" ")} ${c.matchLevel === "高匹配" ? '<span class="badge badge-match">高匹配</span>' : ""}</div>
+                  <div style="font-size:11.5px;color:var(--text-muted)">${escapeHtml(c.category)}</div>
+                </td>
+                <td>
+                  <div class="tbl-opening-list">${renderOpeningsHtml(openings, false)}</div>
+                </td>
+                <td>
+                  <div style="margin-bottom:6px">${escapeHtml(c.highlights)}</div>
+                  <div class="tech-tags">${(c.techStack || []).slice(0, 5).map(t => `<span class="tech-tag" data-tech="${escapeHtml(t)}">${escapeHtml(t)}</span>`).join("")}</div>
+                </td>
+                <td>
+                  <div style="margin-bottom:6px">${renderProgressSelect(c.id)}</div>
+                  <div style="font-size:11.5px;color:var(--text-muted)">核验：${escapeHtml(c.lastChecked)}</div>
+                </td>
+              </tr>
+            `;
+          }).join("");
+        } else {
+          // 未筛选通道（全部）：保留完整三通道列 + 官网入口
+          tableHead.innerHTML = `
+            <tr>
+              <th style="width: 16%">企业与 Base</th>
+              <th style="width: 16%">${state.recentOnly ? "近30天上线岗位" : "代表岗位"}</th>
+              <th style="width: 20%">日常实习动态</th>
+              <th style="width: 17%">暑期实习动态</th>
+              <th style="width: 19%">秋招 / 正式动态</th>
+              <th style="width: 12%">进度与官网入口</th>
+            </tr>
+          `;
+          if (list.length === 0) {
+            tableBody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--text-muted)">没有找到符合条件的企业</td></tr>`;
+            return;
+          }
+          tableBody.innerHTML = list.map(c => {
+            const ch = c.channels || {};
+            const col2 = state.recentOnly
+              ? `<div class="tbl-opening-list">${renderOpeningsHtml(getActiveOpenings(c, "all", true), true)}</div>`
+              : escapeHtml((c.roles || []).join("；"));
+            return `
+              <tr>
+                <td>
+                  <div style="font-weight:700;color:var(--text);margin-bottom:4px">${escapeHtml(c.name)}</div>
+                  <div style="margin-bottom:4px">${c.cities.map(city => `<span class="badge ${city === "上海" ? "badge-sh" : "badge-hz"}">${city}</span>`).join(" ")} ${c.matchLevel === "高匹配" ? '<span class="badge badge-match">高匹配</span>' : ""}</div>
+                  <div style="font-size:11.5px;color:var(--text-muted)">${escapeHtml(c.category)}</div>
+                </td>
+                <td>${col2}</td>
+                <td>${renderChannelSummaryText(ch.daily)}</td>
+                <td>${renderChannelSummaryText(ch.summer)}</td>
+                <td>${renderChannelSummaryText(ch.campus)}</td>
+                <td>
+                  <div style="margin-bottom:8px">${renderProgressSelect(c.id)}</div>
+                  <a class="official-link" href="${escapeHtml(c.officialUrl)}" target="_blank" rel="noopener noreferrer">官网入口 ↗</a>
+                </td>
+              </tr>
+            `;
+          }).join("");
+        }
+      }
+
+      bindDynamicEvents();
+    }
+
+    function bindDynamicEvents() {
+      document.querySelectorAll(".progress-select").forEach(sel => {
+        sel.addEventListener("change", e => {
+          const id = e.target.getAttribute("data-id");
+          const val = e.target.value;
+          e.target.setAttribute("data-state", val);
+          progressMap[id] = val;
+          saveProgress(progressMap);
+          if (state.progress !== "all") render();
+        });
+      });
+
+      document.querySelectorAll(".tech-tag").forEach(tag => {
+        tag.addEventListener("click", e => {
+          const tech = e.target.getAttribute("data-tech");
+          document.getElementById("searchInput").value = tech;
+          state.query = tech;
+          render();
+        });
+      });
+    }
+
+    // Bindings
+    document.querySelectorAll("#regionTabs .pill-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#regionTabs .pill-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        state.region = btn.getAttribute("data-region");
+        render();
+      });
+    });
+
+    document.querySelectorAll("#recruitTabs .pill-btn[data-recruit]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#recruitTabs .pill-btn[data-recruit]").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        state.recruit = btn.getAttribute("data-recruit");
+        render();
+      });
+    });
+
+    document.getElementById("recentOnlyBtn").addEventListener("click", e => {
+      state.recentOnly = !state.recentOnly;
+      e.currentTarget.classList.toggle("active", state.recentOnly);
+      render();
+    });
+
+    document.getElementById("searchInput").addEventListener("input", e => { state.query = e.target.value; render(); });
+    document.getElementById("categoryFilter").addEventListener("change", e => { state.category = e.target.value; render(); });
+    document.getElementById("matchFilter").addEventListener("change", e => { state.match = e.target.value; render(); });
+    document.getElementById("progressFilter").addEventListener("change", e => { state.progress = e.target.value; render(); });
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      state.region = "all";
+      state.recruit = "all";
+      state.recentOnly = false;
+      state.category = "all";
+      state.match = "all";
+      state.progress = "all";
+      state.query = "";
+      document.getElementById("searchInput").value = "";
+      document.getElementById("categoryFilter").value = "all";
+      document.getElementById("matchFilter").value = "all";
+      document.getElementById("progressFilter").value = "all";
+      document.getElementById("recentOnlyBtn").classList.remove("active");
+      document.querySelectorAll("#regionTabs .pill-btn").forEach((b, i) => b.classList.toggle("active", i === 0));
+      document.querySelectorAll("#recruitTabs .pill-btn[data-recruit]").forEach((b, i) => b.classList.toggle("active", i === 0));
+      render();
+    });
+
+    document.getElementById("viewCardsBtn").addEventListener("click", () => {
+      state.view = "cards";
+      document.getElementById("viewCardsBtn").classList.add("active");
+      document.getElementById("viewTableBtn").classList.remove("active");
+      render();
+    });
+
+    document.getElementById("viewTableBtn").addEventListener("click", () => {
+      state.view = "table";
+      document.getElementById("viewTableBtn").classList.add("active");
+      document.getElementById("viewCardsBtn").classList.remove("active");
+      render();
+    });
+
+    document.getElementById("toggleLogBtn").addEventListener("click", () => {
+      document.getElementById("changelogHistory").classList.toggle("open");
+    });
+
+    document.getElementById("exportCsvBtn").addEventListener("click", () => {
+      const list = filterCompanies();
+      const headers = ["企业名称", "分类", "城市", "匹配度", "当前筛选可投岗位及链接", "投递进度", "官方入口", "最后核验"];
+      const rows = list.map(c => {
+        const openings = getActiveOpenings(c, state.recruit, state.recentOnly);
+        const openingStr = openings.map(o => `[${o.channelLabel}] ${o.title} (${o.url})`).join(" | ");
+        return [c.name, c.category, c.cities.join("/"), c.matchLevel, openingStr, getProgress(c.id), c.officialUrl, c.lastChecked];
+      });
+      const csv = "\uFEFF" + [headers, ...rows]
+        .map(r => r.map(v => `"${String(v || "").replace(/"/g, '""')}"`).join(","))
+        .join("\n");
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `沪杭AI应用开发岗位_${new Date().toISOString().slice(0, 10)}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    initMeta();
+    render();
+  </script>
+</body>
+</html>
