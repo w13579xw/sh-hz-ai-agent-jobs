@@ -181,7 +181,10 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 6px;
+      max-height: 230px;
+      overflow-y: auto;
+      padding-right: 4px;
     }
 
     .change-list li {
@@ -674,6 +677,7 @@
   <script src="./data.js"></script>
   <script>
     const STORAGE_KEY = "ai_agent_jobs_progress_v1";
+    const FILTER_STORAGE_KEY = "ai_agent_jobs_filters_v1";
     const data = window.JOBS_DATA || { meta: {}, changelog: [], companies: [] };
     const companies = data.companies || [];
 
@@ -683,7 +687,7 @@
       campus: "秋招"
     };
 
-    const state = {
+    const DEFAULT_STATE = {
       region: "all",
       recruit: "all",     // "all" | "daily" | "summer" | "campus"
       recentOnly: false,  // 近30天上线
@@ -693,6 +697,66 @@
       query: "",
       view: "cards"
     };
+
+    function loadSavedState() {
+      const merged = { ...DEFAULT_STATE };
+      // 1. 先从 localStorage 恢复
+      try {
+        const saved = JSON.parse(localStorage.getItem(FILTER_STORAGE_KEY) || "{}");
+        Object.assign(merged, saved);
+      } catch {}
+      // 2. 若 URL 带参数，以 URL 参数优先（方便分享筛选后的链接）
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("region")) merged.region = params.get("region");
+        if (params.has("recruit")) merged.recruit = params.get("recruit");
+        if (params.has("recent")) merged.recentOnly = params.get("recent") === "1";
+        if (params.has("category")) merged.category = params.get("category");
+        if (params.has("match")) merged.match = params.get("match");
+        if (params.has("progress")) merged.progress = params.get("progress");
+        if (params.has("q")) merged.query = params.get("q");
+        if (params.has("view")) merged.view = params.get("view");
+      } catch {}
+      return merged;
+    }
+
+    const state = loadSavedState();
+
+    function persistState() {
+      try {
+        localStorage.setItem(FILTER_STORAGE_KEY, JSON.stringify(state));
+      } catch {}
+      try {
+        const params = new URLSearchParams();
+        if (state.region !== "all") params.set("region", state.region);
+        if (state.recruit !== "all") params.set("recruit", state.recruit);
+        if (state.recentOnly) params.set("recent", "1");
+        if (state.category !== "all") params.set("category", state.category);
+        if (state.match !== "all") params.set("match", state.match);
+        if (state.progress !== "all") params.set("progress", state.progress);
+        if (state.query.trim()) params.set("q", state.query.trim());
+        if (state.view !== "cards") params.set("view", state.view);
+        const qs = params.toString();
+        const newUrl = window.location.pathname + (qs ? "?" + qs : "") + window.location.hash;
+        window.history.replaceState(null, "", newUrl);
+      } catch {}
+    }
+
+    function syncControlsFromState() {
+      document.querySelectorAll("#regionTabs .pill-btn").forEach(b => {
+        b.classList.toggle("active", b.getAttribute("data-region") === state.region);
+      });
+      document.querySelectorAll("#recruitTabs .pill-btn[data-recruit]").forEach(b => {
+        b.classList.toggle("active", b.getAttribute("data-recruit") === state.recruit);
+      });
+      document.getElementById("recentOnlyBtn").classList.toggle("active", !!state.recentOnly);
+      document.getElementById("searchInput").value = state.query || "";
+      document.getElementById("categoryFilter").value = state.category || "all";
+      document.getElementById("matchFilter").value = state.match || "all";
+      document.getElementById("progressFilter").value = state.progress || "all";
+      document.getElementById("viewCardsBtn").classList.toggle("active", state.view === "cards");
+      document.getElementById("viewTableBtn").classList.toggle("active", state.view === "table");
+    }
 
     function getReferenceTime() {
       const ref = (data.meta && data.meta.referenceDate) ? data.meta.referenceDate : new Date().toISOString().slice(0, 10);
@@ -944,6 +1008,7 @@
     }
 
     function render() {
+      persistState();
       updateFilterHint();
       const list = filterCompanies();
       document.getElementById("filteredCount").textContent = list.length;
@@ -1227,6 +1292,7 @@
     });
 
     initMeta();
+    syncControlsFromState();
     render();
   </script>
 </body>

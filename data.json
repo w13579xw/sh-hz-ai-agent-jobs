@@ -2,20 +2,20 @@
   "meta": {
     "title": "沪杭 AI 应用开发实习与校招岗位雷达",
     "subtitle": "面向 2028 届计算机硕士 · 覆盖上海 / 杭州 57 家大厂、外企与中厂",
-    "updatedAt": "2026-11-24 18:48 (Asia/Shanghai)",
+    "updatedAt": "2026-11-24 18:58 (Asia/Shanghai)",
     "nextAutoUpdate": "每日 03:00 (Asia/Shanghai) 自动检查更新",
     "totalCompanies": 57,
     "referenceDate": "2026-11-24"
   },
   "changelog": [
     {
-      "date": "2026-11-24 18:00",
+      "date": "2026-11-24 18:58",
       "added": [
         {
           "channel": "日常实习",
-          "company": "小红书",
-          "title": "Agent 产品研发实习生（职位 20736·直达JD）",
-          "url": "https://job.xiaohongshu.com/campus/intern/position/20736"
+          "company": "MiniMax",
+          "title": "AI System 研发实习生（明确覆盖2028届·直达JD）",
+          "url": "https://vrfi1sk8a0.jobs.feishu.cn/379481/m/position/detail/7498620518880446747"
         },
         {
           "channel": "日常实习",
@@ -25,9 +25,27 @@
         },
         {
           "channel": "日常实习",
+          "company": "网易互娱",
+          "title": "AI Agent 开发 - UGC 创作辅助实习生（杭州·直达JD）",
+          "url": "https://campus.game.163.com/app/detail/index?id=4933&projectId=75"
+        },
+        {
+          "channel": "日常实习",
+          "company": "小红书",
+          "title": "Agent 产品研发实习生（上海·职位20736·直达JD）",
+          "url": "https://job.xiaohongshu.com/campus/intern/position/20736"
+        },
+        {
+          "channel": "日常实习",
           "company": "字节跳动",
-          "title": "AI Agent 全栈研发实习生（职位 A172769A·直达JD）",
+          "title": "AI Agent 全栈研发实习生（开发者服务 A172769A·直达JD）",
           "url": "https://jobs.bytedance.com/campus/position?keywords=A172769A"
+        },
+        {
+          "channel": "日常实习",
+          "company": "百度",
+          "title": "Agent 工程师实习生（J107185·直达JD）",
+          "url": "https://talent.baidu.com/jobs/detail/INTERN/48d0f3a9-e643-41c6-849f-1d2a4fcd5772"
         },
         {
           "channel": "日常实习",
@@ -38,8 +56,68 @@
         {
           "channel": "日常实习",
           "company": "有赞",
-          "title": "Agent 全栈开发实习生（官方招聘系统）",
+          "title": "Agent 全栈开发实习生（杭州西溪·可转正）",
           "url": "https://job.youzan.com/"
+        },
+        {
+          "channel": "暑期实习",
+          "company": "字节跳动 Seed",
+          "title": "Seed Early Career 实习（面向2027.9及以后毕业·直达）",
+          "url": "https://seed.bytedance.com/zh/seedearlycareer"
+        },
+        {
+          "channel": "秋招",
+          "company": "阿里巴巴",
+          "title": "AI Agent 应用开发工程师（杭州/上海·直达JD）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199907700004"
+        },
+        {
+          "channel": "秋招",
+          "company": "阿里云智能",
+          "title": "AI Agent 应用研发工程师（杭州·直达JD）",
+          "url": "https://careers.aliyun.com/off-campus/position-detail?lang=zh&positionId=100008603008"
+        },
+        {
+          "channel": "秋招",
+          "company": "字节跳动",
+          "title": "AI Agent 开发工程师 - 抖音研发（杭州/上海·直达JD）",
+          "url": "https://jobs.bytedance.com/campus/position/7678943434803464501/detail"
+        },
+        {
+          "channel": "秋招",
+          "company": "腾讯 CSIG",
+          "title": "腾讯云 Kinfra 智能检索与 Agent 研发（上海·直达JD）",
+          "url": "https://careers.tencent.com/jobdesc.html?postId=2108399579169996800"
+        },
+        {
+          "channel": "秋招",
+          "company": "腾讯 IEG",
+          "title": "游戏 AI 大模型应用研发 Agentic Coding（上海·直达JD）",
+          "url": "https://careers.tencent.com/jobdesc.html?postId=2105247514121908224"
+        },
+        {
+          "channel": "秋招",
+          "company": "美团",
+          "title": "智能分析 AI 工程师（Skill/Agent 编排·上海·直达JD）",
+          "url": "https://zhaopin.meituan.com/web/position/detail?highlightType=campus&jobUnionId=4786797684"
+        },
+        {
+          "channel": "秋招",
+          "company": "哔哩哔哩",
+          "title": "多模态 Agent 工程师 / Skill 与 MCP 底座（上海·直达JD）",
+          "url": "https://jobs.bilibili.com/campus/positions/29913"
+        },
+        {
+          "channel": "秋招",
+          "company": "网易",
+          "title": "效率工程部 AI 算法/Agent 应用工程师（杭州·直达JD）",
+          "url": "https://campus.163.com/app/detail/index?id=4789&projectId=103"
+        },
+        {
+          "channel": "秋招",
+          "company": "MiniMax",
+          "title": "AGI 产品研发工程师（Agent Runtime/Infra·上海·直达JD）",
+          "url": "https://vrfi1sk8a0.jobs.feishu.cn/379481/m/position/detail/7549395711529715995"
         }
       ],
       "closed": [
@@ -47,9 +125,14 @@
           "channel": "暑期实习",
           "company": "百度",
           "title": "2027 届暑期实习项目（官网确认已结束，2028 届待 2027 春开启）"
+        },
+        {
+          "channel": "暑期实习",
+          "company": "字节跳动 ByteIntern",
+          "title": "2027 届暑期实习批次已结束（2028 届暑期预计 2027 春开启，当前可投日常实习或 Seed）"
         }
       ],
-      "note": "数据结构升级完成：支持按日常实习/暑期实习/秋招通道精准过滤在招岗位、自动过滤已招满/未开启企业，并新增「近30天上线」筛选。"
+      "note": "新增 18 条沪杭大厂及 AI 独角兽官方直达 JD 详情页链接（覆盖日常实习、暑期实习与秋招），同步标注 2 项已结束的 2027 届暑期项目。"
     },
     {
       "date": "2026-11-24 17:25",
@@ -132,18 +215,25 @@
           "summary": "2027届秋招进行中/补录，2028届待开启",
           "openings": [
             {
-              "title": "2027届 AI应用研发工程师（Agent方向）",
-              "url": "https://talent.alibaba.com/campus/position-list?lang=zh&keywords=Agent",
-              "postedDate": "2026-10-28",
+              "title": "AI Agent 应用开发工程师（杭州/上海·校招）",
+              "url": "https://campus-talent.alibaba.com/campus/position/199907700004",
+              "postedDate": "2026-11-20",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
             },
             {
-              "title": "Agent Infra 基础设施研发工程师",
-              "url": "https://talent.alibaba.com/campus/position-list?lang=zh&keywords=Agent",
-              "postedDate": "2026-11-05",
+              "title": "阿里云智能 - AI Agent 应用研发工程师（杭州）",
+              "url": "https://careers.aliyun.com/off-campus/position-detail?lang=zh&positionId=100008603008",
+              "postedDate": "2026-11-18",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
+            },
+            {
+              "title": "阿里云智能 - AI Agent 平台技术研发（杭州）",
+              "url": "https://careers.aliyun.com/off-campus/position-detail?lang=zh&positionId=100016383008",
+              "postedDate": "2026-11-15",
+              "status": "open",
+              "linkType": "jd"
             }
           ]
         }
@@ -291,18 +381,25 @@
           "summary": "在招：LLM Agent全栈校招（A173843）等2027届岗位",
           "openings": [
             {
-              "title": "2027届 大语言模型Agent全栈开发工程师（A173843·杭州）",
+              "title": "AI Agent 开发工程师 - 抖音研发（杭州/上海·校招）",
+              "url": "https://jobs.bytedance.com/campus/position/7678943434803464501/detail",
+              "postedDate": "2026-11-21",
+              "status": "open",
+              "linkType": "jd"
+            },
+            {
+              "title": "大语言模型Agent全栈开发工程师（A173843·杭州）",
               "url": "https://jobs.bytedance.com/campus/position?keywords=A173843",
               "postedDate": "2026-11-06",
               "status": "open",
               "linkType": "jd"
             },
             {
-              "title": "Agent工程师（AI Coding方向·杭州）",
-              "url": "https://jobs.bytedance.com/campus/position?keywords=Agent",
+              "title": "Agent 工程师（AI Coding 方向·杭州）",
+              "url": "https://jobs.bytedance.com/experienced/position/7282676471176349989/detail",
               "postedDate": "2026-11-14",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
             }
           ]
         }
@@ -525,11 +622,18 @@
           "summary": "2027届校招含AI应用开发工程师、AI全栈工程师",
           "openings": [
             {
-              "title": "AI全栈工程师 / AI应用开发工程师（上海）",
-              "url": "https://zhaopin.meituan.com/web/campus",
-              "postedDate": "2026-10-22",
+              "title": "智能分析 AI 工程师（Prompt/Skill/Agent 编排·上海）",
+              "url": "https://zhaopin.meituan.com/web/position/detail?highlightType=campus&jobUnionId=4786797684",
+              "postedDate": "2026-11-20",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
+            },
+            {
+              "title": "AI 全栈工程师（RAG/Agent工作流·上海）",
+              "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4697320043",
+              "postedDate": "2026-11-14",
+              "status": "open",
+              "linkType": "jd"
             }
           ]
         }
@@ -593,18 +697,25 @@
           "summary": "2027届校招及社招含Kinfra智能检索与Agent、游戏AI",
           "openings": [
             {
-              "title": "游戏AI-大模型应用研发（Agentic Coding·上海）",
-              "url": "https://careers.tencent.com/search.html?keyword=Agent",
-              "postedDate": "2026-11-07",
+              "title": "CSIG 腾讯云 Kinfra 智能检索与 Agent 研发（上海）",
+              "url": "https://careers.tencent.com/jobdesc.html?postId=2108399579169996800",
+              "postedDate": "2026-11-19",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
             },
             {
-              "title": "CSIG 腾讯云 Kinfra 智能检索与Agent研发（上海）",
-              "url": "https://careers.tencent.com/search.html?keyword=Agent",
-              "postedDate": "2026-11-16",
+              "title": "IEG 游戏 AI - 大模型应用研发（Agentic Coding·上海）",
+              "url": "https://careers.tencent.com/jobdesc.html?postId=2105247514121908224",
+              "postedDate": "2026-11-17",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
+            },
+            {
+              "title": "TEG 混元 Agent 后训练算法工程师（上海）",
+              "url": "https://careers.tencent.com/jobdesc.html?postId=2068941068765933568",
+              "postedDate": "2026-11-12",
+              "status": "open",
+              "linkType": "jd"
             }
           ]
         }
@@ -666,11 +777,11 @@
           "summary": "2027届校招含Agent应用开发工程师",
           "openings": [
             {
-              "title": "2027届 Agent应用开发工程师（上海）",
-              "url": "https://jobs.bilibili.com/campus/positions",
-              "postedDate": "2026-10-18",
+              "title": "多模态 Agent 工程师 / Skill 与 MCP 底座（上海）",
+              "url": "https://jobs.bilibili.com/campus/positions/29913",
+              "postedDate": "2026-11-19",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
             }
           ]
         }
@@ -784,11 +895,11 @@
           "summary": "效率工程部/EHR/网易游戏滚动招收AI应用实习生",
           "openings": [
             {
-              "title": "效率工程部 AI应用开发实习生（杭州）",
-              "url": "https://campus.163.com/app/job/position",
-              "postedDate": "2026-11-10",
+              "title": "网易互娱 AI Agent 开发 - UGC 创作辅助实习生（杭州）",
+              "url": "https://campus.game.163.com/app/detail/index?id=4933&projectId=75",
+              "postedDate": "2026-11-21",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
             }
           ]
         },
@@ -802,11 +913,18 @@
           "summary": "2027届校招含效率工程AI应用开发、EHR Java Agent",
           "openings": [
             {
-              "title": "集团EHR Java开发工程师（AI Agent方向·杭州）",
-              "url": "https://campus.163.com/app/job/position",
-              "postedDate": "2026-10-27",
+              "title": "效率工程部 AI 算法/Agent 应用工程师（杭州）",
+              "url": "https://campus.163.com/app/detail/index?id=4789&projectId=103",
+              "postedDate": "2026-11-18",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
+            },
+            {
+              "title": "网易互娱 AI Agent 工程师（游戏研发管线·杭州）",
+              "url": "https://campus.game.163.com/app/detail/index?id=4732&projectId=102",
+              "postedDate": "2026-11-15",
+              "status": "open",
+              "linkType": "jd"
             }
           ]
         }
@@ -1522,11 +1640,11 @@
               "linkType": "jd"
             },
             {
-              "title": "AI System 研发实习生（明确覆盖2028届及以后·上海）",
-              "url": "https://www.minimax.cn/careers",
+              "title": "AI System 研发实习生（覆盖2028届及以后·上海）",
+              "url": "https://vrfi1sk8a0.jobs.feishu.cn/379481/m/position/detail/7498620518880446747",
               "postedDate": "2026-11-24",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
             }
           ]
         },
@@ -1548,11 +1666,11 @@
           "summary": "2027届校招与社招含AI服务端（Agent/AI App）",
           "openings": [
             {
-              "title": "AI 服务端工程师（Agent / AI App·上海）",
-              "url": "https://www.minimax.cn/careers",
-              "postedDate": "2026-11-18",
+              "title": "AGI 产品研发工程师（Agent Runtime/Infra·上海）",
+              "url": "https://vrfi1sk8a0.jobs.feishu.cn/379481/m/position/detail/7549395711529715995",
+              "postedDate": "2026-11-22",
               "status": "open",
-              "linkType": "portal"
+              "linkType": "jd"
             }
           ]
         }
