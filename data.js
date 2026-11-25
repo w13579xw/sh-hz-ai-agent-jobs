@@ -3,12 +3,140 @@ window.JOBS_DATA = {
   "meta": {
     "title": "沪杭 AI 应用开发实习与校招岗位雷达",
     "subtitle": "面向 2028 届计算机硕士 · 覆盖上海 / 杭州 57 家大厂、外企与中厂",
-    "updatedAt": "2026-11-24 18:58 (Asia/Shanghai)",
+    "updatedAt": "2026-11-26 03:06 (Asia/Shanghai)",
     "nextAutoUpdate": "每日 03:00 (Asia/Shanghai) 自动检查更新",
     "totalCompanies": 57,
-    "referenceDate": "2026-11-24"
+    "referenceDate": "2026-11-26"
   },
   "changelog": [
+    {
+      "date": "2026-11-26 03:06",
+      "added": [
+        {
+          "channel": "日常实习",
+          "company": "字节跳动",
+          "title": "AI Agent 开发实习生 - 计算（基础设施 A31360A·上海·ByteIntern）",
+          "url": "https://jobs.bytedance.com/campus/position?keywords=A31360A"
+        },
+        {
+          "channel": "日常实习",
+          "company": "阿里巴巴（阿里云／淘天／钉钉）",
+          "title": "日常实习生 - Agent 数据方向（Qwen 基础模型/Token Foundry·杭州）",
+          "url": "https://talent.alibaba.com/campus/position-list?lang=zh&keywords=Agent"
+        },
+        {
+          "channel": "日常实习",
+          "company": "美团",
+          "title": "LongCat 基础模型通用 Agent 算法/研发实习生（上海）",
+          "url": "https://zhaopin.meituan.com/web/campus"
+        },
+        {
+          "channel": "日常实习",
+          "company": "美团",
+          "title": "数据库 AI 后端开发实习生（DB Agent/Skill管理·上海）",
+          "url": "https://zhaopin.meituan.com/web/campus"
+        },
+        {
+          "channel": "日常实习",
+          "company": "腾讯",
+          "title": "优图实验室 - 原生多模态 Infra / Code Agent 研究实习生（青云计划·上海）",
+          "url": "https://careers.tencent.com/search.html?keyword=Agent"
+        },
+        {
+          "channel": "秋招",
+          "company": "腾讯",
+          "title": "CDG 腾讯营销 - 广告投放 Agent / 电商推荐 Agent 研究（青云课题·上海）",
+          "url": "https://careers.tencent.com/search.html?keyword=Agent"
+        },
+        {
+          "channel": "秋招",
+          "company": "小红书",
+          "title": "2027校招 Agent / 大模型算法工程师（rednote 海外业务·上海/杭州）",
+          "url": "https://job.xiaohongshu.com/campus/intern"
+        },
+        {
+          "channel": "秋招",
+          "company": "小红书",
+          "title": "2027校招 Agent 研发工程师（跨境电商 & 交易平台·上海/杭州）",
+          "url": "https://job.xiaohongshu.com/campus/intern"
+        },
+        {
+          "channel": "日常实习",
+          "company": "网易",
+          "title": "网易雷火伏羲研究型实习生（去中心化 Agent 画像体系建设·杭州）",
+          "url": "https://campus.163.com/app/job/position"
+        },
+        {
+          "channel": "秋招",
+          "company": "网易",
+          "title": "EHR 产品中心 Java 开发工程师（AI Agent 方向·杭州）",
+          "url": "https://campus.163.com/app/job/position"
+        },
+        {
+          "channel": "日常实习",
+          "company": "商汤科技（SenseTime）",
+          "title": "Agent Harness 实习生 / 大模型 Agent 算法实习生（RSI 方向·上海徐汇漕河泾）",
+          "url": "https://hr.sensetime.com/campus"
+        },
+        {
+          "channel": "日常实习",
+          "company": "SAP（SAP Labs China）",
+          "title": "iXp Intern - Generative AI Developer（Agentic Workflows/MCP·上海浦东）",
+          "url": "https://jobs.sap.com/search/?q=AI&locationsearch=Shanghai"
+        },
+        {
+          "channel": "日常实习",
+          "company": "亚马逊 Amazon / AWS",
+          "title": "Agentic AI Applied Scientist Intern（AWS Shanghai AI Lab·上海）",
+          "url": "https://www.amazon.jobs/en/search?base_query=AI+Agent&loc_query=Shanghai%2C+China"
+        },
+        {
+          "channel": "日常实习",
+          "company": "英伟达 NVIDIA",
+          "title": "AI Agent Engineer Intern（Multi-Agent Systems/SDK·上海）",
+          "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite?q=AI"
+        },
+        {
+          "channel": "日常实习",
+          "company": "小鹏汽车",
+          "title": "具身智能体框架开发 / 云端 AI Agent 实习生（MCP/Workflow·上海）",
+          "url": "https://xiaopeng.jobs.feishu.cn/"
+        },
+        {
+          "channel": "日常实习",
+          "company": "米哈游／莉莉丝／叠纸／鹰角／沐瞳",
+          "title": "米哈游 AI 研发工程师实习生 / Agent 算法研究员实习生（Agent 管线·上海徐汇）",
+          "url": "https://jobs.mihoyo.com/#/campus/position"
+        }
+      ],
+      "closed": [
+        {
+          "channel": "秋招",
+          "company": "美团",
+          "title": "智能分析 AI 工程师（Prompt/Skill/Agent 编排·上海，2027届正式批网申已截止）",
+          "url": "https://zhaopin.meituan.com/web/position/detail?highlightType=campus&jobUnionId=4786797684"
+        },
+        {
+          "channel": "秋招",
+          "company": "美团",
+          "title": "AI 全栈工程师（RAG/Agent工作流·上海，2027届正式批网申已截止）",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4697320043"
+        },
+        {
+          "channel": "秋招",
+          "company": "拼多多",
+          "title": "2027届 AI Agent 研发工程师（上海，2027届常规秋招网申通道已收尾关闭）",
+          "url": "https://careers.pddglobalhr.com/campus/intern"
+        },
+        {
+          "channel": "秋招",
+          "company": "百度（ACG 智能云／MEG）",
+          "title": "千帆大模型平台应用开发工程师（上海，2027届核心正式批网申已收尾关闭）",
+          "url": "https://talent.baidu.com/jobs/list?recruitType=INTERN"
+        }
+      ],
+      "note": "完成 2026-11-26 全部 57 家企业巡检：新增 16 条日常实习/秋招 AI Agent 岗位（含字节 A31360A、阿里 Qwen Agent 数据、美团 LongCat/DB Agent、腾讯优图/营销、SAP/AWS/NVIDIA 外企专项及小鹏/米哈游等），同步将已结束正式批网申的美团、拼多多、百度 2027 届秋招通道及对应 4 个秋招岗位标记为 closed。"
+    },
     {
       "date": "2026-11-24 18:58",
       "added": [
@@ -165,9 +293,9 @@ window.JOBS_DATA = {
         "暑期实习",
         "秋招"
       ],
-      "dailyInternStatus": "全年滚动开放（AI应用研发/Agent方向，不限届别）",
+      "dailyInternStatus": "全年滚动开放（含Qwen Agent数据方向、AI应用研发/Agent，不限届别）",
       "summerInternStatus": "预计2027年春季启动2028届暑期转正实习",
-      "campusRecruitStatus": "2027届秋招进行中/补录，2028届待开启",
+      "campusRecruitStatus": "2027届秋招11月下旬进入收尾与少量补录阶段（招满即关）",
       "roles": [
         "AI应用研发工程师/实习生（Agent）",
         "Agent Infra基础设施研发"
@@ -184,12 +312,19 @@ window.JOBS_DATA = {
       "highlights": "Multi-Agent编排、RAG、Memory、MCP、流式与幻觉防护；明确偏好Cursor/Claude Code重度用户与开源贡献。",
       "matchLevel": "高匹配",
       "officialUrl": "https://talent.alibaba.com/campus/position-list?lang=zh&keywords=Agent",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
-          "summary": "全年滚动开放（AI应用研发/Agent方向，不限届别）",
+          "summary": "全年滚动开放（含Qwen Agent数据方向、AI应用研发/Agent，不限届别）",
           "openings": [
+            {
+              "title": "日常实习生 - Agent 数据方向（Qwen 基础模型/Token Foundry·杭州）",
+              "url": "https://talent.alibaba.com/campus/position-list?lang=zh&keywords=Agent",
+              "postedDate": "2026-11-26",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "AI应用研发实习生（Agent方向·杭州/上海）",
               "url": "https://talent.alibaba.com/campus/position-list?lang=zh&keywords=Agent",
@@ -213,7 +348,7 @@ window.JOBS_DATA = {
         },
         "campus": {
           "status": "open",
-          "summary": "2027届秋招进行中/补录，2028届待开启",
+          "summary": "2027届秋招11月下旬进入收尾与少量补录阶段（招满即关）",
           "openings": [
             {
               "title": "AI Agent 应用开发工程师（杭州/上海·校招）",
@@ -273,7 +408,7 @@ window.JOBS_DATA = {
       "highlights": "支付宝端内AI助理与开放生态、金融级高并发与安全合规交付。",
       "matchLevel": "中匹配",
       "officialUrl": "https://talent.antgroup.com/campus-full-list?keywords=Agent",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -323,9 +458,9 @@ window.JOBS_DATA = {
         "暑期实习",
         "秋招"
       ],
-      "dailyInternStatus": "在招：AI Agent全栈研发实习生（A172769A）等日常实习",
+      "dailyInternStatus": "在招：AI Agent开发-计算(A31360A)、AI Agent全栈研发(A172769A)等日常/ByteIntern实习",
       "summerInternStatus": "ByteIntern 2028届预计2027年春招开启（Seed支持2027.9后毕业）",
-      "campusRecruitStatus": "在招：LLM Agent全栈校招（A173843）等2027届岗位",
+      "campusRecruitStatus": "在招：LLM Agent全栈(A173843)等2027届岗位（秋招第一阶段至12-31，招满即下架）",
       "roles": [
         "AI Agent全栈研发实习生",
         "LLM Agent全栈开发工程师",
@@ -342,12 +477,19 @@ window.JOBS_DATA = {
       "highlights": "研发全生命周期AI化、智能代码助手、CodeReview、故障诊断；全栈与多步任务编排导向强。",
       "matchLevel": "高匹配",
       "officialUrl": "https://jobs.bytedance.com/campus/position?keywords=Agent",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
-          "summary": "在招：AI Agent全栈研发实习生（A172769A）等日常实习",
+          "summary": "在招：AI Agent开发-计算(A31360A)、AI Agent全栈研发(A172769A)等日常/ByteIntern实习",
           "openings": [
+            {
+              "title": "AI Agent 开发实习生 - 计算（基础设施 A31360A·上海·ByteIntern）",
+              "url": "https://jobs.bytedance.com/campus/position?keywords=A31360A",
+              "postedDate": "2026-11-26",
+              "status": "open",
+              "linkType": "jd"
+            },
             {
               "title": "AI Agent全栈研发实习生 - 开发者服务（A172769A）",
               "url": "https://jobs.bytedance.com/campus/position?keywords=A172769A",
@@ -379,7 +521,7 @@ window.JOBS_DATA = {
         },
         "campus": {
           "status": "open",
-          "summary": "在招：LLM Agent全栈校招（A173843）等2027届岗位",
+          "summary": "在招：LLM Agent全栈(A173843)等2027届岗位（秋招第一阶段至12-31，招满即下架）",
           "openings": [
             {
               "title": "AI Agent 开发工程师 - 抖音研发（杭州/上海·校招）",
@@ -423,7 +565,7 @@ window.JOBS_DATA = {
       ],
       "dailyInternStatus": "在招：Agent产品研发实习生（20736）及企业智能部Intelligence Lab AI Agent实习（每周4天、3-6个月）",
       "summerInternStatus": "Ace顶尖实习生计划与暑期实习面向在校生",
-      "campusRecruitStatus": "在招：2027校招AI Coding Agent、Agent平台全栈/Infra",
+      "campusRecruitStatus": "2027校招11月下旬逐步收尾，跨商/rednote Agent及AI Coding持续补录",
       "roles": [
         "Agent产品研发实习生",
         "大模型Agent开发（AI Coding）",
@@ -441,7 +583,7 @@ window.JOBS_DATA = {
       "highlights": "长任务Harness、执行器、沙箱权限、轨迹回放与定位；社招【点点专项】明确要求LangGraph/Dify/Spring AI。",
       "matchLevel": "高匹配",
       "officialUrl": "https://job.xiaohongshu.com/campus/intern",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -478,8 +620,22 @@ window.JOBS_DATA = {
         },
         "campus": {
           "status": "open",
-          "summary": "在招：2027校招AI Coding Agent、Agent平台全栈/Infra",
+          "summary": "2027校招11月下旬逐步收尾，跨商/rednote Agent及AI Coding持续补录",
           "openings": [
+            {
+              "title": "2027校招 Agent 研发工程师（跨境电商 & 交易平台·上海/杭州）",
+              "url": "https://job.xiaohongshu.com/campus/intern",
+              "postedDate": "2026-11-25",
+              "status": "open",
+              "linkType": "portal"
+            },
+            {
+              "title": "2027校招 Agent / 大模型算法工程师（rednote 海外业务·上海/杭州）",
+              "url": "https://job.xiaohongshu.com/campus/intern",
+              "postedDate": "2026-11-25",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "2027校招 大模型Agent开发工程师（AI Coding方向）",
               "url": "https://job.xiaohongshu.com/campus/intern",
@@ -514,7 +670,7 @@ window.JOBS_DATA = {
       ],
       "dailyInternStatus": "常年开放服务端/大模型应用日常实习（3个月起，转正导向强）",
       "summerInternStatus": "2028届暑期实习预计2027年春开启",
-      "campusRecruitStatus": "2027届秋招/提前批含AI Agent研发工程师、AI Infra",
+      "campusRecruitStatus": "2027届常规秋招网申通道已于11月下旬收尾关闭（可转投日常实习或关注后续补录）",
       "roles": [
         "AI Agent研发工程师",
         "大模型应用开发",
@@ -532,7 +688,7 @@ window.JOBS_DATA = {
       "highlights": "任务规划、长短期记忆、RAG、MCP、多智能体协同与高并发低延迟分布式系统。",
       "matchLevel": "中匹配",
       "officialUrl": "https://careers.pddglobalhr.com/campus/intern",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -553,14 +709,14 @@ window.JOBS_DATA = {
           "openings": []
         },
         "campus": {
-          "status": "open",
-          "summary": "2027届秋招/提前批含AI Agent研发工程师、AI Infra",
+          "status": "closed",
+          "summary": "2027届常规秋招网申通道已于11月下旬收尾关闭（可转投日常实习或关注后续补录）",
           "openings": [
             {
               "title": "2027届 AI Agent 研发工程师（上海）",
               "url": "https://careers.pddglobalhr.com/campus/intern",
               "postedDate": "2026-10-29",
-              "status": "open",
+              "status": "closed",
               "linkType": "portal"
             }
           ]
@@ -581,9 +737,9 @@ window.JOBS_DATA = {
         "暑期实习",
         "秋招"
       ],
-      "dailyInternStatus": "滚动开放AI应用开发/全栈日常实习",
+      "dailyInternStatus": "滚动开放LongCat通用Agent、数据库AI Agent及全栈日常实习",
       "summerInternStatus": "北斗计划与2028届暑期转正实习预计2027春启动",
-      "campusRecruitStatus": "2027届校招含AI应用开发工程师、AI全栈工程师",
+      "campusRecruitStatus": "2027届秋招正式批网申已于10月底至11月中旬陆续截止，当前以面试与Offer审批为主",
       "roles": [
         "AI应用开发工程师",
         "AI全栈工程师"
@@ -598,12 +754,26 @@ window.JOBS_DATA = {
       "highlights": "基于LLM API、RAG、工具调用与工作流编排构建内部提效工具与业务应用。",
       "matchLevel": "中匹配",
       "officialUrl": "https://zhaopin.meituan.com/web/campus",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
-          "summary": "滚动开放AI应用开发/全栈日常实习",
+          "summary": "滚动开放LongCat通用Agent、数据库AI Agent及全栈日常实习",
           "openings": [
+            {
+              "title": "数据库 AI 后端开发实习生（DB Agent/Skill管理·上海）",
+              "url": "https://zhaopin.meituan.com/web/campus",
+              "postedDate": "2026-11-26",
+              "status": "open",
+              "linkType": "portal"
+            },
+            {
+              "title": "LongCat 基础模型通用 Agent 算法/研发实习生（上海）",
+              "url": "https://zhaopin.meituan.com/web/campus",
+              "postedDate": "2026-11-26",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "AI应用开发实习生（上海）",
               "url": "https://zhaopin.meituan.com/web/campus",
@@ -619,21 +789,21 @@ window.JOBS_DATA = {
           "openings": []
         },
         "campus": {
-          "status": "open",
-          "summary": "2027届校招含AI应用开发工程师、AI全栈工程师",
+          "status": "closed",
+          "summary": "2027届秋招正式批网申已于10月底至11月中旬陆续截止，当前以面试与Offer审批为主",
           "openings": [
             {
               "title": "智能分析 AI 工程师（Prompt/Skill/Agent 编排·上海）",
               "url": "https://zhaopin.meituan.com/web/position/detail?highlightType=campus&jobUnionId=4786797684",
               "postedDate": "2026-11-20",
-              "status": "open",
+              "status": "closed",
               "linkType": "jd"
             },
             {
               "title": "AI 全栈工程师（RAG/Agent工作流·上海）",
               "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4697320043",
               "postedDate": "2026-11-14",
-              "status": "open",
+              "status": "closed",
               "linkType": "jd"
             }
           ]
@@ -654,9 +824,9 @@ window.JOBS_DATA = {
         "暑期实习",
         "秋招"
       ],
-      "dailyInternStatus": "常年开放TEG/CSIG/游戏AI日常实习",
+      "dailyInternStatus": "常年开放TEG/CSIG优图(Code Agent)/游戏AI日常与青云研究实习",
       "summerInternStatus": "青云计划与2028届暑期实习预计2027年春开启",
-      "campusRecruitStatus": "2027届校招及社招含Kinfra智能检索与Agent、游戏AI",
+      "campusRecruitStatus": "2027届常规秋招进入收尾期，青云计划与Kinfra/游戏AI持续推进",
       "roles": [
         "AI后台与Agent Memory开发",
         "Kinfra智能检索与Agent研发",
@@ -673,12 +843,19 @@ window.JOBS_DATA = {
       "highlights": "高性能推理与Agent Memory、GraphRAG/Agentic Search、长期记忆与多步规划。",
       "matchLevel": "高匹配",
       "officialUrl": "https://careers.tencent.com/search.html?keyword=Agent",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
-          "summary": "常年开放TEG/CSIG/游戏AI日常实习",
+          "summary": "常年开放TEG/CSIG优图(Code Agent)/游戏AI日常与青云研究实习",
           "openings": [
+            {
+              "title": "优图实验室 - 原生多模态 Infra / Code Agent 研究实习生（青云计划·上海）",
+              "url": "https://careers.tencent.com/search.html?keyword=Agent",
+              "postedDate": "2026-11-26",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "CSIG/TEG 智能检索与Agent研发实习生（上海）",
               "url": "https://careers.tencent.com/search.html?keyword=Agent",
@@ -695,8 +872,15 @@ window.JOBS_DATA = {
         },
         "campus": {
           "status": "open",
-          "summary": "2027届校招及社招含Kinfra智能检索与Agent、游戏AI",
+          "summary": "2027届常规秋招进入收尾期，青云计划与Kinfra/游戏AI持续推进",
           "openings": [
+            {
+              "title": "CDG 腾讯营销 - 广告投放 Agent / 电商推荐 Agent 研究（青云课题·上海）",
+              "url": "https://careers.tencent.com/search.html?keyword=Agent",
+              "postedDate": "2026-11-26",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "CSIG 腾讯云 Kinfra 智能检索与 Agent 研发（上海）",
               "url": "https://careers.tencent.com/jobdesc.html?postId=2108399579169996800",
@@ -753,7 +937,7 @@ window.JOBS_DATA = {
       "highlights": "结合社区内容生态、对话式AI搜索与互动场景进行AI原生应用与智能体研发。",
       "matchLevel": "中匹配",
       "officialUrl": "https://jobs.bilibili.com/campus/positions",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -820,7 +1004,7 @@ window.JOBS_DATA = {
       "highlights": "旅游垂类智能客服与AI行程规划助手；明确要求LangGraph/CrewAI、MCP、RAG与Agent Loop。",
       "matchLevel": "高匹配",
       "officialUrl": "https://careers.trip.com/campus",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -889,12 +1073,19 @@ window.JOBS_DATA = {
       "highlights": "内部办公提效与微服务集成、HR智能助手、游戏NPC与工业化多Agent协作。",
       "matchLevel": "中匹配",
       "officialUrl": "https://campus.163.com/app/job/position",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
           "summary": "效率工程部/EHR/网易游戏滚动招收AI应用实习生",
           "openings": [
+            {
+              "title": "网易雷火伏羲研究型实习生（去中心化 Agent 画像体系建设·杭州）",
+              "url": "https://campus.163.com/app/job/position",
+              "postedDate": "2026-11-25",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "网易互娱 AI Agent 开发 - UGC 创作辅助实习生（杭州）",
               "url": "https://campus.game.163.com/app/detail/index?id=4933&projectId=75",
@@ -913,6 +1104,13 @@ window.JOBS_DATA = {
           "status": "open",
           "summary": "2027届校招含效率工程AI应用开发、EHR Java Agent",
           "openings": [
+            {
+              "title": "EHR 产品中心 Java 开发工程师（AI Agent 方向·杭州）",
+              "url": "https://campus.163.com/app/job/position",
+              "postedDate": "2026-11-25",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "效率工程部 AI 算法/Agent 应用工程师（杭州）",
               "url": "https://campus.163.com/app/detail/index?id=4789&projectId=103",
@@ -964,7 +1162,7 @@ window.JOBS_DATA = {
       "highlights": "围绕昇腾生态做垂域微调、训推加速、分布式优化与云端AI应用落地，开源贡献加分明显。",
       "matchLevel": "中匹配",
       "officialUrl": "https://career.huawei.com/reccampportal/portal5/campus-recruitment.html",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -1015,7 +1213,7 @@ window.JOBS_DATA = {
       ],
       "dailyInternStatus": "滚动开放JoyAI Agent研发实习生",
       "summerInternStatus": "TGT顶尖青年技术天才计划及暑期实习支持上海",
-      "campusRecruitStatus": "2027届校招含Agent大模型算法与工程研发",
+      "campusRecruitStatus": "2027届秋招正式批网申预计2026-11-30集中截止（最后冲刺窗口），含Agent算法与工程",
       "roles": [
         "Agent大模型算法与工程研发",
         "Coding/DeepResearch Agent研发"
@@ -1030,7 +1228,7 @@ window.JOBS_DATA = {
       "highlights": "负责Agent沙盒建设、轨迹合成、长上下文与仓库级建模，推动Coding Agent与DeepResearch Agent落地。",
       "matchLevel": "高匹配",
       "officialUrl": "https://campus.jd.com/api/wx/position/index",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -1052,7 +1250,7 @@ window.JOBS_DATA = {
         },
         "campus": {
           "status": "open",
-          "summary": "2027届校招含Agent大模型算法与工程研发",
+          "summary": "2027届秋招正式批网申预计2026-11-30集中截止（最后冲刺窗口），含Agent算法与工程",
           "openings": [
             {
               "title": "Agent 大模型算法与工程研发（Coding/DeepResearch·上海）",
@@ -1081,7 +1279,7 @@ window.JOBS_DATA = {
       ],
       "dailyInternStatus": "日常实习全年开放且不限届别（明确有面向2028届的Agent岗）",
       "summerInternStatus": "2027届暑期已结束；2028届暑期项目待2027春发布",
-      "campusRecruitStatus": "2027届秋招及AIDU计划进行中",
+      "campusRecruitStatus": "2027届核心正式批网申已于11月上旬实质性关闭（日常实习全年开放不限届别，覆盖2028届）",
       "roles": [
         "千帆大模型平台应用开发",
         "AI原生应用与多Agent开发",
@@ -1097,7 +1295,7 @@ window.JOBS_DATA = {
       "highlights": "文心与千帆大模型平台多Agent框架商业化落地，日常实习对2028届友好。",
       "matchLevel": "高匹配",
       "officialUrl": "https://talent.baidu.com/jobs/list?recruitType=INTERN",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -1125,14 +1323,14 @@ window.JOBS_DATA = {
           "openings": []
         },
         "campus": {
-          "status": "open",
-          "summary": "2027届秋招及AIDU计划进行中",
+          "status": "closed",
+          "summary": "2027届核心正式批网申已于11月上旬实质性关闭（日常实习全年开放不限届别，覆盖2028届）",
           "openings": [
             {
               "title": "千帆大模型平台应用开发工程师（上海）",
               "url": "https://talent.baidu.com/jobs/list?recruitType=INTERN",
               "postedDate": "2026-11-01",
-              "status": "open",
+              "status": "closed",
               "linkType": "portal"
             }
           ]
@@ -1169,7 +1367,7 @@ window.JOBS_DATA = {
       "highlights": "聚焦音视频生成、电商/本地生活与AI互动Agent应用研发。",
       "matchLevel": "中匹配",
       "officialUrl": "https://campus.kuaishou.cn/recruit/campus/e/#/campus/jobs?name=AI",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "upcoming",
@@ -1229,7 +1427,7 @@ window.JOBS_DATA = {
       "highlights": "工程规范度高、WLB好，依托Office/Azure/Copilot团队做云原生与多步Agent编排，重内推。",
       "matchLevel": "中匹配",
       "officialUrl": "https://jobs.careers.microsoft.com/global/en/search?q=AI%20Agent&lc=Shanghai%2C%20China",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -1278,7 +1476,7 @@ window.JOBS_DATA = {
         "暑期实习",
         "秋招"
       ],
-      "dailyInternStatus": "常年开放Cloud/AI长期实习生（VT/Intern）",
+      "dailyInternStatus": "在招：CTO团队 iXp Generative AI Developer（RAG/MCP/Agentic Workflows，需6个月）",
       "summerInternStatus": "设有面向在校生的暑期与长期转正实习",
       "campusRecruitStatus": "Graduate校招含Cloud Developer（Business AI）",
       "roles": [
@@ -1296,12 +1494,19 @@ window.JOBS_DATA = {
       "highlights": "SAP全球三大研发中心之一，聚焦ERP（供应链/财务/HR）中的企业级Copilot与Agent落地。",
       "matchLevel": "中匹配",
       "officialUrl": "https://jobs.sap.com/search/?q=AI&locationsearch=Shanghai",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
-          "summary": "常年开放Cloud/AI长期实习生（VT/Intern）",
+          "summary": "在招：CTO团队 iXp Generative AI Developer（RAG/MCP/Agentic Workflows，需6个月）",
           "openings": [
+            {
+              "title": "iXp Intern - Generative AI Developer（Agentic Workflows/MCP·上海浦东）",
+              "url": "https://jobs.sap.com/search/?q=AI&locationsearch=Shanghai",
+              "postedDate": "2026-11-25",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "Cloud Developer（Business AI）（日常实习）",
               "url": "https://jobs.sap.com/search/?q=AI&locationsearch=Shanghai",
@@ -1345,7 +1550,7 @@ window.JOBS_DATA = {
         "暑期实习",
         "秋招"
       ],
-      "dailyInternStatus": "滚动开放SDE/Applied Scientist实习",
+      "dailyInternStatus": "滚动开放Agentic AI Applied Scientist及SDE实习（AWS上海AI Lab）",
       "summerInternStatus": "暑期实习生项目通常提前半年至一年启动",
       "campusRecruitStatus": "校招/社招含Bedrock大模型集成与跨境电商AI",
       "roles": [
@@ -1362,12 +1567,19 @@ window.JOBS_DATA = {
       "highlights": "聚焦AWS云计算服务（Amazon Bedrock大模型集成与Agent编排）及跨境电商AI工程。",
       "matchLevel": "中匹配",
       "officialUrl": "https://www.amazon.jobs/en/search?base_query=AI+Agent&loc_query=Shanghai%2C+China",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
-          "summary": "滚动开放SDE/Applied Scientist实习",
+          "summary": "滚动开放Agentic AI Applied Scientist及SDE实习（AWS上海AI Lab）",
           "openings": [
+            {
+              "title": "Agentic AI Applied Scientist Intern（AWS Shanghai AI Lab·上海）",
+              "url": "https://www.amazon.jobs/en/search?base_query=AI+Agent&loc_query=Shanghai%2C+China",
+              "postedDate": "2026-11-25",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "SDE（Bedrock与Agent编排工具）（日常实习）",
               "url": "https://www.amazon.jobs/en/search?base_query=AI+Agent&loc_query=Shanghai%2C+China",
@@ -1411,7 +1623,7 @@ window.JOBS_DATA = {
         "暑期实习",
         "秋招"
       ],
-      "dailyInternStatus": "University Recruiting常年开放AI Infra/加速实习",
+      "dailyInternStatus": "University Recruiting常年开放AI Agent Engineer及AI Infra实习",
       "summerInternStatus": "面向硕博与优秀本科生的暑期实习通道",
       "campusRecruitStatus": "校招与社招含大模型推理优化、GPU计算",
       "roles": [
@@ -1428,12 +1640,19 @@ window.JOBS_DATA = {
       "highlights": "偏硬核底层推理引擎、GPU加速与AI Agent底层算力优化，工程含金量极高。",
       "matchLevel": "中匹配",
       "officialUrl": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite?q=AI",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
-          "summary": "University Recruiting常年开放AI Infra/加速实习",
+          "summary": "University Recruiting常年开放AI Agent Engineer及AI Infra实习",
           "openings": [
+            {
+              "title": "AI Agent Engineer Intern（Multi-Agent Systems/SDK·上海）",
+              "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite?q=AI",
+              "postedDate": "2026-11-25",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "AI Infra工程师（日常实习）",
               "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite?q=AI",
@@ -1494,7 +1713,7 @@ window.JOBS_DATA = {
       "highlights": "成熟外企研发中心，侧重大模型在跨境电商对话、搜索推荐与风控中的稳定工程落地。",
       "matchLevel": "中匹配",
       "officialUrl": "https://jobs.ebayinc.com/us/en/search-results?keywords=AI&location=Shanghai",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -1560,7 +1779,7 @@ window.JOBS_DATA = {
       "highlights": "全球金融科技巨头研发中心，强调高可靠金融后端与LLM风控/客服应用结合。",
       "matchLevel": "中匹配",
       "officialUrl": "https://paypal.eightfold.ai/careers?query=AI&location=Shanghai",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -1627,7 +1846,7 @@ window.JOBS_DATA = {
       "highlights": "排障/多智能体路由、上下文传递、超时重试降级与流式优化；工程岗无硬性论文要求。",
       "matchLevel": "高匹配",
       "officialUrl": "https://www.minimax.cn/careers",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -1707,7 +1926,7 @@ window.JOBS_DATA = {
       "highlights": "聚焦“AI+终端（手机/汽车/IoT）”与自研Step基模向Agent交互流与产品的工程转化。",
       "matchLevel": "高匹配",
       "officialUrl": "https://app.mokahr.com/campus-recruitment/step/141903#/jobs",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -1756,7 +1975,7 @@ window.JOBS_DATA = {
         "暑期实习",
         "秋招"
       ],
-      "dailyInternStatus": "常年开放大模型应用开发/垂类AI Agent日常实习",
+      "dailyInternStatus": "在招：Agent Harness/RSI算法实习生、大模型应用开发日常实习",
       "summerInternStatus": "暑期实习与日常实习并行开放",
       "campusRecruitStatus": "2027届校招与社招含大模型应用开发工程师",
       "roles": [
@@ -1774,12 +1993,19 @@ window.JOBS_DATA = {
       "highlights": "AI Native标准产品与企业大模型定制交付；重日志评测排障与工程架构能力。",
       "matchLevel": "高匹配",
       "officialUrl": "https://hr.sensetime.com/campus",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
-          "summary": "常年开放大模型应用开发/垂类AI Agent日常实习",
+          "summary": "在招：Agent Harness/RSI算法实习生、大模型应用开发日常实习",
           "openings": [
+            {
+              "title": "Agent Harness 实习生 / 大模型 Agent 算法实习生（RSI 方向·上海徐汇漕河泾）",
+              "url": "https://hr.sensetime.com/campus",
+              "postedDate": "2026-11-25",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "大模型应用开发工程师/实习生（日常实习）",
               "url": "https://hr.sensetime.com/campus",
@@ -1840,7 +2066,7 @@ window.JOBS_DATA = {
       "highlights": "国内AI原生搜索与专业文档处理代表，聚焦非结构化长文本检索与问答落地。",
       "matchLevel": "高匹配",
       "officialUrl": "https://www.liepin.com/zhaopin/?key=%E7%A7%98%E5%A1%94%E7%A7%91%E6%8A%80%20AI",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -1909,7 +2135,7 @@ window.JOBS_DATA = {
       "highlights": "聚焦AI原生基础设施与Agentic MaaS，底层推理框架与Agent运行时架构技术硬核。",
       "matchLevel": "中匹配",
       "officialUrl": "https://infinigence.feishu.cn/m/jobs",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -1975,7 +2201,7 @@ window.JOBS_DATA = {
       "highlights": "基于“妙想”金融大模型落地金融Agent；面试高频考Text-to-SQL、多表关联、多轮上下文与MCP集成。",
       "matchLevel": "高匹配",
       "officialUrl": "https://career.eastmoney.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2042,7 +2268,7 @@ window.JOBS_DATA = {
       "highlights": "科创板上市基础软件厂，拥有分布式向量数据库、LLMOps平台与企业级AI智能体（TKH）。",
       "matchLevel": "高匹配",
       "officialUrl": "https://app.mokahr.com/campus_apply/transwarp",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2109,7 +2335,7 @@ window.JOBS_DATA = {
       "highlights": "深耕复杂文档解析、OCR+LLM智能文档处理（IDP）与商业大数据Agent，与OCR经历高度契合。",
       "matchLevel": "高匹配",
       "officialUrl": "https://intsig.zhiye.com/campus/jobs",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2176,7 +2402,7 @@ window.JOBS_DATA = {
       "highlights": "专精特新“小巨人”，在文档审核、垂直行业大模型私有化、知识图谱与Agent工作流积累深厚。",
       "matchLevel": "高匹配",
       "officialUrl": "https://www.liepin.com/zhaopin/?key=%E8%BE%BE%E8%A7%82%E6%95%B0%E6%8D%AE%20AI",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2241,7 +2467,7 @@ window.JOBS_DATA = {
       "highlights": "拥有DUI开放平台与DFM大模型，聚焦车载、家居与B端“语音+LLM多模态Agent”落地。",
       "matchLevel": "中匹配",
       "officialUrl": "https://aispeech.zhiye.com/Campus",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2308,7 +2534,7 @@ window.JOBS_DATA = {
       "highlights": "车辆数据分析、智能座舱、制造工艺与业务提效中的智能工作流落地，明确要求RAG与MCP。",
       "matchLevel": "高匹配",
       "officialUrl": "https://campus.nio.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2382,7 +2608,7 @@ window.JOBS_DATA = {
       "highlights": "算力与数据资源极多，车端与云端Agent结合紧密。",
       "matchLevel": "中匹配",
       "officialUrl": "https://www.lixiang.com/employ/campus/list.html",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2431,7 +2657,7 @@ window.JOBS_DATA = {
         "暑期实习",
         "秋招"
       ],
-      "dailyInternStatus": "常年开放AI多模态与座舱Agent自动化评测实习生（带转正）",
+      "dailyInternStatus": "在招：具身智能体框架/云端AI Agent、多模态与座舱Agent评测实习生（带转正）",
       "summerInternStatus": "暑期实习支持转正评估",
       "campusRecruitStatus": "校招与社招含车载Agent、智能座舱大模型架构研发",
       "roles": [
@@ -2447,12 +2673,19 @@ window.JOBS_DATA = {
       "highlights": "聚焦车载Agent、智能座舱大模型架构、多模态交互与自动化评测体系。",
       "matchLevel": "中匹配",
       "officialUrl": "https://xiaopeng.zhiye.com/campus",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
-          "summary": "常年开放AI多模态与座舱Agent自动化评测实习生（带转正）",
+          "summary": "在招：具身智能体框架/云端AI Agent、多模态与座舱Agent评测实习生（带转正）",
           "openings": [
+            {
+              "title": "具身智能体框架开发 / 云端 AI Agent 实习生（MCP/Workflow·上海）",
+              "url": "https://xiaopeng.jobs.feishu.cn/",
+              "postedDate": "2026-11-25",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "车载Agent与座舱大模型研发（日常实习）",
               "url": "https://xiaopeng.zhiye.com/campus",
@@ -2512,7 +2745,7 @@ window.JOBS_DATA = {
       "highlights": "涉及VLM/LLM微调、云端数据流水线与Corner Case远程决策Agent。",
       "matchLevel": "中匹配",
       "officialUrl": "https://campus.hellobike.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2579,7 +2812,7 @@ window.JOBS_DATA = {
       "highlights": "社区活动搭建、推荐诊断、数仓BI大模型集成、商品鉴别与导购中的Master Agent落地。",
       "matchLevel": "中匹配",
       "officialUrl": "https://campus.dewu.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2645,7 +2878,7 @@ window.JOBS_DATA = {
       "highlights": "面向音频与内容场景设计Agent系统，明确要求任务拆解、工具调用、MCP与Memory管理。",
       "matchLevel": "高匹配",
       "officialUrl": "https://www.liepin.com/zhaopin/?key=%E5%96%9C%E9%A9%AC%E6%8B%89%E9%9B%85%20Agent",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2710,7 +2943,7 @@ window.JOBS_DATA = {
       "highlights": "聚焦网文大模型应用、AI辅助创作与角色扮演（Role-play）互动智能体。",
       "matchLevel": "中匹配",
       "officialUrl": "https://join.yuewen.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2776,7 +3009,7 @@ window.JOBS_DATA = {
       "highlights": "偏向产业供应链与运营提效（自动化客诉处理、智能选品与运营决策Agent）。",
       "matchLevel": "中匹配",
       "officialUrl": "https://ddmcxz.zhiye.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2842,12 +3075,19 @@ window.JOBS_DATA = {
       "highlights": "将AI Agent落地于游戏自动化测试、代码/脚本/资产生成、剧情与NPC智能体。",
       "matchLevel": "中匹配",
       "officialUrl": "https://jobs.mihoyo.com/#/campus/position",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
           "summary": "米哈游等常年开放AI研发/AIGC工具链日常实习（含转正）",
           "openings": [
+            {
+              "title": "米哈游 AI 研发工程师实习生 / Agent 算法研究员实习生（Agent 管线·上海徐汇）",
+              "url": "https://jobs.mihoyo.com/#/campus/position",
+              "postedDate": "2026-11-25",
+              "status": "open",
+              "linkType": "portal"
+            },
             {
               "title": "AI研发工程师（Agent研发管线）（日常实习）",
               "url": "https://jobs.mihoyo.com/#/campus/position",
@@ -2909,7 +3149,7 @@ window.JOBS_DATA = {
       "highlights": "金融大模型智能体架构、多智能体系统、长程推理、持久化记忆与GUI Agent落地。",
       "matchLevel": "高匹配",
       "officialUrl": "https://job.10jqka.com.cn/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -2977,7 +3217,7 @@ window.JOBS_DATA = {
       "highlights": "强看重后端基础（JVM/MySQL/Redis）+ Agent工具链（MCP、多模型网关、LangGraph状态、JSON稳定性）。",
       "matchLevel": "高匹配",
       "officialUrl": "https://campus.hundsun.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3042,7 +3282,7 @@ window.JOBS_DATA = {
       "highlights": "跨境支付与数字科技场景下的AI Agent客服、智能化风控与业务流程自动化落地。",
       "matchLevel": "中匹配",
       "officialUrl": "https://www.liepin.com/zhaopin/?key=%E8%BF%9E%E8%BF%9E%E6%95%B0%E5%AD%97%20AI",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "upcoming",
@@ -3101,7 +3341,7 @@ window.JOBS_DATA = {
       "highlights": "基于“观澜”大模型与多模态体系，推动智能安防、工业视觉与企业级Agent落地。",
       "matchLevel": "中匹配",
       "officialUrl": "https://campushr.hikvision.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3168,7 +3408,7 @@ window.JOBS_DATA = {
       "highlights": "基于多模态行业大模型在智慧城市、智能制造场景落地AI Agent与业务系统。",
       "matchLevel": "中匹配",
       "officialUrl": "https://job.dahuatech.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3235,7 +3475,7 @@ window.JOBS_DATA = {
       "highlights": "明确要求Agent框架搭建、工具平台开发以及Prompt/微调、ReAct、Function Calling与MCP协议。",
       "matchLevel": "高匹配",
       "officialUrl": "https://job.ezviz.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3301,7 +3541,7 @@ window.JOBS_DATA = {
       "highlights": "车机端智能体（Eva）、AI OS交互及企业内部Data Agent、Text-to-SQL工作流落地。",
       "matchLevel": "中匹配",
       "officialUrl": "https://campus.geely.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3366,7 +3606,7 @@ window.JOBS_DATA = {
       "highlights": "车载语音、多模态交互及智能座舱Agent落地研发。",
       "matchLevel": "中匹配",
       "officialUrl": "https://leapmotor.zhiye.com/campus",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3431,7 +3671,7 @@ window.JOBS_DATA = {
       "highlights": "将RPA流程自动化与大模型、AI Agent深度融合，极客文化浓、重Python自动化落地。",
       "matchLevel": "高匹配",
       "officialUrl": "https://www.liepin.com/zhaopin/?key=%E5%BD%B1%E5%88%80%20AI",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3497,7 +3737,7 @@ window.JOBS_DATA = {
       "highlights": "国产IPA（智能流程自动化）与AI Agent代表企业，核心产品聚焦大模型数字员工与工作流。",
       "matchLevel": "高匹配",
       "officialUrl": "https://www.liepin.com/zhaopin/?key=%E5%AE%9E%E5%9C%A8%E6%99%BA%E8%83%BD%20AI",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3563,7 +3803,7 @@ window.JOBS_DATA = {
       "highlights": "空间大模型、3D生成与工业数字孪生中的AI工程化与自动化工作流建设。",
       "matchLevel": "中匹配",
       "officialUrl": "https://app.mokahr.com/campus_apply/qunhemail/2832#/jobs",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3628,7 +3868,7 @@ window.JOBS_DATA = {
       "highlights": "全球领先的视觉算法与多模态AI公司，与视觉论文和Python工程背景有交集。",
       "matchLevel": "中匹配",
       "officialUrl": "https://www.arcsoft.com.cn/job/JobList.html",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3694,7 +3934,7 @@ window.JOBS_DATA = {
       "highlights": "聚焦AI+AR眼镜与AI-Native UI本地智能体框架。",
       "matchLevel": "中匹配",
       "officialUrl": "https://www.liepin.com/zhaopin/?key=Rokid%20AI",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3761,7 +4001,7 @@ window.JOBS_DATA = {
       "highlights": "深度融合AI+IoT，聚焦语音AI交互、智能硬件与垂直大模型应用，重实战动手能力。",
       "matchLevel": "高匹配",
       "officialUrl": "https://job.tuya.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3827,7 +4067,7 @@ window.JOBS_DATA = {
       "highlights": "积极推进AI Native战略，高频举办Agent黑客松，落地商家经营AI与GEO工具。",
       "matchLevel": "高匹配",
       "officialUrl": "https://job.youzan.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3883,7 +4123,7 @@ window.JOBS_DATA = {
       "highlights": "深耕数字医疗，聚焦临床决策辅助、用药助手与医疗文本大模型应用落地。",
       "matchLevel": "中匹配",
       "officialUrl": "https://www.liepin.com/zhaopin/?key=%E4%B8%81%E9%A6%99%E5%9B%AD%20AI",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
@@ -3948,7 +4188,7 @@ window.JOBS_DATA = {
       "highlights": "杭州本土垂类龙头，面向政企采购数智化与跨境支付出海场景落地垂直大模型与Agent。",
       "matchLevel": "中匹配",
       "officialUrl": "https://www.liepin.com/zhaopin/?key=%E6%94%BF%E9%87%87%E4%BA%91%20AI",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "upcoming",
@@ -3999,7 +4239,7 @@ window.JOBS_DATA = {
       "highlights": "基于“讯飞星火”大模型在智能办公（讯飞听见/数字员工）、教育、医疗与车载场景落地Agent。",
       "matchLevel": "中匹配",
       "officialUrl": "https://campus.iflytek.com/",
-      "lastChecked": "2026-11-24",
+      "lastChecked": "2026-11-26",
       "channels": {
         "daily": {
           "status": "open",
