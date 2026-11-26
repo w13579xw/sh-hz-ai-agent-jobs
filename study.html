@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2028届 AI Agent 3个月硬核冲刺作战台</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-elevated: #111827;
+      --surface: #151e32;
+      --surface-hover: #1b2640;
+      --border: rgba(148, 163, 184, 0.16);
+      --border-strong: rgba(56, 189, 248, 0.35);
+      --text: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent: #38bdf8;
+      --accent-2: #818cf8;
+      --emerald: #34d399;
+      --amber: #fbbf24;
+      --rose: #fb7185;
+      --glow: 0 0 28px rgba(56, 189, 248, 0.14);
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(56, 189, 248, 0.14), transparent 60%),
+        radial-gradient(700px 450px at 90% 0%, rgba(129, 140, 248, 0.12), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding-bottom: 72px;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    /* Top Nav */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(11, 17, 32, 0.82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--emerald));
+      box-shadow: 0 0 12px var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      padding: 7px 14px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.16s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--border-strong);
+      color: var(--text);
+      background: rgba(56, 189, 248, 0.08);
+    }
+
+    .nav-btn.active {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.22), rgba(129, 140, 248, 0.22));
+      border-color: var(--accent);
+      color: #fff;
+      box-shadow: var(--glow);
+    }
+
+    .nav-btn.radar-link {
+      border-color: rgba(52, 211, 153, 0.35);
+      color: var(--emerald);
+    }
+
+    /* Hero Dashboard */
+    .hero {
+      padding: 28px 0 22px;
+    }
+
+    .hero-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #f8fafc 0%, #7dd3fc 55%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    .hero-sub {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-ghost {
+      padding: 7px 13px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-secondary);
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: #fff; }
+
+    .btn-primary {
+      padding: 8px 16px;
+      border-radius: 9px;
+      border: 1px solid rgba(52, 211, 153, 0.45);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(56, 189, 248, 0.2));
+      color: #ecfdf5;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-primary:hover { box-shadow: 0 0 18px rgba(52, 211, 153, 0.28); }
+    .btn-primary.done {
+      background: rgba(52, 211, 153, 0.16);
+      color: var(--emerald);
+      border-color: var(--emerald);
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      opacity: 0.7;
+    }
+
+    .stat-label { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; }
+    .stat-val { font-size: 26px; font-weight: 800; color: #fff; font-variant-numeric: tabular-nums; }
+    .stat-meta { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+    .progress-bar-bg {
+      height: 7px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--emerald));
+      border-radius: 999px;
+      transition: width 0.35s ease;
+    }
+
+    /* Sections */
+    .tab-section { display: none; margin-top: 22px; }
+    .tab-section.active { display: block; }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tag-pill {
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.14);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    /* Month Blocks */
+    .month-block {
+      margin-bottom: 24px;
+    }
+
+    .month-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11px 16px;
+      background: linear-gradient(90deg, rgba(56, 189, 248, 0.14), rgba(129, 140, 248, 0.06));
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .month-header h2 { font-size: 16px; font-weight: 700; color: #fff; }
+    .month-progress { font-size: 12.5px; font-weight: 700; color: var(--emerald); }
+
+    .weeks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
+      gap: 14px;
+    }
+
+    .week-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color 0.16s, transform 0.16s;
+    }
+
+    .week-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+    .week-card.completed { border-color: rgba(52, 211, 153, 0.45); background: linear-gradient(180deg, rgba(16, 185, 129, 0.06), var(--surface)); }
+
+    .week-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .week-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.12);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .week-title { font-size: 15px; font-weight: 700; color: #fff; margin-top: 6px; }
+    .week-desc { font-size: 13px; color: var(--text-secondary); }
+
+    .dod-box {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 10px 12px;
+      font-size: 12.5px;
+      color: #cbd5e1;
+    }
+    .dod-box strong { color: var(--emerald); font-size: 11.5px; display: block; margin-bottom: 3px; }
+
+    .check-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      user-select: none;
+    }
+
+    .check-label input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      accent-color: var(--emerald);
+      cursor: pointer;
+    }
+
+    /* Week 1 Daily Cards */
+    .day-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      transition: border-color 0.18s;
+    }
+    .day-card.all-done { border-color: rgba(52, 211, 153, 0.5); }
+
+    .day-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .day-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .day-badge {
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 12.5px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 7px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0b1120;
+    }
+
+    .day-title { font-size: 16px; font-weight: 700; color: #fff; }
+    .day-hours { font-size: 12px; color: var(--amber); font-weight: 600; }
+
+    .day-body {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 860px) { .day-body { grid-template-columns: 1fr; } }
+
+    .subtask-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .subtask-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      padding: 9px 11px;
+      border-radius: 9px;
+      background: rgba(15, 23, 42, 0.58);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: #e2e8f0;
+      cursor: pointer;
+    }
+    .subtask-item.checked {
+      color: var(--text-muted);
+      text-decoration: line-through;
+      border-color: rgba(52, 211, 153, 0.25);
+    }
+    .subtask-item input { margin-top: 3px; width: 16px; height: 16px; accent-color: var(--emerald); flex-shrink: 0; }
+
+    .day-side {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .info-box {
+      background: rgba(15, 23, 42, 0.55);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 13px;
+      font-size: 12.5px;
+    }
+    .info-box h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .res-links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .res-links a {
+      color: #7dd3fc;
+      text-decoration: none;
+      font-size: 12.5px;
+    }
+    .res-links a:hover { text-decoration: underline; }
+
+    /* Hot Topics Table */
+    .filter-pills {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .filter-pill {
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-secondary);
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .filter-pill.active {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 960px;
+      font-size: 13px;
+    }
+
+    thead th {
+      background: rgba(15, 23, 42, 0.85);
+      color: #e2e8f0;
+      text-align: left;
+      padding: 13px 14px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: #cbd5e1;
+    }
+    tbody tr:hover { background: rgba(56, 189, 248, 0.04); }
+
+    .heat-badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .heat-p0 { background: rgba(251, 113, 133, 0.18); color: var(--rose); border: 1px solid rgba(251, 113, 133, 0.35); }
+    .heat-p1 { background: rgba(251, 191, 36, 0.16); color: var(--amber); border: 1px solid rgba(251, 191, 36, 0.35); }
+
+    /* Interview QA Cards */
+    .qa-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .qa-card.mastered { border-color: rgba(52, 211, 153, 0.45); }
+
+    .qa-head {
+      padding: 15px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .qa-head:hover { background: var(--surface-hover); }
+
+    .qa-q {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .qa-num {
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 12px;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: rgba(129, 140, 248, 0.18);
+      color: #c7d2fe;
+    }
+
+    .qa-body {
+      display: none;
+      padding: 0 18px 16px;
+      border-top: 1px solid var(--border);
+    }
+    .qa-card.open .qa-body { display: block; }
+
+    .qa-answer {
+      margin-top: 14px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .qa-answer ul { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .qa-answer strong { color: #f8fafc; }
+    .qa-tip {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: rgba(52, 211, 153, 0.08);
+      border: 1px solid rgba(52, 211, 153, 0.25);
+      font-size: 12.5px;
+      color: #a7f3d0;
+    }
+
+    .note-input {
+      width: 100%;
+      margin-top: 10px;
+      padding: 9px 11px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.7);
+      color: #f1f5f9;
+      font-size: 12.5px;
+      resize: vertical;
+      min-height: 54px;
+      outline: none;
+    }
+    .note-input:focus { border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>2028届 AI Agent 硬核冲刺作战台</span>
+      </div>
+      <div class="nav-links">
+        <button class="nav-btn active" data-tab="roadmap">📅 3个月12周路线</button>
+        <button class="nav-btn" data-tab="week1">⚡ 第1周每日打卡</button>
+        <button class="nav-btn" data-tab="hottopics">🔥 2026-2027沪杭硬核考点表</button>
+        <button class="nav-btn" data-tab="interview">🎯 经典面经与高分回答</button>
+        <a class="nav-btn radar-link" href="./index.html">📡 沪杭岗位雷达 ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-head">
+        <div>
+          <h1>西电 2028 届 · AI 应用开发 90 天打卡系统</h1>
+          <div class="hero-sub">主线：异步工程底座 → 原生手写 ReAct & MCP → RAG 评测 → LangGraph 生产级旗舰项目 → 沪杭大中厂面经与手撕</div>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary" id="dailyCheckinBtn">✅ 今日 LeetCode + 八股打卡</button>
+          <button class="btn-ghost" id="exportBackupBtn">导出进度备份</button>
+          <button class="btn-ghost" id="resetProgressBtn">重置记录</button>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">12周总路线完成度</div>
+          <div class="stat-val" id="statWeekPct">0%</div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="barWeek"></div></div>
+          <div class="stat-meta" id="statWeekMeta">已完成 0 / 12 周</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">第 1 周精细子任务</div>
+          <div class="stat-val" id="statW1Pct">0%</div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="barW1"></div></div>
+          <div class="stat-meta" id="statW1Meta">已完成 0 / 0 项</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">高频面经掌握度</div>
+          <div class="stat-val" id="statQaPct">0 / 10</div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="barQa"></div></div>
+          <div class="stat-meta">点击面经右侧即可标记已掌握</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">每日刷题/八股打卡天数</div>
+          <div class="stat-val" id="statStreak">0 天</div>
+          <div class="stat-meta" id="statCountdown">距 2027-03-01 暑期黄金期：计算中...</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- TAB 1: 3个月12周任务 -->
+    <section class="tab-section active" id="tab-roadmap">
+      <div class="section-header">
+        <div class="section-title">📅 三个月（12 周）核心执行路线 <span class="tag-pill">2026.12 — 2027.02</span></div>
+        <div style="font-size:12.5px;color:var(--text-secondary)">贯穿全程固定习惯：每日 1–2 道 LeetCode Hot 100（中等）+ 1 个计算机基础考点</div>
+      </div>
+      <div id="roadmapContainer"></div>
+    </section>
+
+    <!-- TAB 2: 第一周每日任务 -->
+    <section class="tab-section" id="tab-week1">
+      <div class="section-header">
+        <div class="section-title">⚡ 第 1 周精细每日任务（Day 1 — Day 7） <span class="tag-pill">异步底座 + FastAPI/SSE + 压测验收</span></div>
+        <div style="font-size:12.5px;color:var(--text-secondary)">目标：彻底吃透 Python 异步并发与生产级大模型 API 调用封装，不靠框架写出高可用基础层</div>
+      </div>
+      <div id="week1Container"></div>
+    </section>
+
+    <!-- TAB 3: 2026-2027 沪杭硬核考点表 -->
+    <section class="tab-section" id="tab-hottopics">
+      <div class="section-header">
+        <div class="section-title">🔥 2026–2027 沪杭大中厂 AI 应用开发最火硬核考点表 <span class="tag-pill">基于沪杭 57 家企业 JD 与面经提炼</span></div>
+      </div>
+      <div class="filter-pills" id="topicFilters"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 11%">热度 / 分类</th>
+              <th style="width: 17%">硬核考点</th>
+              <th style="width: 18%">沪杭高频考察企业</th>
+              <th style="width: 27%">面试官深水区必追问问题</th>
+              <th style="width: 27%">你的项目落地与达标证明</th>
+            </tr>
+          </thead>
+          <tbody id="topicsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 4: 经典面经与高分回答 -->
+    <section class="tab-section" id="tab-interview">
+      <div class="section-header">
+        <div class="section-title">🎯 经典面经与大厂高分回答库（10 题） <span class="tag-pill">含你的 3 道核心题 + 7 道沪杭高频必考题</span></div>
+        <div style="display:flex;gap:8px">
+          <button class="btn-ghost" id="expandAllQaBtn">全部展开</button>
+          <button class="btn-ghost" id="collapseAllQaBtn">全部收起</button>
+        </div>
+      </div>
+      <div id="qaContainer"></div>
+    </section>
+  </main>
+
+  <script>
+    const STORE_KEY = "xd28_ai_agent_study_v1";
+
+    const ROADMAP_MONTHS = [
+      {
+        month: "第一个月（2026.12）· 异步工程底座 + 原生手写 Agent + MCP + RAG 评测",
+        weeks: [
+          {
+            id: "W1",
+            title: "Python 异步并发 + FastAPI / SSE 流式服务",
+            desc: "吃透 asyncio 事件循环、gather/Semaphore 并发控制、httpx 异步客户端、FastAPI 异步路由与 SSE 流式推送。",
+            dod: "写出异步并发压测脚本：并发请求大模型 API，实现限流、指数退避重试、超时熔断，实测串行 vs 异步并发耗时对比。"
+          },
+          {
+            id: "W2",
+            title: "手写原生 Agent（不用框架）：ReAct & Plan-and-Solve",
+            desc: "纯 Python + OpenAI/Qwen 原生 SDK 实现多轮 Function Calling、Pydantic 参数校验、Self-Correction 自动纠错与终止预算。",
+            dod: "产出约 200 行无框架 Agent 核心引擎，带步数/Token 硬上限与 JSONL 全链路执行轨迹日志。"
+          },
+          {
+            id: "W3",
+            title: "MCP 协议实战与工具安全边界",
+            desc: "学习 Model Context Protocol（Client/Server、Stdio/SSE），实践最小权限控制、敏感操作确认与 Prompt 注入防护。",
+            dod: "手写 1 个标准 MCP Server（暴露抓取/SQL/文档 3 个工具），用 W2 原生 Agent 作为 Client 跑通调用与越权拦截演示。"
+          },
+          {
+            id: "W4",
+            title: "生产级 RAG 全链路 + 独立评测集",
+            desc: "文档解析切分、混合检索（BM25 + 向量库）、BGE-Reranker 重排、Query 改写与引用溯源。",
+            dod: "构建 50 条评测题（含 10 条应拒答题），输出「纯向量 vs 混合 vs 混合+重排」Recall@5 与准确率对比表。"
+          }
+        ]
+      },
+      {
+        month: "第二个月（2027.01）· LangGraph 状态机 + 生产级旗舰项目落地",
+        weeks: [
+          {
+            id: "W5",
+            title: "LangGraph 状态图 + 持久化与断点恢复",
+            desc: "掌握 StateGraph、条件边、Reducer、PostgreSQL/SQLite Checkpointer、Human-in-the-loop 与工具幂等键设计。",
+            dod: "演示长任务在第 3 步强制中断后从 Checkpoint 恢复继续执行，且发邮件/写库等副作用工具不重复触发。"
+          },
+          {
+            id: "W6",
+            title: "旗舰项目 V1：自动化舆情/研报 Multi-Agent 闭环",
+            desc: "砍掉穿搭等玩具 Demo，聚焦 3 节点协作：抓取检索 Agent（MCP）→ 情感与事实核验 Agent → 研报生成与飞书推送 Agent。",
+            dod: "配置完整 Retry + Fallback（主模型超时/限流自动降级备用模型），支持定时调度每日自动推送飞书卡片日报。"
+          },
+          {
+            id: "W7",
+            title: "旗舰项目 V2：延迟、高并发与 Token 成本优化",
+            desc: "SSE 流式进度反馈、无依赖工具 asyncio.gather 并行、Redis 语义缓存（Semantic Cache）、大小模型路由与 Prefix 缓存。",
+            dod: "压测输出优化前后量化表：TTFT 首字延迟、P50/P95 端到端耗时、单次任务 Token 成本下降比例。"
+          },
+          {
+            id: "W8",
+            title: "旗舰项目 V3：100 条自动评测闭环 + Docker 部署",
+            desc: "构造 100 条评测任务（含超时故障注入、脏数据/恶意注入、无信息拒答），编写一键评测与回归脚本。",
+            dod: "产出实验报告（任务成功率、引用支持率、恢复率、15 条 Badcase 归因修复）+ Docker Compose 一键启动与规范 GitHub README。"
+          }
+        ]
+      },
+      {
+        month: "第三个月（2027.02）· 八股手撕冲刺 + 模拟面试 + 沪杭分梯队主投",
+        weeks: [
+          {
+            id: "W9",
+            title: "计算机基础 + AI 应用高频八股集中突破",
+            desc: "OS 进程线程协程、HTTP/SSE/WS、MySQL 索引事务、Redis 缓存与分布式锁、Transformer/KV Cache/Prefill-Decode。",
+            dod: "整理 20 道个人《高频面试问答卡》，确保每道工程/Agent 题都能挂钩自己项目里的真实压测与评测数字。"
+          },
+          {
+            id: "W10",
+            title: "简历 STAR 量化精修 + 全真模拟面试",
+            desc: "按「问题 → 个人动作 → 评测基线 → 量化收益」重构简历，删除无依据形容词；同步准备 90 秒自我介绍与 10 分钟项目深挖。",
+            dod: "完成 2–3 次 60 分钟全真模拟面试（项目深挖 20m + 手撕中等题 20m + 场景设计 20m）并逐项复盘卡壳点。"
+          },
+          {
+            id: "W11",
+            title: "沪杭中厂 & 独角兽日常实习提前试水",
+            desc: "先投 10–15 家高匹配沪杭中厂/独角兽日常实习（MiniMax、合合、达观、东财、同花顺、恒生、蔚来、有赞、影刀等）检验通过率。",
+            dod: "记录每场真实面试复盘，针对性补齐面试官追问最多的数据库/并发或 RAG/Agent 架构盲区。"
+          },
+          {
+            id: "W12",
+            title: "2028 届暑期转正实习全面主投（沪杭大厂+外企）",
+            desc: "全面投递阿里/阿里云/蚂蚁、字节、小红书、拼多多、美团、腾讯、携程、B站、网易及微软/SAP/AWS 内推。",
+            dod: "配合「沪杭岗位雷达网页」每日跟踪投递状态与新增直达 JD，稳拿高含金量暑期转正 Offer。"
+          }
+        ]
+      }
+    ];
+
+    const WEEK1_DAYS = [
+      {
+        day: "Day 1",
+        title: "吃透 Python 异步底层：协程、事件循环与 asyncio 核心原语",
+        hours: "预计 3.5 小时",
+        tasks: [
+          { id: "w1d1_1", text: "精读 Python asyncio 核心概念：理解事件循环（Event Loop）、Coroutine、Task、Future 区别，明白为何异步只加速 I/O 密集型而非 CPU 密集型。" },
+          { id: "w1d1_2", text: "动手写 3 个最小 Demo：`asyncio.gather` 并发执行、`asyncio.wait_for` 超时控制、`asyncio.Semaphore(5)` 限制最大并发数。" },
+          { id: "w1d1_3", text: "【每日刷题】LeetCode Hot 100 哈希/双指针 2 道中等题（如 49.字母异位词分组、15.三数之和），手写不看提示。" }
+        ],
+        howTo: "新建仓库 `agent-infra-lab/day1_async.py`，用 `asyncio.sleep` 模拟 20 个耗时 1s 的外部 API 请求，对比串行（20s）、无限制并发（1s）、Semaphore(5) 限流并发（4s）的真实耗时并打印日志。",
+        resources: [
+          { label: "Python 官方文档：asyncio 异步 I/O 指南", url: "https://docs.python.org/zh-cn/3/library/asyncio.html" },
+          { label: "Real Python：Async IO in Python 完整实战教程", url: "https://realpython.com/async-io-python/" },
+          { label: "LeetCode Hot 100 官方题单", url: "https://leetcode.cn/studyplan/top-100-liked/" }
+        ]
+      },
+      {
+        day: "Day 2",
+        title: "生产级异步 HTTP 客户端：httpx + 指数退避重试 + 熔断降级",
+        hours: "预计 3.5 小时",
+        tasks: [
+          { id: "w1d2_1", text: "学习 `httpx.AsyncClient` 连接池复用（`Limits`、`Timeout` 分段设置 connect/read 超时），避免每次请求新建 TCP/TLS 握手。" },
+          { id: "w1d2_2", text: "结合 `tenacity` 实现针对 429（限流）/ 502 / 503 / 超时的指数退避重试（Exponential Backoff + Jitter 随机抖动），对 400 参数错误直接快速失败不重试。" },
+          { id: "w1d2_3", text: "【每日刷题】LeetCode 滑动窗口 2 道中等题（3.无重复字符的最长子串、438.找到字符串中所有字母异位词）。" }
+        ],
+        howTo: "封装 `AsyncLLMClient` 类，对接任意 OpenAI 兼容接口（如 Qwen/DeepSeek API），故意注入一个超时错误和 429 模拟，验收日志中清晰打印「第 1 次重试等待 1.2s → 第 2 次成功」以及 Token 消耗统计。",
+        resources: [
+          { label: "HTTPX 官方文档：Async Support & Connection Pooling", url: "https://www.python-httpx.org/async/" },
+          { label: "Tenacity 官方文档：Python 优雅重试库", url: "https://tenacity.readthedocs.io/en/latest/" }
+        ]
+      },
+      {
+        day: "Day 3",
+        title: "FastAPI 异步服务端 + Pydantic V2 强类型校验",
+        hours: "预计 3.5 小时",
+        tasks: [
+          { id: "w1d3_1", text: "理解 FastAPI 中 `async def` 与普通 `def` 路由的线程调度差异（避免在 `async def` 中误调阻塞式 `requests.get` 堵死整个事件循环）。" },
+          { id: "w1d3_2", text: "用 Pydantic V2 定义严格请求/响应 Schema，实现统一异常拦截中间件与 `request_id` 链路追踪日志。" },
+          { id: "w1d3_3", text: "【每日刷题】LeetCode 链表 2 道中等题（146.LRU 缓存必刷！、148.排序链表）。" }
+        ],
+        howTo: "启动一个 FastAPI 服务，提供 `POST /v1/chat` 与 `GET /health` 接口；用 Swagger UI (`/docs`) 测试非法参数返回统一错误码，并观察并发请求下不同 `request_id` 的异步交叉日志。",
+        resources: [
+          { label: "FastAPI 官方文档：并发与 async / await", url: "https://fastapi.tiangolo.com/zh/async/" },
+          { label: "Pydantic V2 官方文档：数据校验与结构化输出", url: "https://docs.pydantic.dev/latest/" }
+        ]
+      },
+      {
+        day: "Day 4",
+        title: "大模型流式响应核心：SSE（Server-Sent Events）全链路打通",
+        hours: "预计 4 小时",
+        tasks: [
+          { id: "w1d4_1", text: "对比轮询、WebSocket 与 SSE 的区别，理解为什么 ChatGPT/DeepSeek/Agent 对话服务普遍首选 SSE（单向文本流、HTTP 友好、自带断线重连、易于 Nginx 代理）。" },
+          { id: "w1d4_2", text: "用 FastAPI `StreamingResponse(..., media_type='text/event-stream')` 透传大模型 `stream=True` 分片，同时统计 **TTFT（首字延迟）** 和 **TPS（每秒生成 Token 数）**。" },
+          { id: "w1d4_3", text: "处理客户端中途断开连接（`await request.is_disconnected()`）时立即取消上游 LLM 请求，防止浪费 Token 费用。" }
+        ],
+        howTo: "写一个极简 HTML 页面（或 `curl -N`）接入你的 `/v1/chat/stream` 接口，观察打字机效果，并在服务端日志看到每个请求的 `TTFT=0.48s, total=2.3s`；测试中途关闭网页，确认服务端立即打印取消上游请求日志。",
+        resources: [
+          { label: "MDN：Server-Sent Events (SSE) 规范详解", url: "https://developer.mozilla.org/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events" },
+          { label: "FastAPI：StreamingResponse 官方说明", url: "https://fastapi.tiangolo.com/advanced/custom-response/#streamingresponse" }
+        ]
+      },
+      {
+        day: "Day 5",
+        title: "结构化输出与多工具异步并发调度初探",
+        hours: "预计 3.5 小时",
+        tasks: [
+          { id: "w1d5_1", text: "深入阅读 Anthropic《Building effective agents》与 OpenAI/Claude Tool Use 官方文档，区分「Workflow 固定工作流」与「Autonomous Agent 自主智能体」。" },
+          { id: "w1d5_2", text: "实测大模型 `response_format` / Structured Outputs + Function Calling，实现当模型一次返回 3 个独立 `tool_calls` 时，用 `asyncio.gather` 并行执行它们。" },
+          { id: "w1d5_3", text: "【每日刷题】LeetCode 二叉树 2 道中等题（102.层序遍历、236.最近公共祖先）。" }
+        ],
+        howTo: "用 3 个模拟工具（查汇率、查天气、查文档摘要，各耗时 0.8s）测试：模型一次发出 3 个 tool_calls，你的调度器并发执行在 ~0.85s 内全部返回，而非串行 2.4s。",
+        resources: [
+          { label: "Anthropic 必读经典：Building effective agents", url: "https://www.anthropic.com/research/building-effective-agents" },
+          { label: "OpenAI 官方文档：Function Calling & Structured Outputs", url: "https://platform.openai.com/docs/guides/function-calling" }
+        ]
+      },
+      {
+        day: "Day 6",
+        title: "第 1 周综合压测验收：并发压测报告 + 故障演练",
+        hours: "预计 4 小时",
+        tasks: [
+          { id: "w1d6_1", text: "编写压测脚本（或用 Locust），对你的 FastAPI 异步 LLM 服务发起 10 / 30 / 50 并发压测，记录成功率、P50/P95 延迟、TTFT 与报错分布。" },
+          { id: "w1d6_2", text: "加入 **Fallback 降级策略**：主模型 API 超时或连续失败 3 次时自动切换到备用模型或返回友好降级提示，并记录日志。" },
+          { id: "w1d6_3", text: "整理本周代码为整洁 GitHub 仓库（含 `README.md`、压测数据表格、架构图）。" }
+        ],
+        howTo: "验收标准：你的 README 里有一张真实的《串行 vs 异步并发 + Semaphore 限流压测对比表》，并能不看代码口头讲清「为什么用异步、连接池如何配、客户端断连怎么停扣费」。",
+        resources: [
+          { label: "Locust 开源压测工具官方文档", url: "https://docs.locust.io/en/stable/" }
+        ]
+      },
+      {
+        day: "Day 7",
+        title: "周复盘 + 错题重刷 + 下周原生 ReAct 预热",
+        hours: "预计 2.5 小时",
+        tasks: [
+          { id: "w1d7_1", text: "无提示重刷本周写卡壳的 LeetCode 题目（重点：LRU 缓存 + 双指针/滑窗）。" },
+          { id: "w1d7_2", text: "精读 ReAct 原论文（ICLR 2023）的核心思想与实验局限，写 1 页笔记，为 W2 手写无框架 ReAct 引擎做好设计稿。" },
+          { id: "w1d7_3", text: "对照「经典面经库」口述一遍：SSE 与 WebSocket 区别、Agent 延迟怎么优化，录一段 3 分钟语音自检表达清晰度。" }
+        ],
+        howTo: "完成本周所有勾选，在 GitHub 推送 Week 1 里程碑提交，给大脑留半天彻底休息，准备 W2 硬核手写 Agent 引擎！",
+        resources: [
+          { label: "原始论文：ReAct (Synergizing Reasoning and Acting)", url: "https://arxiv.org/abs/2210.03629" }
+        ]
+      }
+    ];
+
+    const HOT_TOPICS = [
+      {
+        cat: "协议与安全",
+        heat: "P0 极热",
+        heatCls: "heat-p0",
+        topic: "MCP 协议（Model Context Protocol）",
+        companies: "阿里/阿里云、字节、携程、东方财富、恒生电子、萤石、蔚来、喜马拉雅",
+        questions: "MCP 与传统 Function Calling 到底有什么区别？如何自己开发一个 MCP Server？企业内网挂载 MCP 工具如何做鉴权与权限隔离？",
+        action: "亲手用官方 SDK 写 1 个 MCP Server + Client，演示工具注册、参数校验和越权拦截。"
+      },
+      {
+        cat: "Agent 架构",
+        heat: "P0 极热",
+        heatCls: "heat-p0",
+        topic: "LangGraph 状态机、持久化与中断恢复",
+        companies: "小红书（点点专项）、携程、恒生电子、美团、字节、MiniMax",
+        questions: "为什么复杂 Agent 不用线性 Chain 而用图状态机？任务跑一半进程挂了怎么恢复？如何防止 Agent 陷入死循环或无限套娃？",
+        action: "在旗舰项目中落地 PostgreSQL/SQLite Checkpointer、最大步数硬限制与 Human-in-the-loop 审批节点。"
+      },
+      {
+        cat: "RAG 与评测",
+        heat: "P0 极热",
+        heatCls: "heat-p0",
+        topic: "自动评测闭环与 Badcase 归因（Eval）",
+        companies: "字节、百度、美团（LongCat）、小红书、商汤、小鹏、阿里",
+        questions: "你怎么证明你的 Agent/RAG 优化真的有效？“提升 20%”的口径和基线是什么？pass@k 与 pass^k 有何区别？LLM-as-a-Judge 有偏差怎么办？",
+        action: "构建 100 条独立测试集（含不可回答题与故障注入），跑出基线 vs 改进消融表，留存 15 条真实 Badcase 修复记录。"
+      },
+      {
+        cat: "工程高可用",
+        heat: "P0 极热",
+        heatCls: "heat-p0",
+        topic: "高并发流式（SSE）、降级熔断与 Token 成本优化",
+        companies: "MiniMax、拼多多、阿里、蚂蚁、字节、携程",
+        questions: "大模型接口延迟高、突发流量大时怎么防止把服务拖垮？客户端中途断开怎么止损？语义缓存和大小模型路由怎么做？",
+        action: "FastAPI + SSE 流式 + asyncio.gather 并行工具调用 + Redis 语义缓存 + 大小模型路由，实测 TTFT 与成本下降数据。"
+      },
+      {
+        cat: "RAG 与评测",
+        heat: "P0 极热",
+        heatCls: "heat-p0",
+        topic: "生产级 RAG 排障（解析/混合检索/重排/防幻觉）",
+        companies: "腾讯（Kinfra）、合合信息、达观数据、东方财富、星环、秘塔",
+        questions: "RAG 召回率只有 60% 怎么逐层定位排查？PDF 复杂表格解析乱码怎么处理？什么时候该用 RAG、什么时候用长上下文或 SFT？",
+        action: "结合你已有 OCR 与知识图谱优势，实现 BM25 + 向量混合检索 + BGE-Rerank + 引用支持率校验 + 拒答阈值。"
+      },
+      {
+        cat: "Agent 架构",
+        heat: "P0 极热",
+        heatCls: "heat-p0",
+        topic: "长任务 Harness、沙箱隔离与副作用幂等",
+        companies: "小红书、京东（JoyAI）、无问芯穹、字节、拼多多",
+        questions: "工具调用超时后重试会不会导致重复写入/重复发邮件？Agent 执行代码或读不可信网页发生 Prompt 注入怎么兜底？",
+        action: "为有副作用工具设计 `task_id + step_id` 幂等键与终态校验；不可信文本与高危执行权限隔离。"
+      },
+      {
+        cat: "Agent 架构",
+        heat: "P1 高频",
+        heatCls: "heat-p1",
+        topic: "Context Engineering 与长短期 Memory 管理",
+        companies: "腾讯（混元/TEG）、小红书、同花顺、喜马拉雅、阿里",
+        questions: "会话状态、跨会话长期记忆、外部知识库三者怎么区分？多轮对话上下文爆炸（Lost in the Middle）如何压缩裁剪？",
+        action: "实现滑动窗口 + 摘要压缩 + 结构化状态槽位，避免无脑把全部工具原始 JSON 塞进上下文。"
+      },
+      {
+        cat: "工程高可用",
+        heat: "P1 高频",
+        heatCls: "heat-p1",
+        topic: "AI Coding 工具重度协同与工程闭环",
+        companies: "阿里云、淘天集团、字节（AI Coding）、小红书、米哈游",
+        questions: "日常如何用 Cursor / Claude Code 提效？如何设计规则、测试与验收流程避免 AI 写出隐蔽 Bug？",
+        action: "在项目开发中沉淀规范的 Spec、自动化单测与评测回归脚本，面试时展示“人指挥 AI 交付生产代码”的真实案例。"
+      },
+      {
+        cat: "后端与模型基础",
+        heat: "P1 高频",
+        heatCls: "heat-p1",
+        topic: "后端基石（MySQL/Redis/并发）与 Spring AI 认知",
+        companies: "恒生电子、东方财富、阿里/蚂蚁、网易、美团",
+        questions: "MySQL 索引失效与事务隔离级别？Redis 缓存击穿/雪崩与分布式锁？Java 体系为何引入 Spring AI 而非手写 HttpClient？",
+        action: "夯实 Python/SQL 调优与数据库/Redis 核心八股；投递阿里/蚂蚁/恒生 Java 线时补充 Spring AI 抽象与 Advisor 概念。"
+      },
+      {
+        cat: "后端与模型基础",
+        heat: "P1 高频",
+        heatCls: "heat-p1",
+        topic: "大模型推理原理（KV Cache / Prefill-Decode / vLLM）",
+        companies: "MiniMax、腾讯、英伟达、无问芯穹、华为、阿里云",
+        questions: "为什么长上下文首字延迟（TTFT）飙升？Prefill 和 Decode 阶段分别受限于计算还是显存带宽？Prompt Prefix 缓存为何能降本提速？",
+        action: "能手画 Attention + KV Cache 显存占用公式，讲清固定 System Prompt 前缀复用带来的加速与降费原理。"
+      }
+    ];
+
+    const INTERVIEW_QA = [
+      {
+        id: "qa1",
+        tag: "你的核心题 · 防幻觉",
+        q: "设计一个客服 Agent，怎么保证不胡说八道？",
+        points: [
+          "<strong>第一层（检索与拒答门槛）</strong>：做 Query 改写 + 混合检索（BM25 关键词 + 向量）+ Reranker 重排；设定重排分数硬阈值，若 Top-K 证据相关性低于阈值，<strong>直接触发“知识盲区拒答 / 转人工”</strong>，绝不强行生成。",
+          "<strong>第二层（生成强约束与引用溯源）</strong>：System Prompt 强制约束“只允许基于 `<context>` 中的原文作答，每条业务结论必须标注 `[doc_id]`”；涉及价格、退款政策、订单状态等确定性数据，禁止模型自由发挥，必须走结构化 Tool 查库返回。",
+          "<strong>第三层（后置护栏校验 Guardrail）</strong>：在输出给用户前加一层轻量校验（规则正则检查敏感承诺/金额一致性 + 小模型 NLI/忠实度核验），若发现结论无原文支撑，触发重检索或降级为标准兜底话术。",
+          "<strong>第四层（离线评测闭环）</strong>：构造含 20%“不可回答/诱导越权题”的独立测试集，上线前必须考核<strong>引用支持率（Faithfulness）</strong>与<strong>正确拒答率</strong>，同时盯紧误拒答率防止影响体验。"
+        ],
+        tip: "加分收尾：直接报出你自己项目测试集上的真实数字，例如“引入重排阈值 + 引用核验后，不可回答题的幻觉率从 34% 降到 6%，误拒答控制在 3% 以内”。"
+      },
+      {
+        id: "qa2",
+        tag: "你的核心题 · 多Agent架构",
+        q: "多个 Agent 协作时怎么保证消息一致性？",
+        points: [
+          "<strong>核心原则：用“共享强类型状态机”替代“自由聊天传话”</strong>。多个 Agent 靠自然语言互发消息极易信息失真与乱序，工程上应采用类似 <strong>LangGraph 的全局强类型 State（Pydantic Schema）</strong> 作为 Single Source of Truth。",
+          "<strong>状态版本与 Reducer 合并</strong>：每个子 Agent 只读写自己被授权的 State 字段；并发分支写回同一列表字段时，通过确定性 <strong>Reducer（如按唯一 ID 去重追加）</strong> 或乐观锁版本号避免覆盖丢失。",
+          "<strong>持久化 Checkpoint 与故障回滚</strong>：每次状态跃迁由 Checkpointer 事务性落盘（PostgreSQL/Redis），任一 Agent 超时崩溃时，可从上一个一致快照恢复，不会出现“A 以为 B 做完了但实际没落盘”的半吊子状态。",
+          "<strong>副作用工具幂等键</strong>：涉及写库、发通知、下单的外部动作，必须携带全局唯一的 <code>idempotency_key = hash(task_id + step_id + args)</code>，保证重试或重放时外部世界状态严格一致。"
+        ],
+        tip: "加分收尾：顺带提一句“并不是所有任务都需要多 Agent，先用单 Agent/固定工作流做基线，只有子任务天然隔离或上下文过长需要拆上下文窗口时才上多 Agent”。"
+      },
+      {
+        id: "qa3",
+        tag: "你的核心题 · 性能优化",
+        q: "Agent 的延迟怎么优化？",
+        points: [
+          "<strong>拆解耗时来源</strong>：Agent 端到端延迟 = <code>网络开销 + 模型思考轮次 × (TTFT + Decode时间) + 工具执行耗时</code>，优化必须逐层对症下药。",
+          "<strong>交互体感层</strong>：全链路采用 <strong>SSE 流式输出</strong>，并在工具执行阶段实时推送状态事件（如“正在检索近7天舆情…”），大幅降低用户感知等待。",
+          "<strong>编排与并发层</strong>：减少无意义的 LLM 思考轮次（确定性前置清洗/路由用规则或代码写死，不进 Agent Loop）；模型一次输出多个无依赖 `tool_calls` 时，用 <code>asyncio.gather</code> <strong>并行执行</strong>；复用 <code>httpx.AsyncClient</code> 长连接池。",
+          "<strong>模型与缓存层</strong>：① <strong>大小模型路由</strong>（意图分类/情感打标/格式提取走 Qwen-Turbo/小模型，复杂规划与最终总结才走旗舰模型）；② <strong>Prompt Prefix 缓存</strong>（固定 System Prompt 与工具定义放最前，最大化命中服务端 KV Cache）；③ <strong>Redis 语义缓存</strong>（高频相似 Query 直接命中返回，0 模型延迟）。"
+        ],
+        tip: "加分收尾：给出你 W7 压测的量化对比，例如“并行工具调用 + 大小模型路由 + 语义缓存后，P95 延迟从 11.4s 降到 4.2s，单任务 Token 成本下降 45%”。"
+      },
+      {
+        id: "qa4",
+        tag: "沪杭必考 · 协议",
+        q: "MCP 协议和 Function Calling 是什么关系？它解决了什么痛点？",
+        points: [
+          "<strong>职责分层不同</strong>：Function Calling 是<strong>大模型自身的能力</strong>（模型输出结构化 JSON 表达“我想调哪个函数、传什么参数”）；MCP（Model Context Protocol）是<strong>应用与外部工具/数据源之间的标准通信协议</strong>（类似 AI 时代的 USB-C）。",
+          "<strong>解决的痛点</strong>：过去 M 个 AI 应用对接 N 个企业工具（飞书、数据库、GitHub、本地文件）需要写 M×N 套定制 Adapter；引入 MCP 后，工具方只需实现 1 个 <strong>MCP Server</strong>，任何支持 <strong>MCP Client</strong> 的 Agent 都能即插即用，降为 M+N。",
+          "<strong>安全边界不能省</strong>：MCP 只负责标准化发现与调用，<strong>不自动赋予模型规划能力，也不替代鉴权</strong>。高危写操作必须在 MCP Server 或应用层做身份鉴权、参数白名单与人工审批。"
+        ],
+        tip: "加分收尾：直接讲你 W3 亲手写的 MCP Server（暴露了哪几个工具、用的 Stdio 还是 SSE 传输、怎么做的异常封装）。"
+      },
+      {
+        id: "qa5",
+        tag: "沪杭必考 · RAG排障",
+        q: "线上 RAG 问答准确率只有 60%，你怎么一步步定位和优化？",
+        points: [
+          "<strong>第一步：分层拆解指标，绝不盲调 Prompt</strong>。把端到端错误拆成四层分别抽样归因：① <strong>文档解析与切分</strong>（表格/跨页断句丢信息）；② <strong>检索召回层</strong>（Recall@k 低，正确答案根本没进 Top-K）；③ <strong>重排与上下文层</strong>（进了 Top-20 但没进 Top-5，或被噪声淹没）；④ <strong>生成层</strong>（证据都在上下文里但模型答偏或幻觉）。",
+          "<strong>召回前优化</strong>：指代消解（多轮改写）、Query 扩展/拆解、HyDE 假设性文档嵌入。",
+          "<strong>召回与重排优化</strong>：向量检索补齐 <strong>BM25 关键词混合检索</strong>（专治专有名词、型号、代码、人名查不到）+ <strong>BGE-Reranker 精排</strong> + 父子文档切分（小块检索、大块回填保留完整语境）。",
+          "<strong>生成与验收</strong>：精简无关上下文（防 Lost in the Middle），固定独立测试集做消融实验，确认每步改动都带来真实提升。"
+        ],
+        tip: "结合你已有的 OCR 与航运知识图谱背景：顺手强调“复杂表格与多跳关系靠纯向量很难救，必须靠版面解析 + 结构化查询/图谱工具补齐”。"
+      },
+      {
+        id: "qa6",
+        tag: "沪杭必考 · 技术选型",
+        q: "RAG、长上下文（Long Context）和 SFT 微调，业务里怎么选？",
+        points: [
+          "<strong>RAG</strong>：适合<strong>知识频繁更新、需要原文引用溯源、权限隔离严格</strong>的外部事实问答（如企业文档、最新舆情、法规条款），成本随语料增长可控。",
+          "<strong>长上下文</strong>：适合单次任务文档量不大（几万 Token 内）、需要<strong>全局跨段落深度理解</strong>（如整份合同审阅、代码库理解）且可配合 Prefix Cache 降费的场景；但文档上百万字时成本和注意力稀释（Lost in the Middle）会失控。",
+          "<strong>SFT 微调</strong>：核心作用是<strong>对齐输出格式、领域表达风格、特定工具调用习惯与任务行为</strong>，而不是“把动态知识死记硬背塞进权重”（微调注入知识更新慢且易引发通用能力退化）。",
+          "<strong>生产常态是组合拳</strong>：例如用 RAG 查实时知识 + SFT/LoRA 强化特定领域工具调用与结构化输出稳定性。"
+        ],
+        tip: "面试必防追问：你简历里有企业问答 SFT，务必提前准备好“当时为什么选 SFT、有没有和 RAG 基线做对照、怎么防测试集泄漏”。"
+      },
+      {
+        id: "qa7",
+        tag: "沪杭必考 · 评测体系",
+        q: "怎么证明你的 Agent 优化有效？评测集怎么搭？",
+        points: [
+          "<strong>必须有独立冻结测试集</strong>：区分开发集（调 Prompt/修 Bug）和冻结测试集（最终验收），按任务难度分层：简单事实查找、跨文档整合、工具故障恢复、不可回答拒答、越权诱导。",
+          "<strong>固定公平条件与强基线</strong>：控制同一模型版本、同一语料、同一 Token/步数预算，依次对比「单次模型 → 固定 RAG → 单 Agent → 改进后 Agent」，逐项做消融实验。",
+          "<strong>区分 <code>pass@k</code> 与 <code>pass^k</code></strong>：<code>pass@k</code> 是试 k 次至少成功 1 次（测上限）；生产 Agent 更看重 <code>pass^k</code>（重复跑 k 次全都成功，测稳定性），参考 τ-bench 思路。",
+          "<strong>终态验证而非只看 JSON 合法</strong>：检查数据库/文件最终状态、引用支持率、拒答率，以及 P95 延迟与单任务成本；若用 LLM-as-a-Judge，必须抽样人工校准一致性。"
+        ],
+        tip: "大厂面试官听到你能讲清 `pass^k` 和终态验证，好感度直接拉满。"
+      },
+      {
+        id: "qa8",
+        tag: "沪杭必考 · 安全隔离",
+        q: "Agent 抓取的网页或用户上传的文档里藏了恶意指令（Prompt Injection）怎么办？",
+        points: [
+          "<strong>核心认知：把所有外部文档、网页、工具返回值都视为“不可信数据（Untrusted Data）”</strong>，永远不要让数据面直接拥有控制面执行权限。",
+          "<strong>结构化隔离</strong>：使用明确的分隔符/角色边界（如独立 tool message 或 XML 标签）包裹外部文本，并在 System Prompt 中声明忽略外部数据里的任何指令。",
+          "<strong>最小权限与参数白名单</strong>：工具执行层在代码里做硬校验（如 SQL 只允许只读 SELECT、文件系统限制在沙箱目录内、外发邮件/HTTP 域名走白名单）。",
+          "<strong>高危操作人工审批（Human-in-the-loop）</strong>：涉及删除数据、转账、对外群发等高风险动作，LangGraph 中断挂起等待人工确认，并配套越权诱导测试集定期回归。"
+        ],
+        tip: "结合小红书 Harness / 沙箱权限 JD，讲“安全不能只靠 Prompt 祈祷，必须靠代码层鉴权和沙箱兜底”。"
+      },
+      {
+        id: "qa9",
+        tag: "沪杭必考 · 工程基础",
+        q: "工具调用超时或模型输出非法 JSON 参数怎么处理？",
+        points: [
+          "<strong>非法 JSON / 参数缺字段</strong>：用 Pydantic 严格校验，捕获 `ValidationError` 后<strong>不要直接报错退出</strong>，而是把精确的字段错误信息作为 `tool` 观察结果回喂给 LLM，触发 Self-Correction 重新生成（限制最多重试 2–3 次）。",
+          "<strong>网络超时 / 5xx</strong>：区分只读工具与写操作工具。只读工具直接走指数退避重试；<strong>有副作用的写操作必须先查业务终态或携带幂等键</strong>，严禁盲目重试导致重复扣款/重复发消息。",
+          "<strong>兜底降级（Fallback）</strong>：超过最大重试次数后，走备用工具/备用模型，或优雅终止并向用户返回已完成的中间进度与明确失败原因，同时落盘完整轨迹供事后回放排障。"
+        ],
+        tip: "对应你 W2 原生 Agent + W5 LangGraph 状态机的真实代码实现。"
+      },
+      {
+        id: "qa10",
+        tag: "沪杭必考 · 模型原理",
+        q: "简述 Transformer 推理中 Prefill、Decode 和 KV Cache 的关系，为什么长上下文越跑越慢？",
+        points: [
+          "<strong>Prefill（预填充阶段）</strong>：一次性并行计算全部输入 Prompt Token 的 Q/K/V，算出第一个输出 Token，属于<strong>计算密集型（Compute-bound）</strong>，直接决定 <strong>TTFT（首字延迟）</strong>；输入越长，Attention $O(N^2)$ 计算开销越大。",
+          "<strong>Decode（自回归解码阶段）</strong>：逐个生成后续 Token，每步都要把之前所有 Token 的 K/V 从显存读出来做 Attention，属于<strong>显存带宽密集型（Memory-bandwidth-bound）</strong>，决定生成速度（TPS）。",
+          "<strong>KV Cache 的作用与代价</strong>：缓存历史 Token 的 K/V 避免重复算，把每步计算从 $O(N^2)$ 降到 $O(N)$，但显存占用随「上下文长度 × 并发 Batch」线性暴涨，容易触发显存瓶颈或换出。",
+          "<strong>应用层启示</strong>：把固定不变的 System Prompt、工具定义和共享背景放在最前面，可命中推理引擎（vLLM/SGLang/云 API）的 <strong>Prefix Cache</strong>，大幅降低 TTFT 和输入费用。"
+        ],
+        tip: "应用开发岗不需要手推 CUDA 算子，但能把 Prefill/Decode/KV Cache 和业务层的 TTFT、Prefix Cache 成本优化串起来，就是绝对高分。"
+      }
+    ];
+
+    function loadStore() {
+      try {
+        return JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    const store = Object.assign({
+      activeTab: "roadmap",
+      topicCat: "全部",
+      weeks: {},
+      w1Tasks: {},
+      qaMastered: {},
+      qaNotes: {},
+      checkins: []
+    }, loadStore());
+
+    function saveStore() {
+      localStorage.setItem(STORE_KEY, JSON.stringify(store));
+      updateStats();
+    }
+
+    function todayStr() {
+      const d = new Date();
+      return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+    }
+
+    function updateStats() {
+      // Weeks
+      const allWeeks = ROADMAP_MONTHS.flatMap(m => m.weeks);
+      const doneWeeks = allWeeks.filter(w => store.weeks[w.id]).length;
+      const wPct = Math.round((doneWeeks / allWeeks.length) * 100);
+      document.getElementById("statWeekPct").textContent = `${wPct}%`;
+      document.getElementById("barWeek").style.width = `${wPct}%`;
+      document.getElementById("statWeekMeta").textContent = `已完成 ${doneWeeks} / ${allWeeks.length} 周`;
+
+      // W1 subtasks
+      const allW1 = WEEK1_DAYS.flatMap(d => d.tasks);
+      const doneW1 = allW1.filter(t => store.w1Tasks[t.id]).length;
+      const w1Pct = Math.round((doneW1 / allW1.length) * 100);
+      document.getElementById("statW1Pct").textContent = `${w1Pct}%`;
+      document.getElementById("barW1").style.width = `${w1Pct}%`;
+      document.getElementById("statW1Meta").textContent = `已完成 ${doneW1} / ${allW1.length} 项子任务`;
+
+      // QA
+      const doneQa = INTERVIEW_QA.filter(q => store.qaMastered[q.id]).length;
+      document.getElementById("statQaPct").textContent = `${doneQa} / ${INTERVIEW_QA.length}`;
+      document.getElementById("barQa").style.width = `${Math.round((doneQa / INTERVIEW_QA.length) * 100)}%`;
+
+      // Streak & Checkin btn
+      const today = todayStr();
+      const checkedToday = store.checkins.includes(today);
+      document.getElementById("statStreak").textContent = `${store.checkins.length} 天`;
+      const btn = document.getElementById("dailyCheckinBtn");
+      btn.textContent = checkedToday ? "✅ 今日已完成打卡" : "✅ 今日 LeetCode + 八股打卡";
+      btn.classList.toggle("done", checkedToday);
+
+      // Countdown to 2027-03-01
+      const target = new Date("2027-03-01T00:00:00+08:00").getTime();
+      const daysLeft = Math.max(0, Math.ceil((target - Date.now()) / 86400000));
+      document.getElementById("statCountdown").textContent = `距 2027-03-01 暑期黄金期：${daysLeft} 天`;
+    }
+
+    function renderRoadmap() {
+      const el = document.getElementById("roadmapContainer");
+      el.innerHTML = ROADMAP_MONTHS.map(m => {
+        const doneCnt = m.weeks.filter(w => store.weeks[w.id]).length;
+        return `
+          <div class="month-block">
+            <div class="month-header">
+              <h2>${m.month}</h2>
+              <span class="month-progress">进度：${doneCnt} / ${m.weeks.length} 周</span>
+            </div>
+            <div class="weeks-grid">
+              ${m.weeks.map(w => {
+                const done = !!store.weeks[w.id];
+                return `
+                  <article class="week-card ${done ? "completed" : ""}">
+                    <div class="week-top">
+                      <span class="week-code">${w.id}</span>
+                      <label class="check-label">
+                        <input type="checkbox" data-week="${w.id}" ${done ? "checked" : ""} />
+                        <span>${done ? "已完成" : "打卡完成"}</span>
+                      </label>
+                    </div>
+                    <div class="week-title">${w.title}</div>
+                    <div class="week-desc">${w.desc}</div>
+                    <div class="dod-box">
+                      <strong>验收交付物（DoD）：</strong>
+                      ${w.dod}
+                    </div>
+                  </article>
+                `;
+              }).join("")}
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      el.querySelectorAll("input[data-week]").forEach(cb => {
+        cb.addEventListener("change", e => {
+          store.weeks[e.target.getAttribute("data-week")] = e.target.checked;
+          saveStore();
+          renderRoadmap();
+        });
+      });
+    }
+
+    function renderWeek1() {
+      const el = document.getElementById("week1Container");
+      el.innerHTML = WEEK1_DAYS.map(d => {
+        const doneCnt = d.tasks.filter(t => store.w1Tasks[t.id]).length;
+        const allDone = doneCnt === d.tasks.length;
+        return `
+          <article class="day-card ${allDone ? "all-done" : ""}">
+            <div class="day-header">
+              <div class="day-title-wrap">
+                <span class="day-badge">${d.day}</span>
+                <span class="day-title">${d.title}</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px">
+                <span class="day-hours">⏱ ${d.hours}</span>
+                <span class="tag-pill">${doneCnt} / ${d.tasks.length}</span>
+              </div>
+            </div>
+            <div class="day-body">
+              <div class="subtask-list">
+                ${d.tasks.map(t => {
+                  const ck = !!store.w1Tasks[t.id];
+                  return `
+                    <label class="subtask-item ${ck ? "checked" : ""}">
+                      <input type="checkbox" data-w1="${t.id}" ${ck ? "checked" : ""} />
+                      <span>${t.text}</span>
+                    </label>
+                  `;
+                }).join("")}
+              </div>
+              <div class="day-side">
+                <div class="info-box">
+                  <h4>🛠️ 完成方式与验收标准</h4>
+                  <div style="color:#cbd5e1">${d.howTo}</div>
+                </div>
+                <div class="info-box">
+                  <h4>📚 精选一手资料</h4>
+                  <div class="res-links">
+                    ${d.resources.map(r => `<a href="${r.url}" target="_blank" rel="noopener noreferrer">• ${r.label} ↗</a>`).join("")}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      el.querySelectorAll("input[data-w1]").forEach(cb => {
+        cb.addEventListener("change", e => {
+          store.w1Tasks[e.target.getAttribute("data-w1")] = e.target.checked;
+          saveStore();
+          renderWeek1();
+        });
+      });
+    }
+
+    function renderTopics() {
+      const cats = ["全部", ...new Set(HOT_TOPICS.map(t => t.cat))];
+      const filtersEl = document.getElementById("topicFilters");
+      filtersEl.innerHTML = cats.map(c => `
+        <button class="filter-pill ${store.topicCat === c ? "active" : ""}" data-cat="${c}">${c}</button>
+      `).join("");
+
+      filtersEl.querySelectorAll(".filter-pill").forEach(btn => {
+        btn.addEventListener("click", () => {
+          store.topicCat = btn.getAttribute("data-cat");
+          saveStore();
+          renderTopics();
+        });
+      });
+
+      const list = store.topicCat === "全部" ? HOT_TOPICS : HOT_TOPICS.filter(t => t.cat === store.topicCat);
+      document.getElementById("topicsBody").innerHTML = list.map(t => `
+        <tr>
+          <td>
+            <span class="heat-badge ${t.heatCls}">${t.heat}</span>
+            <div style="font-size:11.5px;color:var(--text-muted);margin-top:5px">${t.cat}</div>
+          </td>
+          <td style="font-weight:700;color:#fff">${t.topic}</td>
+          <td style="color:#7dd3fc">${t.companies}</td>
+          <td>${t.questions}</td>
+          <td style="color:#a7f3d0">${t.action}</td>
+        </tr>
+      `).join("");
+    }
+
+    function renderQa() {
+      const el = document.getElementById("qaContainer");
+      el.innerHTML = INTERVIEW_QA.map((item, idx) => {
+        const mastered = !!store.qaMastered[item.id];
+        const note = store.qaNotes[item.id] || "";
+        return `
+          <article class="qa-card ${mastered ? "mastered" : ""} ${idx < 3 ? "open" : ""}" data-qa-card="${item.id}">
+            <div class="qa-head">
+              <div class="qa-q">
+                <span class="qa-num">Q${String(idx + 1).padStart(2, "0")}</span>
+                <span>${item.q}</span>
+                <span class="tag-pill">${item.tag}</span>
+              </div>
+              <label class="check-label" onclick="event.stopPropagation()">
+                <input type="checkbox" data-qa-master="${item.id}" ${mastered ? "checked" : ""} />
+                <span>${mastered ? "已掌握" : "标记掌握"}</span>
+              </label>
+            </div>
+            <div class="qa-body">
+              <div class="qa-answer">
+                <ul>${item.points.map(p => `<li>${p}</li>`).join("")}</ul>
+                <div class="qa-tip">💡 <strong>面试官加分话术：</strong>${item.tip}</div>
+                <textarea class="note-input" data-qa-note="${item.id}" placeholder="在这里写下结合你自己项目的口述要点或复盘笔记（自动保存）...">${note}</textarea>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      el.querySelectorAll(".qa-head").forEach(h => {
+        h.addEventListener("click", () => h.parentElement.classList.toggle("open"));
+      });
+      el.querySelectorAll("input[data-qa-master]").forEach(cb => {
+        cb.addEventListener("change", e => {
+          const id = e.target.getAttribute("data-qa-master");
+          store.qaMastered[id] = e.target.checked;
+          saveStore();
+          e.target.closest(".qa-card").classList.toggle("mastered", e.target.checked);
+          e.target.nextElementSibling.textContent = e.target.checked ? "已掌握" : "标记掌握";
+        });
+      });
+      el.querySelectorAll("textarea[data-qa-note]").forEach(ta => {
+        ta.addEventListener("input", e => {
+          store.qaNotes[e.target.getAttribute("data-qa-note")] = e.target.value;
+          saveStore();
+        });
+      });
+    }
+
+    function switchTab(tabId) {
+      store.activeTab = tabId;
+      saveStore();
+      document.querySelectorAll(".nav-btn[data-tab]").forEach(b => {
+        b.classList.toggle("active", b.getAttribute("data-tab") === tabId);
+      });
+      document.querySelectorAll(".tab-section").forEach(s => {
+        s.classList.toggle("active", s.id === "tab-" + tabId);
+      });
+    }
+
+    document.querySelectorAll(".nav-btn[data-tab]").forEach(btn => {
+      btn.addEventListener("click", () => switchTab(btn.getAttribute("data-tab")));
+    });
+
+    document.getElementById("dailyCheckinBtn").addEventListener("click", () => {
+      const today = todayStr();
+      if (!store.checkins.includes(today)) {
+        store.checkins.push(today);
+        saveStore();
+      }
+    });
+
+    document.getElementById("expandAllQaBtn").addEventListener("click", () => {
+      document.querySelectorAll(".qa-card").forEach(c => c.classList.add("open"));
+    });
+    document.getElementById("collapseAllQaBtn").addEventListener("click", () => {
+      document.querySelectorAll(".qa-card").forEach(c => c.classList.remove("open"));
+    });
+
+    document.getElementById("exportBackupBtn").addEventListener("click", () => {
+      const blob = new Blob([JSON.stringify(store, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `AI_Agent复习进度备份_${todayStr()}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById("resetProgressBtn").addEventListener("click", () => {
+      if (confirm("确定要清空所有打卡进度与面经笔记吗？")) {
+        localStorage.removeItem(STORE_KEY);
+        location.reload();
+      }
+    });
+
+    renderRoadmap();
+    renderWeek1();
+    renderTopics();
+    renderQa();
+    switchTab(store.activeTab || "roadmap");
+    updateStats();
+  </script>
+</body>
+</html>
