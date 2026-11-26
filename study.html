@@ -181,110 +181,134 @@
     .progress-bar-bg { height: 7px; background: rgba(255, 255, 255, 0.08); border-radius: 999px; overflow: hidden; margin-top: 10px; }
     .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--emerald)); border-radius: 999px; transition: width 0.35s ease; }
 
-    /* Activity Heatmap (GitHub / Token-activity style) */
-    .activity-card {
-      margin-top: 14px;
+    /* Clickable Streak Card */
+    .stat-card.clickable {
+      cursor: pointer;
+      transition: border-color 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+    }
+    .stat-card.clickable:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--glow);
+    }
+
+    /* Centered Checkin Calendar Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(5, 10, 22, 0.72);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.open { display: flex; }
+
+    .activity-modal {
+      width: 100%;
+      max-width: 640px;
       background: #111827;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px 20px 14px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 22px 24px 20px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      animation: modalIn 0.16s ease;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.96) translateY(6px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
     }
 
     .activity-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .activity-title {
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 800;
       color: #f8fafc;
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     .activity-summary {
       font-size: 12px;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .seg-control {
-      display: inline-flex;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 3px;
-      gap: 2px;
-    }
-
-    .seg-btn {
-      padding: 4px 12px;
-      border-radius: 999px;
-      border: none;
-      background: transparent;
-      color: var(--text-secondary);
-      font-size: 12px;
+      color: var(--emerald);
       font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s ease;
     }
 
-    .seg-btn.active {
-      background: #0b1120;
-      color: #f8fafc;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+    .modal-close {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+      font-size: 18px;
+      line-height: 1;
+      cursor: pointer;
     }
+    .modal-close:hover { border-color: var(--accent); color: #fff; }
 
     .heatmap-scroll {
       overflow-x: auto;
-      padding-bottom: 4px;
+      padding: 6px 2px 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .heatmap-inner {
+      width: max-content;
     }
 
     .heatmap-grid {
       display: grid;
       grid-auto-flow: column;
-      grid-template-rows: repeat(7, 13px);
-      gap: 4px;
+      grid-template-rows: repeat(7, 15px);
+      gap: 5px;
       width: max-content;
     }
 
     .hm-cell {
-      width: 13px;
-      height: 13px;
-      border-radius: 3px;
-      background: #1e2636;
-      border: 1px solid rgba(255, 255, 255, 0.03);
+      width: 15px;
+      height: 15px;
+      border-radius: 3.5px;
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.04);
       cursor: pointer;
       transition: transform 0.12s ease, border-color 0.12s ease;
     }
 
     .hm-cell:hover {
-      transform: scale(1.22);
-      border-color: rgba(125, 211, 252, 0.85);
-      z-index: 2;
+      transform: scale(1.18);
+      border-color: rgba(125, 211, 252, 0.9);
     }
 
-    .hm-cell.lv-1 { background: #1e3a5f; border-color: rgba(56, 189, 248, 0.25); }
-    .hm-cell.lv-2 { background: #2563eb; border-color: rgba(96, 165, 250, 0.35); }
-    .hm-cell.lv-3 { background: #3b82f6; border-color: rgba(147, 197, 253, 0.45); }
-    .hm-cell.lv-4 { background: #7dd3fc; border-color: rgba(224, 242, 254, 0.7); box-shadow: 0 0 8px rgba(125, 211, 252, 0.45); }
+    .hm-cell.checked {
+      background: #3b82f6;
+      border-color: rgba(147, 197, 253, 0.65);
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.45);
+    }
+
     .hm-cell.is-today { outline: 1.5px solid #34d399; outline-offset: 1px; }
+    .hm-cell.selected { outline: 2px solid #fbbf24; outline-offset: 1px; transform: scale(1.15); }
+    .hm-cell.out-range { opacity: 0.18; pointer-events: none; }
 
     .hm-months {
-      display: flex;
       position: relative;
-      height: 18px;
+      height: 20px;
       margin-top: 8px;
-      font-size: 11.5px;
-      color: var(--text-muted);
-      min-width: 896px;
+      font-size: 12px;
+      color: var(--text-secondary);
     }
 
     .hm-month-label {
@@ -298,55 +322,39 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-      font-size: 11.5px;
-      color: var(--text-muted);
+      gap: 10px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--text-secondary);
+    }
+
+    .selected-date-info {
+      color: #f8fafc;
+      font-weight: 600;
     }
 
     .hm-legend {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
 
     .hm-legend .hm-cell {
-      width: 11px;
-      height: 11px;
+      width: 12px;
+      height: 12px;
       cursor: default;
     }
     .hm-legend .hm-cell:hover { transform: none; }
-
-    .chart-box {
-      width: 100%;
-      height: 136px;
-      display: flex;
-      align-items: flex-end;
-      gap: 6px;
-      padding: 12px 4px 2px;
-    }
-
-    .bar-col {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100%;
-      justify-content: flex-end;
-      gap: 5px;
-      min-width: 24px;
-    }
-
-    .bar-stick {
-      width: 100%;
-      max-width: 26px;
-      border-radius: 4px 4px 2px 2px;
-      background: linear-gradient(180deg, #60a5fa, #2563eb);
-      min-height: 3px;
-      transition: height 0.25s ease;
-    }
-
-    .bar-lbl { font-size: 10.5px; color: var(--text-muted); white-space: nowrap; }
 
     .hm-tooltip {
       position: fixed;
@@ -675,40 +683,36 @@
           <div class="progress-bar-bg"><div class="progress-bar-fill" id="barQa"></div></div>
           <div class="stat-meta">点击面经右侧即可标记已掌握</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-label">每日学习打卡天数</div>
+        <div class="stat-card clickable" id="streakCardBtn" title="点击查看 11月–4月 打卡日历">
+          <div class="stat-label">
+            <span>每日学习打卡天数</span>
+            <span class="tag-pill">查看日历 ↗</span>
+          </div>
           <div class="stat-val" id="statStreak">0 天</div>
           <div class="stat-meta" id="statCountdown">距 2027-03-01 暑期黄金期：计算中...</div>
         </div>
       </div>
 
-      <!-- 学习活动热力图（每日 / 每周 / 累计） -->
-      <section class="activity-card">
-        <div class="activity-head">
-          <div class="activity-title">
-            <span>学习活动</span>
-            <span class="activity-summary" id="activitySummary">近一年累计 0 次学习活动</span>
+      <!-- 居中打卡日历弹窗（点击「每日学习打卡天数」卡片后显示） -->
+      <div class="modal-backdrop" id="activityModal">
+        <section class="activity-modal" role="dialog" aria-modal="true">
+          <div class="activity-head">
+            <div class="activity-title">
+              <span>📅 学习打卡日历（11月 — 4月）</span>
+              <span class="activity-summary" id="activitySummary">累计打卡 0 天</span>
+            </div>
+            <button class="modal-close" id="closeActivityModal" title="关闭">×</button>
           </div>
-          <div class="seg-control" id="activityModeSwitch">
-            <button class="seg-btn active" data-mode="daily">每日</button>
-            <button class="seg-btn" data-mode="weekly">每周</button>
-            <button class="seg-btn" data-mode="cumulative">累计</button>
+          <div id="activityBody"></div>
+          <div class="hm-footer">
+            <span class="selected-date-info" id="selectedDateInfo">点击或悬停任意方格查看日期与打卡状态</span>
+            <div class="hm-legend">
+              <span class="legend-item"><span class="hm-cell"></span>未打卡</span>
+              <span class="legend-item"><span class="hm-cell checked"></span>已打卡</span>
+            </div>
           </div>
-        </div>
-        <div id="activityBody"></div>
-        <div class="hm-footer">
-          <span>提示：点击「今日学习打卡」、勾选任意任务/面经均自动点亮当日方格；也可点击任意历史方格补卡/取消</span>
-          <div class="hm-legend">
-            <span>少</span>
-            <span class="hm-cell"></span>
-            <span class="hm-cell lv-1"></span>
-            <span class="hm-cell lv-2"></span>
-            <span class="hm-cell lv-3"></span>
-            <span class="hm-cell lv-4"></span>
-            <span>多</span>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <div class="hm-tooltip" id="hmTooltip"></div>
     </div>
   </header>
@@ -1956,161 +1960,121 @@
       return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
     }
 
-    function levelClass(v) {
-      if (v <= 0) return "";
-      if (v === 1) return "lv-1";
-      if (v === 2) return "lv-2";
-      if (v <= 4) return "lv-3";
-      return "lv-4";
-    }
+    let selectedCalDate = null;
 
     function renderActivity() {
       const body = document.getElementById("activityBody");
-      const mode = store.activityMode || "daily";
-      document.querySelectorAll("#activityModeSwitch .seg-btn").forEach(b => {
-        b.classList.toggle("active", b.getAttribute("data-mode") === mode);
-      });
-
-      // 构造最近 53 周（371 天）对齐到周日..周六（与截图一致的 53×7 网格）
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       const todayKey = fmtDate(today);
-      const endOfWeek = new Date(today);
-      endOfWeek.setDate(today.getDate() + (6 - today.getDay()));
-      const start = new Date(endOfWeek);
-      start.setDate(endOfWeek.getDate() - 53 * 7 + 1);
+
+      // 范围：本月1日（如 2026-11-01）起至次年4月30日（2027-04-30）
+      const startYear = today.getMonth() >= 4 ? today.getFullYear() : today.getFullYear() - 1;
+      const rangeStart = new Date(startYear, 10, 1);      // 11月1日
+      const rangeEnd = new Date(startYear + 1, 3, 30);    // 次年4月30日
+
+      // 网格对齐到周日..周六
+      const gridStart = new Date(rangeStart);
+      gridStart.setDate(rangeStart.getDate() - rangeStart.getDay());
+      const gridEnd = new Date(rangeEnd);
+      gridEnd.setDate(rangeEnd.getDate() + (6 - rangeEnd.getDay()));
+
+      const totalDays = Math.round((gridEnd - gridStart) / 86400000) + 1;
+      const totalCols = Math.ceil(totalDays / 7);
 
       const days = [];
-      let totalActs = 0;
-      let activeDays = 0;
-      for (let i = 0; i < 53 * 7; i++) {
-        const d = new Date(start);
-        d.setDate(start.getDate() + i);
+      let checkedInRange = 0;
+      for (let i = 0; i < totalCols * 7; i++) {
+        const d = new Date(gridStart);
+        d.setDate(gridStart.getDate() + i);
         const key = fmtDate(d);
-        const isFuture = d > today;
-        const val = isFuture ? 0 : getDayActivity(key);
-        if (val > 0) { totalActs += val; activeDays++; }
-        days.push({ d, key, val, isFuture, col: Math.floor(i / 7) });
+        const inRange = d >= rangeStart && d <= rangeEnd;
+        const checked = inRange && store.checkins.includes(key);
+        if (checked) checkedInRange++;
+        days.push({ d, key, inRange, checked, col: Math.floor(i / 7) });
       }
-      document.getElementById("activitySummary").textContent = `近一年累计 ${totalActs} 次学习活动 · 活跃 ${activeDays} 天`;
+      document.getElementById("activitySummary").textContent = `11月–4月累计打卡 ${checkedInRange} 天`;
 
-      if (mode === "daily") {
-        // 计算月份标签位置
-        const monthLabels = [];
-        let lastMonth = -1;
-        for (let col = 0; col < 53; col++) {
-          const d = days[col * 7].d;
-          const m = d.getMonth();
+      // 计算 11月 ~ 4月 月份标签位置
+      const monthLabels = [];
+      let lastMonth = -1;
+      for (let col = 0; col < totalCols; col++) {
+        let firstInRange = null;
+        for (let r = 0; r < 7; r++) {
+          const item = days[col * 7 + r];
+          if (item && item.inRange) { firstInRange = item; break; }
+        }
+        if (firstInRange) {
+          const m = firstInRange.d.getMonth();
           if (m !== lastMonth) {
             monthLabels.push({ col, text: `${m + 1}月` });
             lastMonth = m;
           }
         }
-        const cellsHtml = days.map(item => {
-          const cls = ["hm-cell", levelClass(item.val), item.key === todayKey ? "is-today" : ""].filter(Boolean).join(" ");
-          const style = item.isFuture ? "opacity:0.25;pointer-events:none" : "";
-          return `<div class="${cls}" style="${style}" data-date="${item.key}" data-val="${item.val}"></div>`;
-        }).join("");
-
-        const monthsHtml = monthLabels.map(m =>
-          `<span class="hm-month-label" style="left:${m.col * 17}px">${m.text}</span>`
-        ).join("");
-
-        body.innerHTML = `
-          <div class="heatmap-scroll">
-            <div class="heatmap-grid">${cellsHtml}</div>
-            <div class="hm-months">${monthsHtml}</div>
-          </div>
-        `;
-
-        const tip = document.getElementById("hmTooltip");
-        body.querySelectorAll(".hm-cell[data-date]").forEach(cell => {
-          cell.addEventListener("mouseenter", e => {
-            const dk = cell.getAttribute("data-date");
-            const v = Number(cell.getAttribute("data-val"));
-            const ck = store.checkins.includes(dk) ? " · 已打卡" : "";
-            tip.textContent = `${dk}：${v} 次学习活动${ck}`;
-            tip.style.display = "block";
-          });
-          cell.addEventListener("mousemove", e => {
-            tip.style.left = (e.clientX + 12) + "px";
-            tip.style.top = (e.clientY - 34) + "px";
-          });
-          cell.addEventListener("mouseleave", () => { tip.style.display = "none"; });
-          cell.addEventListener("click", () => {
-            const dk = cell.getAttribute("data-date");
-            const idx = store.checkins.indexOf(dk);
-            if (idx === -1) {
-              store.checkins.push(dk);
-              recordActivity(1, dk);
-            } else {
-              store.checkins.splice(idx, 1);
-              recordActivity(-1, dk);
-            }
-            saveStore();
-          });
-        });
-      } else if (mode === "weekly") {
-        // 最近 16 周柱状图
-        const weeks = [];
-        for (let col = 53 - 16; col < 53; col++) {
-          let sum = 0;
-          for (let r = 0; r < 7; r++) sum += days[col * 7 + r].val;
-          const firstD = days[col * 7].d;
-          weeks.push({ label: `${firstD.getMonth()+1}/${firstD.getDate()}`, sum });
-        }
-        const maxV = Math.max(1, ...weeks.map(w => w.sum));
-        body.innerHTML = `
-          <div class="chart-box">
-            ${weeks.map(w => {
-              const h = Math.round((w.sum / maxV) * 96);
-              return `<div class="bar-col" title="${w.label} 起一周：${w.sum} 次活动">
-                <div style="font-size:11px;color:${w.sum ? '#7dd3fc' : 'var(--text-muted)'}">${w.sum || ""}</div>
-                <div class="bar-stick" style="height:${Math.max(3, h)}px;opacity:${w.sum ? 1 : 0.25}"></div>
-                <div class="bar-lbl">${w.label}</div>
-              </div>`;
-            }).join("")}
-          </div>
-        `;
-      } else {
-        // 最近 90 天累计学习曲线（SVG）
-        const recent = days.filter(x => !x.isFuture).slice(-90);
-        let acc = 0;
-        const pts = recent.map((x, idx) => { acc += x.val; return { idx, key: x.key, acc }; });
-        const maxA = Math.max(1, acc);
-        const W = 900, H = 120, pad = 12;
-        const coords = pts.map((p, i) => {
-          const x = pad + (i / Math.max(1, pts.length - 1)) * (W - pad * 2);
-          const y = H - pad - (p.acc / maxA) * (H - pad * 2);
-          return [x.toFixed(1), y.toFixed(1)];
-        });
-        const linePath = coords.map((c, i) => (i === 0 ? `M${c[0]},${c[1]}` : `L${c[0]},${c[1]}`)).join(" ");
-        const areaPath = `${linePath} L${coords[coords.length-1][0]},${H-pad} L${coords[0][0]},${H-pad} Z`;
-        body.innerHTML = `
-          <div style="width:100%;overflow-x:auto">
-            <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:136px;display:block">
-              <defs>
-                <linearGradient id="cumGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
-                  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.02"/>
-                </linearGradient>
-              </defs>
-              <path d="${areaPath}" fill="url(#cumGrad)"></path>
-              <path d="${linePath}" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"></path>
-              <text x="${pad}" y="14" fill="#94a3b8" font-size="11">近 90 天累计：${acc} 次学习活动</text>
-              <text x="${W - 86}" y="${H - 2}" fill="#64748b" font-size="11">${pts[pts.length-1].key}</text>
-              <text x="${pad}" y="${H - 2}" fill="#64748b" font-size="11">${pts[0].key}</text>
-            </svg>
-          </div>
-        `;
       }
+
+      const cellsHtml = days.map(item => {
+        const cls = [
+          "hm-cell",
+          !item.inRange ? "out-range" : "",
+          item.checked ? "checked" : "",
+          item.key === todayKey ? "is-today" : "",
+          item.key === selectedCalDate ? "selected" : ""
+        ].filter(Boolean).join(" ");
+        return `<div class="${cls}" data-date="${item.key}" data-checked="${item.checked ? "1" : "0"}"></div>`;
+      }).join("");
+
+      const monthsHtml = monthLabels.map(m =>
+        `<span class="hm-month-label" style="left:${m.col * 20}px">${m.text}</span>`
+      ).join("");
+
+      body.innerHTML = `
+        <div class="heatmap-scroll">
+          <div class="heatmap-inner">
+            <div class="heatmap-grid">${cellsHtml}</div>
+            <div class="hm-months" style="width:${totalCols * 20}px">${monthsHtml}</div>
+          </div>
+        </div>
+      `;
+
+      const tip = document.getElementById("hmTooltip");
+      const infoEl = document.getElementById("selectedDateInfo");
+      body.querySelectorAll(".hm-cell[data-date]:not(.out-range)").forEach(cell => {
+        cell.addEventListener("mouseenter", () => {
+          const dk = cell.getAttribute("data-date");
+          const isCk = cell.getAttribute("data-checked") === "1";
+          tip.textContent = `${dk} · ${isCk ? "已打卡" : "未打卡"}`;
+          tip.style.display = "block";
+        });
+        cell.addEventListener("mousemove", e => {
+          tip.style.left = (e.clientX + 12) + "px";
+          tip.style.top = (e.clientY - 34) + "px";
+        });
+        cell.addEventListener("mouseleave", () => { tip.style.display = "none"; });
+        // 仅选中展示日期与状态，绝不修改打卡记录（不支持补卡）
+        cell.addEventListener("click", () => {
+          selectedCalDate = cell.getAttribute("data-date");
+          const isCk = cell.getAttribute("data-checked") === "1";
+          infoEl.textContent = `已选中：${selectedCalDate}（${isCk ? "已打卡" : "未打卡"}）`;
+          body.querySelectorAll(".hm-cell.selected").forEach(el => el.classList.remove("selected"));
+          cell.classList.add("selected");
+        });
+      });
     }
 
-    document.querySelectorAll("#activityModeSwitch .seg-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        store.activityMode = btn.getAttribute("data-mode");
-        saveStore();
-      });
+    const activityModal = document.getElementById("activityModal");
+    document.getElementById("streakCardBtn").addEventListener("click", () => {
+      renderActivity();
+      activityModal.classList.add("open");
+    });
+    document.getElementById("closeActivityModal").addEventListener("click", () => {
+      activityModal.classList.remove("open");
+    });
+    activityModal.addEventListener("click", e => {
+      if (e.target === activityModal) activityModal.classList.remove("open");
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") activityModal.classList.remove("open");
     });
 
     document.getElementById("togglePendingFirstBtn").addEventListener("click", () => {
