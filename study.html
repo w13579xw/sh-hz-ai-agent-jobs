@@ -453,6 +453,7 @@
         <button class="nav-btn active" data-tab="roadmap">📅 3个月12周路线</button>
         <button class="nav-btn" data-tab="weekly">⚡ 每周每日打卡</button>
         <select id="weekSelector" class="week-select" title="切换查看任意一周的每日任务"></select>
+        <button class="nav-btn" data-tab="tracks">🧩 进阶专项（后训练/Infra/后端）</button>
         <button class="nav-btn" data-tab="hottopics">🔥 沪杭硬核考点表</button>
         <button class="nav-btn" data-tab="interview">🎯 经典面经库</button>
         <a class="nav-btn radar-link" href="./index.html">📡 沪杭岗位雷达 ↗</a>
@@ -468,7 +469,7 @@
           <div class="hero-sub">主线：异步工程底座 → 原生手写 ReAct & MCP → RAG 评测 → LangGraph 生产级旗舰项目 → 沪杭大中厂面经与实战</div>
         </div>
         <div class="hero-actions">
-          <button class="btn-primary" id="dailyCheckinBtn">✅ 今日 LeetCode + 八股打卡</button>
+          <button class="btn-primary" id="dailyCheckinBtn">✅ 今日学习打卡</button>
           <button class="btn-ghost" id="exportBackupBtn">导出进度备份</button>
         </div>
       </div>
@@ -493,7 +494,7 @@
           <div class="stat-meta">点击面经右侧即可标记已掌握</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">每日刷题/八股打卡天数</div>
+          <div class="stat-label">每日学习打卡天数</div>
           <div class="stat-val" id="statStreak">0 天</div>
           <div class="stat-meta" id="statCountdown">距 2027-03-01 暑期黄金期：计算中...</div>
         </div>
@@ -530,7 +531,17 @@
       <div id="weeklyContainer"></div>
     </section>
 
-    <!-- TAB 3: 2026-2027 沪杭硬核考点表 -->
+    <!-- TAB 3: 进阶专项扩展（Agent模型后训练 / 通用AI Infra / 后端软件开发） -->
+    <section class="tab-section" id="tab-tracks">
+      <div class="section-header">
+        <div class="section-title">🧩 进阶专项扩展计划 <span class="tag-pill">可与 12 周主线并行打卡</span></div>
+        <div style="font-size:12.5px;color:var(--text-secondary)">按目标岗位灵活选修：应用算法岗加修「后训练」，Infra/高并发岗加修「AI Infra」，大厂研发岗夯实「后端软件开发」</div>
+      </div>
+      <div class="filter-pills" id="trackPills"></div>
+      <div id="tracksContainer"></div>
+    </section>
+
+    <!-- TAB 4: 2026-2027 沪杭硬核考点表 -->
     <section class="tab-section" id="tab-hottopics">
       <div class="section-header">
         <div class="section-title">🔥 2026–2027 沪杭大中厂 AI 应用开发最火硬核考点表 <span class="tag-pill">基于沪杭 57 家企业 JD 与面经提炼</span></div>
@@ -1023,6 +1034,182 @@
       }
     };
 
+    const SPECIAL_TRACKS = [
+      {
+        id: "posttrain",
+        name: "🧠 Agent 模型后训练",
+        subtitle: "面向应用算法 / Agentic RL / 垂域微调岗（衔接你的 SFT 与 PPO 经历）",
+        modules: [
+          {
+            id: "pt1",
+            badge: "模块 1",
+            title: "Agent SFT 与多轮轨迹数据工程（LoRA / QLoRA）",
+            tasks: [
+              { id: "pt1_1", text: "吃透多轮 Tool-Calling 轨迹数据构造：仅对 assistant 回复与工具调用 token 计算 Loss（Loss Masking），不对 tool observation 算 loss。" },
+              { id: "pt1_2", text: "使用 LLaMA-Factory 或 TRL 对 Qwen2.5-7B/3B 做一次带去重、去污染校验的 LoRA 微调，对比微调前后 JSON 工具调用格式正确率。" }
+            ],
+            howTo: "输出一份训练记录卡：样本数、训练/验证/独立测试切分、LoRA rank/alpha/target_modules、学习率曲线、微调前后对照指标。",
+            resources: [
+              { label: "TRL 官方文档：SFTTrainer", url: "https://huggingface.co/docs/trl/sft_trainer" },
+              { label: "LLaMA-Factory 开源微调框架", url: "https://github.com/hiyouga/LLaMA-Factory" }
+            ],
+            qas: [
+              { q: "做 Agent 多轮对话 SFT 时，为什么必须做 Loss Mask（只对 assistant token 算 loss）？", a: "如果对用户输入和工具返回的 Observation 也计算交叉熵损失，模型会去拟合不可控的外部环境和网页噪声，浪费容量且导致推理时自己“脑补”工具返回结果（幻觉）。" },
+              { q: "LoRA 微调后发现模型通用能力退化（灾难性遗忘）怎么办？", a: "① 混入 10%–20% 高质量通用指令数据做配比；② 降低学习率/减少 epoch 防过拟合；③ 调小 LoRA rank 或仅挂载注意力层；④ 独立保留通用 benchmark 子集做回归监控。" }
+            ]
+          },
+          {
+            id: "pt2",
+            badge: "模块 2",
+            title: "偏好对齐 DPO 与奖励建模（Reward Modeling）",
+            tasks: [
+              { id: "pt2_1", text: "理解 DPO 数学目标：如何绕过显式 Reward Model，通过 Chosen/Rejected 偏好对与 Reference Model（β 系数）直接优化策略。" },
+              { id: "pt2_2", text: "基于 Agent 真实失败轨迹构造偏好对（成功轨迹为 Chosen、参数错/死循环/幻觉轨迹为 Rejected），用 TRL DPOTrainer 跑通小规模对齐实验。" }
+            ],
+            howTo: "能手写 DPO 损失函数核心公式并解释 β 过大/过小对 KL 散度与生成多样性的影响。",
+            resources: [
+              { label: "TRL 官方文档：DPOTrainer", url: "https://huggingface.co/docs/trl/dpo_trainer" }
+            ],
+            qas: [
+              { q: "SFT、DPO、GRPO 三者在数据形态、优化目标和适用场景上有什么核心区别？", a: "<strong>SFT</strong> 用高质量监督轨迹做模仿学习（学格式和基本能力）；<strong>DPO</strong> 用离线偏好对 (y_w, y_l) 做对比对齐（抑幻觉、偏风格，但受限于离线分布偏移）；<strong>GRPO</strong> 通过在线采样多条轨迹 + 组内相对奖励做在线 RL（突破 SFT 上限，尤其适合代码/数学/工具调用等可验证终态任务）。" }
+            ]
+          },
+          {
+            id: "pt3",
+            badge: "模块 3",
+            title: "Agentic RL 核心：PPO vs GRPO 与可验证奖励（RLVR）",
+            tasks: [
+              { id: "pt3_1", text: "对比 PPO（需 Critic 价值网络）与 GRPO（同组多采样均值方差归一化算优势、省去 Critic 显存）的原理与稳定性差异。" },
+              { id: "pt3_2", text: "理解多轮工具交互中的沙盒 Rollout、Verifiable Reward（如代码单测通过、SQL 终态一致）与 Reward Hacking（奖励漏洞）防范。" }
+            ],
+            howTo: "阅读 GRPO / Agent Lightning 论文并整理 1 页笔记，清晰说明你过往机器人 PPO 经验与语言 Agent RL 的共性与差异。",
+            resources: [
+              { label: "TRL 官方文档：GRPOTrainer", url: "https://huggingface.co/docs/trl/grpo_trainer" },
+              { label: "verl：字节开源大模型 RL 训练框架", url: "https://github.com/volcengine/verl" },
+              { label: "论文：Agent Lightning (2025)", url: "https://arxiv.org/abs/2508.03680" }
+            ],
+            qas: [
+              { q: "为什么 Agentic RL 很容易出现 Reward Hacking（刷分作弊）？怎么防？", a: "如果奖励只看“格式合法”或“表面字数/关键词”，模型会学会输出空洞合规模板或钻沙盒漏洞拿满分却没解决真实任务。防线：① 采用<strong>端到端可验证终态奖励</strong>（如真实单测/数据库最终状态）；② 加入 KL 惩罚防策略偏离过远；③ 定期人工抽检高分轨迹。" }
+            ]
+          }
+        ]
+      },
+      {
+        id: "infra",
+        name: "⚡ 通用 AI Infra 基础",
+        subtitle: "面向 AI Infra / 推理加速 / 大模型平台研发岗（高薪硬核壁垒）",
+        modules: [
+          {
+            id: "inf1",
+            badge: "模块 1",
+            title: "LLM 推理引擎核心原理（PagedAttention / Batching / KV Cache）",
+            tasks: [
+              { id: "inf1_1", text: "吃透 KV Cache 显存计算公式、Continuous Batching（迭代级调度）与 PagedAttention（分页显存消除碎片）的核心思想。" },
+              { id: "inf1_2", text: "理解 Chunked Prefill（拆分长输入防阻塞 Decode）、Prefix Caching（公共前缀复用）与 PD 分离（Prefill/Decode 分离部署）架构。" }
+            ],
+            howTo: "能手算出 7B/70B 模型在 FP16、上下文 8K、Batch=32 时的 KV Cache 显存占用，并画出 Continuous Batching 相比 Static Batching 的吞吐优势。",
+            resources: [
+              { label: "vLLM 官方文档：PagedAttention 与在线服务", url: "https://docs.vllm.ai/en/latest/serving/online_serving/" },
+              { label: "SGLang 官方文档：RadixAttention 前缀缓存", url: "https://docs.sglang.ai/" }
+            ],
+            qas: [
+              { q: "为什么 vLLM 引入 PagedAttention 能把吞吐量提升数倍？", a: "传统推理为每个请求按最大序列长度预分配连续显存，导致高达 60%–80% 的内部/外部显存碎片；PagedAttention 借鉴操作系统虚拟内存分页机制，将 KV Cache 切分为固定 Block 按需非连续分配并支持共享前缀，使同卡可承载的并发 Batch Size 大幅提升。" },
+              { q: "什么是 PD 分离（Prefill-Decode Disaggregation），它解决什么问题？", a: "Prefill 是计算密集型、Decode 是显存带宽密集型；混布在同一张卡上时，一个长 Prompt 的 Prefill 会严重卡顿正在 Decode 的其他请求（TTFT 与 TPOT 互相干扰）。PD 分离将两阶段拆到不同节点并传输 KV Cache，分别按算力和带宽独立扩缩容。" }
+            ]
+          },
+          {
+            id: "inf2",
+            badge: "模块 2",
+            title: "vLLM / SGLang 生产部署、量化与压测调优",
+            tasks: [
+              { id: "inf2_1", text: "实操使用 vLLM 或 SGLang 部署开源模型，理解关键启动参数（`gpu-memory-utilization`、`max-num-seqs`、`enable-prefix-caching`、`tensor-parallel-size`）。" },
+              { id: "inf2_2", text: "理解 AWQ/GPTQ/FP8 权重量化与 KV Cache 量化对精度、显存与吞吐的权衡，以及投机采样（Speculative Decoding）加速原理。" }
+            ],
+            howTo: "固定硬件与输入/输出长度，压测不同并发下的 TTFT、TPOT 和总吞吐（tokens/s），记录显存瓶颈拐点。",
+            resources: [
+              { label: "vLLM 性能调优与压测指南", url: "https://docs.vllm.ai/en/latest/performance/optimization.html" }
+            ],
+            qas: [
+              { q: "投机采样（Speculative Decoding）为什么能在不损失生成质量的前提下加速解码？", a: "Decode 阶段受限于显存带宽、算力大量闲置。投机采样用小草稿模型快速连续猜出 k 个 token，再由大模型一次前向并行验证这 k 个 token，按拒绝采样保证数学分布与大模型完全一致，从而用一次大模型显存读取换回多个有效 token。" }
+            ]
+          },
+          {
+            id: "inf3",
+            badge: "模块 3",
+            title: "分布式训练通信与云原生 AI 服务治理",
+            tasks: [
+              { id: "inf3_1", text: "掌握 3D 并行直觉（DP 数据并行 / TP 张量并行 / PP 流水线并行 / ZeRO-1/2/3 优化器与梯度分片）及 FlashAttention IO 感知原理。" },
+              { id: "inf3_2", text: "掌握 Docker GPU 容器化、K8s Pod/Service/HPA 基础，以及 AI Gateway（多模型统一网关、Token 限流、Prometheus + Grafana 监控）。" }
+            ],
+            howTo: "画出一条生产级 AI Gateway 架构图（接入鉴权 → 语义缓存 → 模型路由 → vLLM 集群 → 指标监控与降级）。",
+            resources: [
+              { label: "HuggingFace：Ultra-Scale Playbook 分布式训练图解", url: "https://huggingface.co/spaces/nanotron/ultrascale-playbook" }
+            ],
+            qas: [
+              { q: "ZeRO-1、ZeRO-2、ZeRO-3 分别切分了什么？为什么 TP（张量并行）通常只在单机 NVLink 内做？", a: "ZeRO-1 切分优化器状态，ZeRO-2 增切梯度，ZeRO-3 再切分模型参数本身。TP 在每一层前后都要做高频率的 AllReduce 集合通信，对互联带宽极其敏感，跨机走以太网/IB 会严重拖慢训练，因此通常限制在单机 8 卡 NVLink 内部。" }
+            ]
+          }
+        ]
+      },
+      {
+        id: "backend",
+        name: "🏗️ 后端软件开发核心",
+        subtitle: "面向大厂 AI 应用研发 / 后端工程岗（消除一面八股与系统设计短板）",
+        modules: [
+          {
+            id: "be1",
+            badge: "模块 1",
+            title: "MySQL 索引、事务 MVCC 与慢查询调优",
+            tasks: [
+              { id: "be1_1", text: "吃透 InnoDB B+ 树索引结构、聚簇索引与回表、覆盖索引、联合索引最左前缀原则及常见索引失效场景。" },
+              { id: "be1_2", text: "吃透 ACID、四种隔离级别、MVCC（ReadView + Undo Log）如何解决不可重复读，以及间隙锁（Gap Lock）如何防幻读。" }
+            ],
+            howTo: "结合你过往 Python/SQL 优化经历，实操用 `EXPLAIN` 分析一条慢查询并写出索引改造前后扫描行数对比。",
+            resources: [
+              { label: "小林 coding：图解 MySQL 核心篇", url: "https://xiaolincoding.com/mysql/" }
+            ],
+            qas: [
+              { q: "为什么 MySQL 索引选 B+ 树而不是二叉树、红黑树或哈希表？", a: "① B+ 树矮胖、扇出大，千万级数据只需 3–4 次磁盘 I/O；② 非叶子节点只存键不存数据，单页能放更多索引键；③ 叶子节点用双向链表相连，极其擅长范围查询（BETWEEN / ORDER BY），而哈希表不支持范围查询。" }
+            ]
+          },
+          {
+            id: "be2",
+            badge: "模块 2",
+            title: "Redis 高并发缓存与消息队列异步解耦",
+            tasks: [
+              { id: "be2_1", text: "掌握 Redis 常用数据结构底层、RDB/AOF 持久化、缓存穿透/击穿/雪崩防护与分布式锁（SET NX EX + Lua 释放）。" },
+              { id: "be2_2", text: "理解 Kafka / Redis Stream 在 AI 长任务中的削峰填谷、异步消费、死信队列与消息幂等消费机制。" }
+            ],
+            howTo: "在你的 Agent 服务里落地基于 Redis 的限流器（滑动窗口/令牌桶）与异步任务队列设计方案。",
+            resources: [
+              { label: "小林 coding：图解 Redis 核心篇", url: "https://xiaolincoding.com/redis/" }
+            ],
+            qas: [
+              { q: "高并发 AI 任务中，如何保证“更新数据库 + 更新/删除 Redis 缓存”的数据一致性？", a: "主流采用 <strong>Cache-Aside（旁路缓存）</strong>：先更新数据库，再<strong>删除</strong>缓存（而不是更新缓存，防并发写覆盖脏数据）；若删除失败则通过消息队列异步重试或订阅 Binlog（Canal）做最终一致保障。" }
+            ]
+          },
+          {
+            id: "be3",
+            badge: "模块 3",
+            title: "操作系统、计算机网络与高可用系统设计",
+            tasks: [
+              { id: "be3_1", text: "吃透进程/线程/协程与 Python GIL、Linux `epoll` I/O 多路复用原理、虚拟内存与死锁四条件。" },
+              { id: "be3_2", text: "吃透 TCP 三次握手四次挥手、TIME_WAIT、拥塞控制、HTTPS TLS 握手、HTTP/1.1 vs HTTP/2 及反向代理 Nginx 调优。" },
+              { id: "be3_3", text: "掌握高可用设计四件套（限流、熔断、降级、幂等）与 OpenTelemetry 分布式链路追踪；投阿里/蚂蚁/恒生 Java 线时了解 Spring AI 核心抽象。" }
+            ],
+            howTo: "完整手画并口述一道经典系统设计题：《设计一个支持 1 万 QPS 的企业级 Multi-Agent 对话与工具调度网关》。",
+            resources: [
+              { label: "小林 coding：图解网络与操作系统", url: "https://xiaolincoding.com/network/" },
+              { label: "Spring AI 官方参考文档（Java 线选读）", url: "https://docs.spring.io/spring-ai/reference/" }
+            ],
+            qas: [
+              { q: "为什么 Nginx 代理 SSE（大模型流式输出）时经常出现“前端半天不出字，最后一下子全蹦出来”？", a: "因为 Nginx 默认开启了 <code>proxy_buffering on</code>，会等上游响应攒满缓冲区才发给客户端；生产部署 SSE 必须配置 <code>proxy_buffering off;</code>、<code>proxy_cache off;</code> 并调大 <code>proxy_read_timeout</code>，同时响应头加上 <code>X-Accel-Buffering: no</code>。" }
+            ]
+          }
+        ]
+      }
+    ];
+
     const HOT_TOPICS = [
       { cat: "协议与安全", heat: "P0 极热", heatCls: "heat-p0", topic: "MCP 协议（Model Context Protocol）", companies: "阿里/阿里云、字节、携程、东方财富、恒生、萤石、蔚来、喜马拉雅", questions: "MCP 与传统 Function Calling 到底有什么区别？如何自己开发一个 MCP Server？企业内网挂载 MCP 工具如何做鉴权与权限隔离？", action: "亲手用官方 SDK 写 1 个 MCP Server + Client，演示工具注册、参数校验和越权拦截。" },
       { cat: "Agent 架构", heat: "P0 极热", heatCls: "heat-p0", topic: "LangGraph 状态机、持久化与中断恢复", companies: "小红书（点点专项）、携程、恒生电子、美团、字节、MiniMax", questions: "为什么复杂 Agent 不用线性 Chain 而用图状态机？任务跑一半进程挂了怎么恢复？如何防止 Agent 陷入死循环或无限套娃？", action: "在旗舰项目中落地 PostgreSQL/SQLite Checkpointer、最大步数硬限制与 Human-in-the-loop 审批节点。" },
@@ -1057,10 +1244,12 @@
     const store = Object.assign({
       activeTab: "roadmap",
       selectedWeek: "W1",
+      selectedTrack: "posttrain",
       pendingFirst: true,
       topicCat: "全部",
       weeks: {},
       subTasks: {},
+      trackTasks: {},
       qaMastered: {},
       qaNotes: {},
       checkins: []
@@ -1122,7 +1311,7 @@
       const checkedToday = store.checkins.includes(today);
       document.getElementById("statStreak").textContent = `${store.checkins.length} 天`;
       const btn = document.getElementById("dailyCheckinBtn");
-      btn.textContent = checkedToday ? "✅ 今日已完成打卡（点击取消）" : "✅ 今日 LeetCode + 八股打卡";
+      btn.textContent = checkedToday ? "✅ 今日已完成打卡（点击取消）" : "✅ 今日学习打卡";
       btn.classList.toggle("done", checkedToday);
 
       const target = new Date("2027-03-01T00:00:00+08:00").getTime();
@@ -1323,6 +1512,128 @@
       });
     }
 
+    function renderTracks() {
+      const pillsEl = document.getElementById("trackPills");
+      pillsEl.innerHTML = SPECIAL_TRACKS.map(tr => {
+        const allT = tr.modules.flatMap(m => m.tasks);
+        const doneT = allT.filter(t => store.trackTasks[t.id]).length;
+        return `<button class="filter-pill ${store.selectedTrack === tr.id ? "active" : ""}" data-track="${tr.id}">${tr.name} (${doneT}/${allT.length})</button>`;
+      }).join("");
+
+      pillsEl.querySelectorAll(".filter-pill").forEach(btn => {
+        btn.addEventListener("click", () => {
+          store.selectedTrack = btn.getAttribute("data-track");
+          saveStore();
+          renderTracks();
+        });
+      });
+
+      const track = SPECIAL_TRACKS.find(t => t.id === store.selectedTrack) || SPECIAL_TRACKS[0];
+      const allT = track.modules.flatMap(m => m.tasks);
+      const doneT = allT.filter(t => store.trackTasks[t.id]).length;
+      const pct = allT.length ? Math.round((doneT / allT.length) * 100) : 0;
+
+      const el = document.getElementById("tracksContainer");
+      el.innerHTML = `
+        <div class="month-header" style="margin-bottom:14px">
+          <div>
+            <h2>${track.name}</h2>
+            <div style="font-size:12.5px;color:var(--text-secondary);margin-top:2px">${track.subtitle}</div>
+          </div>
+          <span class="month-progress">专项进度：${doneT} / ${allT.length}（${pct}%）</span>
+        </div>
+        ${track.modules.map((m, mi) => {
+          const mDone = m.tasks.filter(t => store.trackTasks[t.id]).length;
+          const allDone = mDone === m.tasks.length;
+          const key = `tr_${track.id}_${mi}`;
+          const isExpanded = manualExpand[key] !== undefined ? manualExpand[key] : !allDone;
+          return `
+            <article class="day-card ${allDone ? "all-done" : ""} ${isExpanded ? "expanded" : ""}" id="card_${key}">
+              <div class="day-header" data-toggle-tr="${key}">
+                <div class="day-title-wrap">
+                  <span class="day-badge">${m.badge}</span>
+                  <span class="day-title">${m.title}</span>
+                  ${allDone ? `<span class="day-done-hint">✓ 已完成（点击可展开回看）</span>` : ""}
+                </div>
+                <div style="display:flex;align-items:center;gap:10px">
+                  <span class="tag-pill">${mDone} / ${m.tasks.length}</span>
+                  <span style="font-size:12px;color:var(--text-muted)">${isExpanded ? "收起 ▲" : "展开 ▼"}</span>
+                </div>
+              </div>
+              <div class="day-body-wrap">
+                <div class="day-body">
+                  <div class="subtask-list">
+                    ${m.tasks.map(t => {
+                      const ck = !!store.trackTasks[t.id];
+                      return `
+                        <label class="subtask-item ${ck ? "checked" : ""}">
+                          <input type="checkbox" data-tr-task="${t.id}" ${ck ? "checked" : ""} />
+                          <span>${t.text}</span>
+                        </label>
+                      `;
+                    }).join("")}
+                  </div>
+                  <div class="day-side">
+                    <div class="info-box">
+                      <h4>🛠️ 完成方式与验收标准</h4>
+                      <div style="color:#cbd5e1">${m.howTo}</div>
+                    </div>
+                    <div class="info-box">
+                      <h4>📚 精选一手资料</h4>
+                      <div class="res-links">
+                        ${m.resources.map(r => `<a href="${r.url}" target="_blank" rel="noopener noreferrer">• ${r.label} ↗</a>`).join("")}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="day-qa-box">
+                  <div class="day-qa-title">💬 本模块高频面试追问（学完立即自测）</div>
+                  ${m.qas.map((qa, qi) => `
+                    <div class="mini-qa-item">
+                      <div class="mini-qa-row">
+                        <span class="mini-qa-q">Q${qi + 1}：${qa.q}</span>
+                        <button class="mini-ans-btn" data-tr-ans="trans_${key}_${qi}">查看参考答案</button>
+                      </div>
+                      <div class="mini-qa-a" id="trans_${key}_${qi}">${qa.a}</div>
+                    </div>
+                  `).join("")}
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("")}
+      `;
+
+      el.querySelectorAll(".day-header[data-toggle-tr]").forEach(h => {
+        h.addEventListener("click", () => {
+          const key = h.getAttribute("data-toggle-tr");
+          const card = h.closest(".day-card");
+          const next = !card.classList.contains("expanded");
+          manualExpand[key] = next;
+          card.classList.toggle("expanded", next);
+          h.querySelector("span:last-child").textContent = next ? "收起 ▲" : "展开 ▼";
+        });
+      });
+
+      el.querySelectorAll("input[data-tr-task]").forEach(cb => {
+        cb.addEventListener("change", e => {
+          store.trackTasks[e.target.getAttribute("data-tr-task")] = e.target.checked;
+          const key = e.target.closest(".day-card").id.replace("card_", "");
+          delete manualExpand[key];
+          saveStore();
+          renderTracks();
+        });
+      });
+
+      el.querySelectorAll("button[data-tr-ans]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const target = document.getElementById(btn.getAttribute("data-tr-ans"));
+          const open = target.classList.toggle("open");
+          btn.textContent = open ? "收起答案" : "查看参考答案";
+        });
+      });
+    }
+
     function renderTopics() {
       const cats = ["全部", ...new Set(HOT_TOPICS.map(t => t.cat))];
       const filtersEl = document.getElementById("topicFilters");
@@ -1434,6 +1745,7 @@
     initWeekSelector();
     renderRoadmap();
     renderWeekly();
+    renderTracks();
     renderTopics();
     renderQa();
     switchTab(store.activeTab || "roadmap");
